@@ -16,7 +16,7 @@ class PropertyTableGateway {
         $status = $statement->execute();
         
         if (!$status) {
-            die("Could not retrieve user");
+            die("Could not retrieve property");
         }
         
         return $statement;
