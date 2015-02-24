@@ -7,9 +7,10 @@ class Property {
     private $description;
     private $rent;
     private $bedrooms;
+    private $AreaID;
     /*private classes*/
 
-    public function __construct($a1, $a2, $tn, $ct, $d, $r, $b) {
+    public function __construct($a1, $a2, $tn, $ct, $d, $r, $b, $aID) {
         $this->address1 = $a1;
         $this->address2 = $a2;
         $this->town = $tn;
@@ -17,6 +18,7 @@ class Property {
         $this->description = $d;
         $this->rent = $r;
         $this->bedrooms = $b;
+        $this->AreadID = $aID;
     } /*default construstor*/
     
     public function getAddress1() { return $this->address1; }
@@ -26,5 +28,8 @@ class Property {
     public function getDescription() { return $this->description; }
     public function getRent() { return $this->rent; }
     public function getBedrooms() { return $this->bedrooms; }
+    public function getAreaID() { return $this->AreaID; }
     /*get methods for each individual fields*/
 }
+
+//ADDED AreaID
