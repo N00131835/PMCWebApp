@@ -23,58 +23,13 @@ $statement = $gateway->getProperty();
     
     <body>
         <div class="container">
-            <div class="toolbarBtns">
-                <?php require 'toolbar.php'; ?>
-            </div>
-
-            <h1>Property Management Company</h1>
+            <?php require 'toolbar.php'; ?>
+            <?php require 'header.php'; ?>
+            <?php require 'mainMenu.php'; ?>
 
             <hr> <!-- horizontal break -->
 
-            <h3>Property List</h3>
-            
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="listPr">Address1</th>
-                            <th class="listPr">Address2</th>
-                            <th class="listPr">Town</th>
-                            <th class="listPr">County</th>
-                            <th class="listPr">Description</th>
-                            <th class="listPr">Rent / Monthly</th>
-                            <th class="listPr">No. of bedrooms</th>
-                            <th class="listPr">Options</th>
-                        </tr>
-                    </thead>
-                    <!-- This is the category fields on the list. -->
-                    <tbody>
-                        <?php
-                        $row = $statement->fetch(PDO::FETCH_ASSOC);
-                        while ($row)  {
-                            echo '<tr>';
-                            echo '<td class="prEach1">' . $row['Address1'] . '</td>';
-                            echo '<td class="prEach1">' . $row['Address2'] . '</td>';
-                            echo '<td class="prEach3">' . $row['Town'] . '</td>';
-                            echo '<td class="prEach3">' . $row['County'] . '</td>';
-                            echo '<td class="prEach1">' . $row['Description'] . '</td>';
-                            echo '<td class="prEach3">' . $row['Rent'] . '</td>';
-                            echo '<td class="prEach4">' . $row['Bedrooms'] . '</td>';
-                            echo '<td class="prEach3 optlinks">'
-                            . '<a href="viewProperty.php?PropertyID='.$row['PropertyID'].'">View</a> '
-                            . '<a href="editPropertyForm.php?PropertyID='.$row['PropertyID'].'">Edit</a> '
-                            . '<a class="deleteProperty" href="deleteProperty.php?PropertyID='.$row['PropertyID'].'">Delete</a> '
-                            . '</td>';
-                            echo '</tr>';
-
-                            $row = $statement->fetch(PDO::FETCH_ASSOC);
-                        }
-                        ?>
-                    </tbody>
-                    <!-- This is the get methods of the properties, where the output of the user put in the Property form will be shown -->
-                </table>
-            <hr class="botline">
-            <a href="createPropertyForm.php">
-                <input id="createPro" type="submit" value="Create Property" name="createProperty"/></a>
+            <p>Welcome to the Dashboard</p>
         </div>
     </body>
 </html>

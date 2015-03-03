@@ -33,11 +33,8 @@ $statement = $gateway->getPropertyById($PropertyID);
     
     <body>
         <div class="container">
-            <div class="logInOut">
-                <?php require 'toolbar.php'; ?>
-            </div> <!-- This is the MENU that is located at the top right of the page. -->
-
-            <h1>Property Management Company</h1>
+            <?php require 'toolbar.php'; ?>
+            <?php require 'header.php'; ?>
 
             <hr> <!-- horizontal break -->
                 <table>

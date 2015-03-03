@@ -28,26 +28,29 @@ $area = $areaGateway->getArea();
     
     <body>
         <div class="container">
-            <div class="logInOut">
-                <?php require 'toolbar.php'; ?>
-            </div> <!-- This is the MENU that is located at the top right of the page. -->
-
-            <h1>Property Management Company</h1>
+            <?php require 'toolbar.php'; ?>
+            <?php require 'header.php'; ?>
+            <?php require 'mainMenu.php'; ?>
 
             <hr> <!-- horizontal break -->
                 <table>
+                    <thead>
                     <!-- This is the category fields on the list. -->
+                        <td class="vedHeaders">Area Name</td>
+                        <td class="vedHeaders">Facilities</td>
+                    </thead>
                     <tbody>
-                    <h3>Viewing a Property</h3>
+                    <h3>Viewing a Area</h3>
                         <?php
                         $row = $area->fetch(PDO::FETCH_ASSOC);
                         while ($row) {
+                            
                             echo '<tr>';
-                            echo '<td class="vedHeaders">Area Name</td>' . '<td>' . $row['AreaName'] . '</td>';
+                            echo '<td>' . $row['AreaName'] . '</td>';
+                            echo '<td>' . $row['Facilities'] . '</td>';
                             echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">Facilities</td>' . '<td>' . $row['Facilities'] . '</td>';
-                            echo '</tr>';
+                            
+                            $row = $area->fetch(PDO::FETCH_ASSOC);
                         }
                         ?>
                     </tbody>
