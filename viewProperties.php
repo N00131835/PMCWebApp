@@ -41,6 +41,7 @@ $statement = $gateway->getProperty();
                             <th class="listPr">Description</th>
                             <th class="listPr">Rent / Monthly</th>
                             <th class="listPr">No. of bedrooms</th>
+                            <th class="listPr">AreaName</th>
                             <th class="listPr">Options</th>
                         </tr>
                     </thead>
@@ -57,7 +58,8 @@ $statement = $gateway->getProperty();
                             echo '<td class="prEach1">' . $row['Description'] . '</td>';
                             echo '<td class="prEach3">' . $row['Rent'] . '</td>';
                             echo '<td class="prEach4">' . $row['Bedrooms'] . '</td>';
-                            echo '<td class="prEach3 optlinks">'
+                            echo '<td class="prEach3">' . $row['AreaName'] . '</td>';
+                            echo '<td class="prEach4 optlinks">'
                             . '<a href="viewProperty.php?PropertyID='.$row['PropertyID'].'">View</a> '
                             . '<a href="editPropertyForm.php?PropertyID='.$row['PropertyID'].'">Edit</a> '
                             . '<a class="deleteProperty" href="deleteProperty.php?PropertyID='.$row['PropertyID'].'">Delete</a> '

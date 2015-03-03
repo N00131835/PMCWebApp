@@ -10,7 +10,8 @@ class PropertyTableGateway {
     
     public function getProperty() {
         // execute a query to get all property
-        $sqlQuery = "SELECT * FROM property";
+        $sqlQuery = "SELECT p.*, a.AreaName FROM property p LEFT JOIN area a ON a.AreaID = p.AreaID";
+        
         
         $statement = $this->connection->prepare($sqlQuery);
         $status = $statement->execute();
