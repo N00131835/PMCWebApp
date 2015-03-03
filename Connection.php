@@ -10,7 +10,8 @@ class Connection {
             $database = "n00131835";
             $username = "N00131835";
             $password = "N00131835";
-
+            //details needed to connect to the database.
+             
             $dsn = "mysql:host=" . $host . ";dbname=" . $database;
             Connection::$connection = new PDO($dsn, $username, $password);
             if (!Connection::$connection) {
