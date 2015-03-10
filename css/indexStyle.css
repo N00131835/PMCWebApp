@@ -36,7 +36,7 @@ nav.navtop {
 }
 
 button[type="button"].registerNav {
-	margin-top: 4px;
+	margin-top: -13px;
 	padding: 10px;
 	background-color: #79c9e2;
 	color: #fff;
