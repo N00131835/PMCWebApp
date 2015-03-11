@@ -311,6 +311,40 @@ button[type="submit"].servicesButton {
 	background-color: #79c9e2;
 }
 
+@media(max-width: 525px){
+    .services-section P{
+        font-size:18px;
+    }
+}
+
+@media(max-width: 395px){
+    .services-section P{
+        font-size:13px;
+    }
+}
+
+@media(max-width: 300px){
+    button[type="submit"].servicesButton {
+            margin-left: 5px;
+    }
+}
+
+@media(max-width: 295px){
+    button[type="submit"].servicesButton {
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+}
+
+@media(max-width: 290px){
+    button[type="submit"].servicesButton {
+        margin-top: 5px;
+        margin-left: -5px;
+    }
+}
+
+
+
 /* ------------------ CUSTOM CSS FOR FOOTER SECTION. ------------------ */
 
 .footer-section {
@@ -477,4 +511,10 @@ h4 {
         margin-top: -27px;
         margin-right: -8px;
     }
+}
+
+/* ------------------ CUSTOM CSS FOR. ------------------ */
+
+.custom-container{
+    padding-top: 150px;
 }

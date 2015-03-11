@@ -33,26 +33,9 @@ $statement = $gateway->getProperty();
     </head>
 
     <body>
-        <div class="container-fluid">
-          <div class="row">
-            <nav class="navtop navbar navbar-default navbar-fixed-top">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>                        
-                </button>
-
-                  <a class="navbar-brand" href="index.php"><img src="img/dr-logosm.png" width="77" height="15px" style="margin-bottom:5px;"> Dublin <br/> Rentals</a>
-
-              </div>
-                
-              <!-- NavBar -->
-              <?php require 'toolbar.php'; ?>
-              
-            </nav>
-          </div>
-        </div>
+        <!-- Header Navigation is in a separate page, so that when I want to edit something i can just go in to the header.php page 
+            and make my edits there, instead of having to edit it in a lot of pages.  -->
+        <?php require 'header.php'; ?>
 
         <!-- Intro Section -->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -240,7 +223,7 @@ $statement = $gateway->getProperty();
                           in all areas of Dublin.
                         </p>
 
-                        <button type="submit" class="servicesButton btn btn-default btn-lg">Get Started</button> 
+                        <a href="register.php"><button type="submit" class="servicesButton btn btn-default btn-lg">Get Started</button></a>
                     </div>
                 </div>
             </div>

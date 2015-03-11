@@ -17,26 +17,9 @@
     </head>
     
     <body>
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="navtop navbar navbar-default navbar-fixed-top">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
-            </button>
-
-            <a class="navbar-brand" href="#"><img src="img/dr-logosm.png" width="77" height="15px" style="margin-bottom:5px;"> Dublin <br/> Rentals</a>
-
-          </div>
-
-          <!-- NavBar -->
-          <?php require 'toolbar.php'; ?>
-          
-        </nav>
-      </div>
-    </div>
+    <!-- Header Navigation is in a separate page, so that when I want to edit something i can just go in to the header.php page 
+         and make my edits there, instead of having to edit it in a lot of pages.  -->
+    <?php require 'header.php'; ?>
 
     <!-- Search Box Section -->
     <section id="loginPage" class="login-section">

@@ -45,9 +45,11 @@ $area = $areaGateway->getArea();
     </head>
     
     <body>
-        <div class="container">
-            <?php require 'toolbar.php'; ?>
-            <?php require 'header.php'; ?>
+        <!-- Header Navigation is in a separate page, so that when I want to edit something i can just go in to the header.php page 
+            and make my edits there, instead of having to edit it in a lot of pages.  -->
+        <?php require 'header.php'; ?>
+        
+        <div class="custom-container container">
             <?php require 'mainMenu.php'; ?>
 
             <hr> <!-- horizontal break -->
