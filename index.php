@@ -43,11 +43,13 @@ $statement = $gateway->getProperty();
                   <span class="icon-bar"></span>                        
                 </button>
 
-                <a class="navbar-brand" href="#"><img src="img/dr-logosm.png" width="77" height="15px" style="margin-bottom:5px;"> Dublin <br/> Rentals</a>
+                  <a class="navbar-brand" href="index.php"><img src="img/dr-logosm.png" width="77" height="15px" style="margin-bottom:5px;"> Dublin <br/> Rentals</a>
 
               </div>
-
+                
+              <!-- NavBar -->
               <?php require 'toolbar.php'; ?>
+              
             </nav>
           </div>
         </div>

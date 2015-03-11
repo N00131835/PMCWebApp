@@ -135,14 +135,6 @@ input[type="number"] {
     margin-left:20px;
 }
 
-input[type="submit"] {
-    
-    width:305px; 
-    height:35px;
-    margin-left:20px;
-    cursor: pointer;
-}
-
 input[type="password"] {
     width:300px; 
     height:30px; 

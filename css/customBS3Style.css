@@ -366,3 +366,106 @@ button[type="submit"].servicesButton {
 	    height: 300px;
 	}
 }
+
+/* ------------------ CUSTOM CSS FOR LOGIN PAGE. ------------------ */
+
+.login-section {
+    padding: 30px;
+    height: 800px;
+    text-align: center;
+    background: #fff;
+}
+
+.login-container {
+    margin-top: 200px;
+    padding: 25px;
+}
+
+.form-login {
+    background-color: #EDEDED;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color:#d2d2d2;
+    border-width: 5px;
+    box-shadow:0 1px 0 #cfcfcf;
+}
+
+@media(max-width: 335px){
+	.form-login {
+            margin-left: -65px;
+	}
+}
+
+@media(max-width: 355px){
+	.form-login {
+            margin-left: -20px;
+	}
+}
+
+@media(max-width: 375px){
+	.form-login {
+            width: 225px;
+	}
+}
+
+h4 { 
+    border:0 solid #fff; 
+    border-bottom-width:1px;
+    padding-bottom:10px;
+    text-align: center;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.loginBtn {
+    width: 150px;
+    height: 50px;
+    background-color: #C0A0E1;
+    border: none;
+}
+
+.loginBtn:hover{
+    background-color: #BA8AEB;
+}
+
+.wrapper {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+
+@media(max-width: 767px){
+    .wrapper {
+        margin-top: 23px;
+    }
+}
+
+.forgotPassOpt {
+    margin-top: -7px;
+}
+
+@media(max-width: 767px){
+    .forgotPassOpt {
+        margin-left: 15px;
+    }
+}
+
+@media(max-width: 408px){
+    .forgotPassOpt {
+        margin-top: -7px;
+        margin-left: -10px;
+    }
+}
+
+@media(max-width: 536px) and (min-width: 490px){
+    .forgotPassOpt {
+        margin-top: -27px;
+        margin-right: -8px;
+    }
+}
