@@ -226,6 +226,11 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
             </form>
             <hr class="botline"> <!-- horizontal break line -->
         </div>    
+    
+        <!-- JAVASCRIPT just before the closing of the body tag --> <!-- Why its at the bottom? SPEED and so that the body, content loads faster. -->
+        <script type="text/javascript" src="js/jquery.js"></script> <!-- jquery is a library, javascript framework, it has a lot of things 
+        // using thwe CDN(content delivery network) for speed and efficiency for the end users -->
+        <script type="text/javascript" src="js/bootstrap.min.js"></script> <!-- This is the Bootstrap script -->
     </body>
 </html>
 
