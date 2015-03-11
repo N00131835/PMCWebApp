@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-12">
                 
-                <img src="img/dr-logosm.png">
+                <a href="#back-to-top"> <img src="img/dr-logosm.png"> </a>
                 
                 <nav class="navbot navbar">
                   <div class="navbar-footer">

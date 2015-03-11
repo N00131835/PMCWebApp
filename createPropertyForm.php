@@ -33,7 +33,7 @@ require 'ensureUserLoggedIn.php'; //redirects to the index(login) if the user is
         <script type="text/javascript" src="js/createProperty.js"></script> 
     </head>
     
-    <body>
+    <body id="back-to-top">
         <!-- Header Navigation is in a separate page, so that when I want to edit something i can just go in to the header.php page 
             and make my edits there, instead of having to edit it in a lot of pages.  -->
         <?php require 'header.php'; ?>

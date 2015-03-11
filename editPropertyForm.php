@@ -51,7 +51,7 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
         <!-- Custom JS coding for Editing Property // This is the JS validation for this Form -->
         <script type="text/javascript" src="js/propertyList.js"></script> 
     </head>
-    <body>
+    <body id="back-to-top">
         <!-- Header Navigation is in a separate page, so that when I want to edit something i can just go in to the header.php page 
             and make my edits there, instead of having to edit it in a lot of pages.  -->
         <?php require 'header.php'; ?>
