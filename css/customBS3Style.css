@@ -614,6 +614,35 @@ h4 {
     }
 }
 
+/* ------------------ CUSTOM CSS FOR DASHPROF SECTION. ------------------ */
+
+.dashProf-section {
+    padding: 30px;
+    height: 500px;
+    background: #f0f0f0;
+}
+
+.dashTableMenu-section {
+    padding: 30px;
+    height: 1000px;
+    background: #fff;
+}
+
+.dashTableMenu-section ul{
+   list-style-type: none;
+}
+
+.dashTableMenu-section li{
+   margin-bottom: 50px;
+}
+
+.dashTableMenu-section img{
+    border: 1px solid #ededed;
+    border-radius: 9px;
+    width: 400px;
+    height: 350px;
+}
+
 /* ------------------ CUSTOM CSS FOR. ------------------ */
 
 .custom-container{

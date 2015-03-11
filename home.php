@@ -44,14 +44,50 @@ $statement = $gateway->getProperty();
             and make my edits there, instead of having to edit it in a lot of pages.  -->
         <?php require 'header.php'; ?>
         
-        <div class="custom-container container">
-            <?php require 'mainMenu.php'; ?>
+        <!-- DashProf Section -->
+        <section id="dashProf" class="dashProf-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
 
-            <hr> <!-- horizontal break -->
-
-            <p>Welcome to the Dashboard</p>
-        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- dashTableMenu Section -->
+        <section id="dashTableMenu" class="dashTableMenu-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                        <h2>Tables</h2>
+                        <ul class="pull-left">
+                            <li>
+                                <a href="viewProperties.php"><img src="img/tableimgs/propertylist.png"></a>
+                            </li>
+                            
+                            <li>
+                                <a href="viewOwners.php"><img src="img/tableimgs/ownerlist.png"></a>
+                            </li>
+                        </ul>
+                        
+                        <ul class="pull-right">
+                            <li>
+                                <a href="viewAreas.php"><img src="img/tableimgs/arealist.png"></a>
+                            </li>
+                            
+                            <li>
+                                <a href="viewTenants.php"><img src="img/tableimgs/tenantlist.png"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
     
+        <!-- Footer Section -->
+        <?php require 'footer.php'; ?>
+        
         <!-- JAVASCRIPT just before the closing of the body tag --> <!-- Why its at the bottom? SPEED and so that the body, content loads faster. -->
         <script type="text/javascript" src="js/jquery.js"></script> <!-- jquery is a library, javascript framework, it has a lot of things 
         // using thwe CDN(content delivery network) for speed and efficiency for the end users -->
