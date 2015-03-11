@@ -94,6 +94,9 @@ $statement = $gateway->getProperty();
             <a href="createPropertyForm.php">
                 <input id="createPro" type="submit" value="Create Property" name="createProperty"/></a>
         </div>
+        
+        <!-- Footer Section -->
+        <?php require 'footer.php'; ?>
     
         <!-- JAVASCRIPT just before the closing of the body tag --> <!-- Why its at the bottom? SPEED and so that the body, content loads faster. -->
         <script type="text/javascript" src="js/jquery.js"></script> <!-- jquery is a library, javascript framework, it has a lot of things 

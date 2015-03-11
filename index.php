@@ -73,28 +73,31 @@ $statement = $gateway->getProperty();
         <section id="searchbox" class="search-section">
           <div class="container">
             <div class="row">
-              <div class="col-lg-12 col-md-9 col-sm-9">
+              <div class="col-lg-offset-0 col-lg-12 col-md-offset-2 col-md-9 col-sm-offset-1 col-sm-10 col-xs-offset-1">
                 <h2> <strong>To Rent | Short Term</strong></h2>
 
                 <form class="form-inline" role="form" id="searchSelects" action="" method="post">
                   <div class="form-group form-inline">
                     <select class="form-control" id="sel1">
-                      <option>Town</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group form-inline">
-                    <select class="form-control" id="sel1">
                       <option>Area</option>
                       <option>Dublin Central</option>
                       <option>Dublin Bay North</option>
-                      <option>Dublin North-West</option>
+                      <option>Dublin North-Central</option>
                       <option>Dublin South-Central</option>
                       <option>Dublin Bay South</option>
+                    </select>
+                  </div>
+                    
+                  <div class="form-group form-inline">
+                    <select class="form-control" id="sel1">
+                      <option>Town</option>
+                      <option>Ballsbridge</option>
+                      <option>Cabra</option>
+                      <option>Tallaght</option>
+                      <option>Phibsboro</option>
+                      <option>Finglas</option>
+                      <option>Merrion</option>
+                      <option>Merrion Square</option>
                     </select>
                   </div>
 
@@ -103,8 +106,8 @@ $statement = $gateway->getProperty();
                       <option>Type</option>
                       <option>Apartment To Let</option>
                       <option>House To Let</option>
-                      <option>3</option>
-                      <option>4</option>
+                      <option>Studio To Let</option>
+                      <option>Flat To Let</option>
                     </select>
                   </div>
                 </form>
@@ -226,8 +229,7 @@ $statement = $gateway->getProperty();
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-
-                        <img src="img/dr-logosm.png">
+                        
                         <p>
                           Are you looking for a new apartment or want to buy a house?
                           <br/> 
@@ -245,43 +247,7 @@ $statement = $gateway->getProperty();
         </section>
 
         <!-- Footer Section -->
-        <footer id="footerCode" class="footer-section">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbot navbar">
-                          <div class="navbar-footer">
-
-                            <a class="navbar-brand" href="#"><img src="img/dr-logosm.png" width="77px" height="15px" style="margin-bottom:5px;"></a>
-
-                          </div>
-
-                          <div class="navbotLinks">
-                            <ul class="navbar-right">
-                              <li><a href="#">Home</a></li>
-                              <li><a href="#">To Rent</a></li>
-                              <li><a href="#">Short-term</a></li>
-                              <li><a href="#">Contact Us</a></li>
-                              <li><a href="#">Login</a></li>
-                              <li><a href="#">Register</a></li>
-                            </ul>
-                          </div>
-                        </nav>
-                    </div>
-
-                    <div class="socialFooter col-lg-12">
-                      <p class="pull-left">&#169; Dublin Rentals</p>
-                      <div class="socialLinks">
-                        <ul class="pull-right">
-                          <li><img src="img/social/fb.png"></li>
-                          <li><img src="img/social/g+.png"></li>
-                          <li><img src="img/social/twit.png"></li>
-                        </ul>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <?php require 'footer.php'; ?>
 
         <!-- JAVASCRIPT just before the closing of the body tag --> <!-- Why its at the bottom? SPEED and so that the body, content loads faster. -->
         <script type="text/javascript" src="js/jquery.js"></script> <!-- jquery is a library, javascript framework, it has a lot of things 

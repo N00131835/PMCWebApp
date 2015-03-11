@@ -182,7 +182,10 @@ require 'ensureUserLoggedIn.php'; //redirects to the index(login) if the user is
                     </table>
                 </form>
             <hr class="botline"> <!-- horizontal break line -->
-        </div>    
+        </div> 
+        
+        <!-- Footer Section -->
+        <?php require 'footer.php'; ?>
     
         <!-- JAVASCRIPT just before the closing of the body tag --> <!-- Why its at the bottom? SPEED and so that the body, content loads faster. -->
         <script type="text/javascript" src="js/jquery.js"></script> <!-- jquery is a library, javascript framework, it has a lot of things 

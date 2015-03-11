@@ -48,8 +48,10 @@ button[type="button"].registerNav {
 	margin-top: 100px;
 }
 
+/* ------------------ CUSTOM CSS FOR SEARCH SECTION. ------------------ */
+
 .search-section {
-	padding: 30px;
+    padding: 30px;
     height: 400px;
     text-align: center;
     background: #fff;
@@ -57,48 +59,49 @@ button[type="button"].registerNav {
 
 div.form-group {
 	margin-top: 40px;
-	width: 370px;
-	height: 70px;
 	display: inline;
 }
 
 select#sel1.form-control {
-	width: 100%;
-	margin: 10px;
+	margin-right: 10px;
 	height: 50px;
 }
 
-@media(min-width: 1200px){
-	select#sel1.form-control {
-		width: 100%;
-		margin: 10px;
-		height: 50px;
-	}
-}
-
-@media(max-width: 1200px){
-	select#sel1.form-control {
-		display: inline;
-		width: 70%;
-		float: left;
-		margin: 10px;
-		height: 50px;
-	}
-}
-
-@media(max-width: 992px) and (max-width: 768px){
-	select#sel1.form-control {
-		width: 30%;
-		margin: 10px;
-		height: 45px;
-	}
-}
 
 button[type="submit"].searchButton {
-	margin: 50px;
-	background-color: #b794d8;
-	color: #fff;
+    width: 150px;
+    margin: 50px;
+    margin-left: 60px;
+    background-color: #b794d8;
+    color: #fff;
 }
+
+@media(max-width: 400px){
+    button[type="submit"].searchButton {
+        margin-left: 50px;
+    }
+}
+
+@media(max-width: 375px){
+    button[type="submit"].searchButton {
+        margin-left: 40px;
+    }
+}
+
+@media(max-width: 330px){
+    button[type="submit"].searchButton {
+        margin-left: 25px;
+    }
+}
+
+@media(max-width: 275px){
+    button[type="submit"].searchButton {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+/* ------------------ CUSTOM CSS FOR QUOTE SECTION. ------------------ */
 
 .quote-section {
 	padding: 30px;
@@ -129,6 +132,8 @@ p.quoteSec {
 	    font-size: 14px;
 	}
 }
+
+/* ------------------ CUSTOM CSS FOR FEATURED SECTION. ------------------ */
 
 .featured-section {
 	padding: 60px;
@@ -282,6 +287,8 @@ p.quoteSec {
 	transform: scale(1);	
 }
 
+/* ------------------ CUSTOM CSS FOR SERVICES SECTION. ------------------ */
+
 .services-section {
 	padding: 60px;
     height: 400px;
@@ -304,9 +311,11 @@ button[type="submit"].servicesButton {
 	background-color: #79c9e2;
 }
 
+/* ------------------ CUSTOM CSS FOR FOOTER SECTION. ------------------ */
+
 .footer-section {
-	padding: 30px;
-    height: 150px;
+    padding: 50px;
+    height: 300px;
     text-align: center;
     background: #292d30;
     color: #c3c3c3;
