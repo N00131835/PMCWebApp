@@ -108,26 +108,6 @@ $statement = $gateway->getProperty();
                 <div class="row">
                     <div class="col-lg-12 col-sm-12">
 
-                        <img src="img/mobile-apps.png" class="quoteImg img-responsive pull-right">
-                        <h3>Lorem ipsum dolor sit amet.</h3>
-                        <p class="quoteSec pull-left col-lg-3 col-xs-3">
-                          We are a firm that is truly
-                          <br/>
-                          dedicated to providing
-                          <br/> only the highest 
-                          <br/>
-                          of quality of service,
-                          <br/>
-                          & exceptional industry
-                          <br/>
-                          knowledge and experience
-                          <br/>
-                          that our clients can genuinely
-                          <br/>
-                          trust with confidence.
-                        </p>
-
-
                     </div>
                 </div>
             </div>

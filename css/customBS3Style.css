@@ -163,6 +163,24 @@ p.quoteSec {
 	width: 100%;
 }
 
+@media(max-width: 500px){
+	.ch-grid {
+	    margin-left:-10px;;
+	}
+}
+
+@media(max-width: 420px){
+	.ch-grid {
+	    margin-left:-50px;;
+	}
+}
+
+@media(max-width: 375px){
+	.ch-grid {
+	    margin-left:-60px;;
+	}
+}
+
 .ch-grid:after,
 .ch-item:before {
 	content: '';
@@ -309,6 +327,7 @@ button[type="submit"].servicesButton {
 	margin: 40px;
 	font-size: 15px;
 	background-color: #79c9e2;
+        color:white;
 }
 
 @media(max-width: 525px){
