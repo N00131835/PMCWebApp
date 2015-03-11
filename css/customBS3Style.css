@@ -94,7 +94,7 @@ button[type="submit"].searchButton {
     }
 }
 
-@media(max-width: 275px){
+@media(max-width: 294px){
     button[type="submit"].searchButton {
         margin-left: 0;
         margin-top: 20px;

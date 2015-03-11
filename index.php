@@ -147,7 +147,7 @@ $statement = $gateway->getProperty();
                                 <h3>16 Brookfields,
                                     Lane Avenue,
                                     Ballsbridge</h3>
-                                <p><a href="#">see more</a></p>
+                                <p><?php echo '<a href="viewProperty.php?PropertyID=1">see more</a> ' ?></p>
                               </div>
                             </div>
                           </li>
@@ -157,7 +157,7 @@ $statement = $gateway->getProperty();
                                 <h3>23 Block D,
                                     Whitestone Ward,
                                     Cabra</h3>
-                                <p><a href="#">see more</a></p>
+                                <p><?php echo '<a href="viewProperty.php?PropertyID=2">see more</a> ' ?></p>
                               </div>
                             </div>
                           </li>
@@ -167,7 +167,7 @@ $statement = $gateway->getProperty();
                                 <h3>1623 Storybrooke,
                                     Park,
                                     Tallaght</h3>
-                                <p><a href="#">View on Dribbble</a></p>
+                                <p><?php echo '<a href="viewProperty.php?PropertyID=3">see more</a> ' ?></p>
                               </div>
                             </div>
                           </li>
@@ -177,7 +177,7 @@ $statement = $gateway->getProperty();
                                 <h3>34 Dale Field,
                                     New Park,
                                     Phibsboro</h3>
-                                <p><a href="#">see more</a></p>
+                                <p><?php echo '<a href="viewProperty.php?PropertyID=4">see more</a> ' ?></p>
                               </div>
                             </div>
                           </li>
@@ -187,7 +187,7 @@ $statement = $gateway->getProperty();
                                 <h3>70 Fairwall,
                                     Maine Avenue,
                                     Finglas</h3>
-                                <p><a href="#">see more</a></p>
+                                <p><?php echo '<a href="viewProperty.php?PropertyID=5">see more</a> ' ?></p>
                               </div>
                             </div>
                           </li>
@@ -197,7 +197,7 @@ $statement = $gateway->getProperty();
                                 <h3>56 Nightshade,
                                     Bane Road,
                                     Merrion</h3>
-                                <p><a href="#">see more</a></p>
+                                <p><?php echo '<a href="viewProperty.php?PropertyID=6">see more</a> ' ?></p>
                               </div>
                             </div>
                           </li>
