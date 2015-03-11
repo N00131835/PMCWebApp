@@ -25,7 +25,7 @@
     <section id="loginPage" class="login-section">
       <div class="login-container">
             <div class="row">
-                <div class="col-xs-offset-1 col-xs-11 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-6 ">
+                <div class="col-xs-offset-1 col-xs-11 col-sm-offset-2 col-sm-7 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4 ">
 
                     <form action="checkLogin.php" method="POST">
                         <div class="form-login">
