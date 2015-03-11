@@ -23,7 +23,7 @@
 
     <!-- Search Box Section -->
     <section id="loginPage" class="login-section">
-      <div class="login-container">
+      <div class="loginReg-container">
             <div class="row">
                 <div class="col-xs-offset-1 col-xs-11 col-sm-offset-2 col-sm-7 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4 ">
 

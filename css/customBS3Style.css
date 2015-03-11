@@ -38,10 +38,13 @@ nav.navtop {
 button[type="button"].registerNav {
 	margin-top: -13px;
 	padding: 10px;
-	background-color: #79c9e2;
-	color: #fff;
+        background-color: #87D1E8;
+        color: white;
 }
 
+.registerNav:hover{
+    background-color: #79c9e2;
+}
 
 /* Carousel class */
 .carousel {
@@ -438,7 +441,7 @@ button[type="submit"].servicesButton {
     background: #fff;
 }
 
-.login-container {
+.loginReg-container {
     margin-top: 200px;
     padding: 25px;
 }
@@ -529,6 +532,85 @@ h4 {
     .forgotPassOpt {
         margin-top: -27px;
         margin-right: -8px;
+    }
+}
+
+/* ------------------ CUSTOM CSS FOR REGISTER PAGE. ------------------ */
+
+.register-section {
+    padding: 30px;
+    height: 800px;
+    text-align: center;
+    background: #fff;
+}
+
+.loginReg-container {
+    margin-top: 200px;
+    padding: 25px;
+}
+
+.form-register {
+    background-color: #EDEDED;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color:#d2d2d2;
+    border-width: 5px;
+    box-shadow:0 1px 0 #cfcfcf;
+}
+
+@media(max-width: 335px){
+	.form-register {
+            margin-left: -65px;
+	}
+}
+
+@media(max-width: 355px){
+	.form-register {
+            margin-left: -20px;
+	}
+}
+
+@media(max-width: 375px){
+	.form-register {
+            width: 225px;
+	}
+}
+
+h4 { 
+    border:0 solid #fff; 
+    border-bottom-width:1px;
+    padding-bottom:10px;
+    text-align: center;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.regBtn {
+    width: 150px;
+    height: 50px;
+    background-color: #87D1E8;
+    border: none;
+}
+
+.regBtn:hover{
+    background-color: #79c9e2;
+}
+
+.wrapper {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+
+@media(max-width: 767px){
+    .wrapper {
+        margin-top: 23px;
     }
 }
 

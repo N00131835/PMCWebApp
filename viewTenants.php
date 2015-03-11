@@ -1,16 +1,16 @@
 <?php
 require_once 'Connection.php';
-require_once 'OwnerTableGateway.php';
+require_once 'TenantTableGateway.php';
 
 require 'ensureUserLoggedIn.php'; //redirects to the index(login) if the user is not logged in
 
 $connection = Connection::getInstance();
-$gateway = new OwnerTableGateway($connection);
+$gateway = new TenantTableGateway($connection);
 
-$statement = $gateway->getOwner();
+$statement = $gateway->getTenant();
 
 ?>
-<!-- This is where the ready made Owner List is placed. -->
+<!-- This is where the ready made Tenant List is placed. -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -48,19 +48,20 @@ $statement = $gateway->getOwner();
 
             <hr> <!-- horizontal break -->
 
-            <h3>Owner List</h3>
+            <h3>Tenant List</h3>
             
                 <table>
                     <thead>
                         <tr>
                             <th class="listPr">FirstName</th>
                             <th class="listPr">LastName</th>
-                            <th class="listPr">Address1</th>
-                            <th class="listPr">Address2</th>
-                            <th class="listPr">Town</th>
-                            <th class="listPr">County</th>
-                            <th class="listPr">MobileNum</th>
+                            <th class="listPr">DOB</th>
+                            <th class="listPr">Gender</th>
                             <th class="listPr">Email</th>
+                            <th class="listPr">MobileNum</th>
+                            <th class="listPr">PropertyID</th>
+                            <th class="listPr">StartLease</th>
+                            <th class="listPr">Duration</th>
                             <th class="listPr">Options</th>
                         </tr>
                     </thead>
@@ -72,16 +73,17 @@ $statement = $gateway->getOwner();
                             echo '<tr>';
                             echo '<td class="prEach1">' . $row['FirstName'] . '</td>';
                             echo '<td class="prEach3">' . $row['LastName'] . '</td>';
-                            echo '<td class="prEach1">' . $row['Address1'] . '</td>';
-                            echo '<td class="prEach1">' . $row['Address2'] . '</td>';
-                            echo '<td class="prEach3">' . $row['Town'] . '</td>';
-                            echo '<td class="prEach3">' . $row['County'] . '</td>';
-                            echo '<td class="prEach4">' . $row['MobileNum'] . '</td>';
+                            echo '<td class="prEach1">' . $row['DOB'] . '</td>';
+                            echo '<td class="prEach1">' . $row['Gender'] . '</td>';
                             echo '<td class="prEach3">' . $row['Email'] . '</td>';
+                            echo '<td class="prEach3">' . $row['MobileNum'] . '</td>';
+                            echo '<td class="prEach3">' . $row['PropertyID'] . '</td>';
+                            echo '<td class="prEach4">' . $row['StartLease'] . '</td>';
+                            echo '<td class="prEach4">' . $row['Duration'] . '</td>';
                             echo '<td class="prEach4 optlinks">'
-                            . '<a href="viewOwner.php?OwnerID='.$row['OwnerID'].'">View</a> '
-                            . '<a href="editOwnerForm.php?OwnerID='.$row['OwnerID'].'">Edit</a> '
-                            . '<a class="deleteOwner" href="deleteOwner.php?OwnerID='.$row['OwnerID'].'">Delete</a> '
+                            . '<a href="viewTenant.php?TenantID='.$row['TenantID'].'">View</a> '
+                            . '<a href="editTenantForm.php?TenantID='.$row['TenantID'].'">Edit</a> '
+                            . '<a class="deleteTenant" href="deleteTenant.php?TenantID='.$row['TenantID'].'">Delete</a> '
                             . '</td>';
                             echo '</tr>';
 
@@ -89,7 +91,7 @@ $statement = $gateway->getOwner();
                         }
                         ?>
                     </tbody>
-                    <!-- This is the get methods of the properties, where the output of the user put in the Owner form will be shown -->
+                    <!-- This is the get methods of the properties, where the output of the user put in the Tenant form will be shown -->
                 </table>
             <hr class="botline">
             <a href="createPropertyForm.php">
