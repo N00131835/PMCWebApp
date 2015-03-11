@@ -17,7 +17,7 @@ function validateRegistration(form) {
         errors["password"] = "Password cannot be empty\n";
     }
     if (password2 === "") {
-        errors["password2"] = "Password2 cannot be empty\n";
+        errors["password2"] = "Confirm Password cannot be empty\n";
     }
     else if (password !== password2) {
         errors["password2"] = "Passwords must match\n";

@@ -1,15 +1,13 @@
 body{
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
     width: 1200px;
     margin: auto;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
 }
 
 h1 {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     margin-top: 40px;
     height: 60px;
 }
@@ -46,7 +44,6 @@ th.listPr {
     text-align: left;
     border: 1px solid #888;
     font-size: 18px;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     color: #4f4e4c;
 }
 
@@ -59,21 +56,18 @@ td.vedHeaders {
 td.prEach1,td.prEach2 {
     width:200px; 
     text-align: left;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     border-bottom: 1px solid #ccc;
 }
 
 td.prEach3,td.prEach5 {
     width:150px; 
     text-align: left;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     border-bottom: 1px solid #ccc;
 }
 
 td.prEach4 {
     width:100px; 
     text-align: left;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     border-bottom: 1px solid #ccc;
 }
 
@@ -83,7 +77,6 @@ tr.field {
     padding: 5px 20px;
     width: 350px;
     color: #4f4e4c;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     font-size: 13px;
     margin-top: 25px;
     margin-bottom: 10px;
@@ -92,7 +85,6 @@ tr.field {
 td.fieldForm {
     font-size: 14px;
     font-weight:bold;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
 }
 
 td.optlinks{
@@ -100,7 +92,6 @@ td.optlinks{
     text-decoration: none;
     color: #000;
     font-size: 14px;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     margin-left: -30px;
 }
 .optlinks a{
@@ -109,14 +100,12 @@ td.optlinks{
     color: #000;
     font-size: 14px;
     border-bottom: 1px solid #ccc;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
 }
 
 .optlinks a:hover {
     background-color: #ccc;
     color: #000;
     font-size: 14px;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
 }
 
 .menu {
@@ -131,7 +120,6 @@ td.optlinks{
 }
 
 input[type="text"] {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     width:300px; 
     height:30px; 
     margin-top:3px; 
@@ -140,7 +128,6 @@ input[type="text"] {
 }
 
 input[type="number"] {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     width:300px; 
     height:30px; 
     margin-top:3px; 
@@ -149,7 +136,7 @@ input[type="number"] {
 }
 
 input[type="submit"] {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
     width:305px; 
     height:35px;
     margin-left:20px;
@@ -157,7 +144,6 @@ input[type="submit"] {
 }
 
 input[type="password"] {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     width:300px; 
     height:30px; 
     margin-top:3px; 
@@ -166,14 +152,12 @@ input[type="password"] {
 }
 
 input[type="button"] {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; 
     width:140px; 
     height:35px; 
     margin-left:20px; 
 }
 
 #loginbtn {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; 
     width:140px; 
     height:35px; 
     margin-left:20px; 
@@ -184,7 +168,6 @@ input[type="button"] {
 }
 
 button[type="submit"] {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     width:160px; 
     height:40px; 
     margin-top:3px; 
@@ -248,17 +231,17 @@ button[type="submit"] {
 }
 
 /* body{
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
 }
 
 .container {
     width: 1250px;
     margin: auto;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
 }
 
 h1 {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
     margin-top: 40px;
     height: 60px;
 }
@@ -291,7 +274,7 @@ th.listPr {
     text-align: left;
     border: 1px solid #888;
     font-size: 18px;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
     color: #4f4e4c;
 }
 
@@ -303,21 +286,21 @@ td.vedHeaders {
 td.prEach1,td.prEach2 {
     width:200px; 
     text-align: left;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
     border-bottom: 1px solid #ccc;
 }
 
 td.prEach3,td.prEach5 {
     width:150px; 
     text-align: left;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
     border-bottom: 1px solid #ccc;
 }
 
 td.prEach4 {
     width:100px; 
     text-align: left;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
     border-bottom: 1px solid #ccc;
 }
 
@@ -327,7 +310,7 @@ tr.field {
     padding: 5px 20px;
     width: 350px;
     color: #4f4e4c;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
     font-size: 13px;
     margin-top: 25px;
     margin-bottom: 10px;
@@ -336,7 +319,7 @@ tr.field {
 td.fieldForm {
     font-size: 14px;
     font-weight:bold;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
 }
 
 td.optlinks{
@@ -344,7 +327,7 @@ td.optlinks{
     text-decoration: none;
     color: #000;
     font-size: 14px;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
     margin-left: -30px;
 }
 .optlinks a{
@@ -353,14 +336,14 @@ td.optlinks{
     color: #000;
     font-size: 14px;
     border-bottom: 1px solid #ccc;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
 }
 
 .optlinks a:hover {
     background-color: #ccc;
     color: #000;
     font-size: 14px;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
 }
 
 .menu {
@@ -375,7 +358,7 @@ td.optlinks{
 }
 
 input[type="text"] {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
     width:300px; 
     height:30px; 
     margin-top:3px; 
@@ -384,7 +367,7 @@ input[type="text"] {
 }
 
 input[type="number"] {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
     width:300px; 
     height:30px; 
     margin-top:3px; 
@@ -393,7 +376,7 @@ input[type="number"] {
 }
 
 input[type="submit"] {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
     width:305px; 
     height:35px;
     margin-left:20px;
@@ -401,7 +384,7 @@ input[type="submit"] {
 }
 
 input[type="password"] {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
     width:300px; 
     height:30px; 
     margin-top:3px; 
@@ -410,14 +393,14 @@ input[type="password"] {
 }
 
 input[type="button"] {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; 
+     
     width:140px; 
     height:35px; 
     margin-left:20px; 
 }
 
 #loginbtn {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; 
+     
     width:140px; 
     height:35px; 
     margin-left:20px; 
@@ -428,7 +411,7 @@ input[type="button"] {
 }
 
 #deleteSub {
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
     width:150px; 
     height:40px; 
     margin-top:3px; 
@@ -438,7 +421,7 @@ input[type="button"] {
 }
 
 #editViewSub {   
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    
     width:140px; 
     height:40px; 
     margin-top:3px; 

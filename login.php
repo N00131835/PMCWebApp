@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title> Property Management Company</title>
+        <!-- meta tags  -->
+        <meta charset="utf-8"> <!-- This is so the browers can read and display characters -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- This means that the browser will (probably) render the width of the page at the width of its own screen.
+        http://css-tricks.com/snippets/html/responsive-meta-tag/ -->
+        
+        <!-- Favicon and Title of the Site -->
+        <link rel="icon" href="img/dr-icon.png">
+        <title> Dublin Rentals </title> <!--  -->
+
+        <!-- Bootstrap CSS and JS -->
+        <script type="text/javascript" src="js/respond.js"></script> <!-- This is what we downloaded from github, we need to hav this is the head, the page wont load or do the responsive thing without this.  -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> <!--This the bootstrap framework stylesheet. CSS that is used for mobiles, so that its faster to load. -->
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="css/customBS3Style.css"> 
         <link rel="stylesheet" type="text/css" href="css/pmcStyle.css">
+        
+        <!-- Custom font -->
+        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     </head>
+    
     <body>
         <div class="container">
                 <?php require 'toolbar.php'; ?>
