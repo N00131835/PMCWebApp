@@ -436,14 +436,10 @@ button[type="submit"].servicesButton {
 
 .login-section {
     padding: 30px;
-    height: 800px;
+    height: 1000px;
     text-align: center;
     background: #fff;
-}
-
-.loginReg-container {
-    margin-top: 200px;
-    padding: 25px;
+    background-image: url(../img/loginReg/bg-4.jpg);
 }
 
 .form-login {
@@ -545,7 +541,7 @@ h4 {
 }
 
 .loginReg-container {
-    margin-top: 200px;
+    margin-top: 280px;
     padding: 25px;
 }
 
