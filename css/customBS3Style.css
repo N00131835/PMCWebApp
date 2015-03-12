@@ -439,7 +439,7 @@ button[type="submit"].servicesButton {
     height: 1000px;
     text-align: center;
     background: #fff;
-    background-image: url(../img/loginReg/bg-4.jpg);
+    background-image: url(../img/loginReg/bg-2.jpg);
 }
 
 .form-login {
@@ -535,7 +535,7 @@ h4 {
 
 .register-section {
     padding: 30px;
-    height: 800px;
+    height: 1000px;
     text-align: center;
     background: #fff;
 }
