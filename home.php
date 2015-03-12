@@ -48,8 +48,9 @@ $statement = $gateway->getProperty();
         <section id="dashProf" class="dashProf-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-sm-12">
-
+                    <div class="dashProfInfo col-lg-12 col-sm-12">
+                        <img src="img/userprofPic.jpg" class="img-rounded">
+                        <!--<textarea class="profTextArea form-control pull-right" rows="9"></textarea>-->
                     </div>
                 </div>
             </div>
@@ -60,7 +61,7 @@ $statement = $gateway->getProperty();
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-sm-12">
-                        <h2>Tables</h2>
+                        <h2 class="mainMenuTitle">Tables</h2>
                         <ul class="pull-left">
                             <li>
                                 <a href="viewProperties.php"><img src="img/tableimgs/propertylist.png"></a>

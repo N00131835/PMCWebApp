@@ -43,59 +43,75 @@ $statement = $gateway->getOwner();
             and make my edits there, instead of having to edit it in a lot of pages.  -->
         <?php require 'header.php'; ?>
         
-        <div class="custom-container container">
-            <?php require 'mainMenu.php'; ?>
-
-            <hr> <!-- horizontal break -->
-
-            <h3>Owner List</h3>
-            
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="listPr">FirstName</th>
-                            <th class="listPr">LastName</th>
-                            <th class="listPr">Address1</th>
-                            <th class="listPr">Address2</th>
-                            <th class="listPr">Town</th>
-                            <th class="listPr">County</th>
-                            <th class="listPr">MobileNum</th>
-                            <th class="listPr">Email</th>
-                            <th class="listPr">Options</th>
-                        </tr>
-                    </thead>
-                    <!-- This is the category fields on the list. -->
-                    <tbody>
-                        <?php
-                        $row = $statement->fetch(PDO::FETCH_ASSOC);
-                        while ($row)  {
-                            echo '<tr>';
-                            echo '<td class="prEach1">' . $row['FirstName'] . '</td>';
-                            echo '<td class="prEach3">' . $row['LastName'] . '</td>';
-                            echo '<td class="prEach1">' . $row['Address1'] . '</td>';
-                            echo '<td class="prEach1">' . $row['Address2'] . '</td>';
-                            echo '<td class="prEach3">' . $row['Town'] . '</td>';
-                            echo '<td class="prEach3">' . $row['County'] . '</td>';
-                            echo '<td class="prEach4">' . $row['MobileNum'] . '</td>';
-                            echo '<td class="prEach3">' . $row['Email'] . '</td>';
-                            echo '<td class="prEach4 optlinks">'
-                            . '<a href="viewOwner.php?OwnerID='.$row['OwnerID'].'">View</a> '
-                            . '<a href="editOwnerForm.php?OwnerID='.$row['OwnerID'].'">Edit</a> '
-                            . '<a class="deleteOwner" href="deleteOwner.php?OwnerID='.$row['OwnerID'].'">Delete</a> '
-                            . '</td>';
-                            echo '</tr>';
-
-                            $row = $statement->fetch(PDO::FETCH_ASSOC);
-                        }
-                        ?>
-                    </tbody>
-                    <!-- This is the get methods of the properties, where the output of the user put in the Owner form will be shown -->
-                </table>
-            <hr class="botline">
-            <a href="createPropertyForm.php">
-                <input id="createPro" type="submit" value="Create Property" name="createProperty"/></a>
-        </div>
+        <!-- menuList Section -->
+        <section id="mainMenuList" class="menuList-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                           <?php require 'mainMenu.php'; ?>
+                    </div>
+                </div>
+            </div>
+        </section>
         
+        <!-- menuList Section -->
+        <section id="ownerLists" class="ownerList-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                        <h3>
+                            Owner List
+                            
+                            <a href="createPropertyForm.php" class="pull-right">
+                                <input id="createPro" type="submit" value="Create Property" name="createProperty"/>
+                            </a>
+                        </h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="listPr">FirstName</th>
+                                    <th class="listPr">LastName</th>
+                                    <th class="listPr">Address1</th>
+                                    <th class="listPr">Address2</th>
+                                    <th class="listPr">Town</th>
+                                    <th class="listPr">County</th>
+                                    <th class="listPr">MobileNum</th>
+                                    <th class="listPr">Email</th>
+                                    <th class="listPr">Options</th>
+                                </tr>
+                            </thead>
+                            <!-- This is the category fields on the list. -->
+                            <tbody>
+                                <?php
+                                $row = $statement->fetch(PDO::FETCH_ASSOC);
+                                while ($row)  {
+                                    echo '<tr>';
+                                    echo '<td class="prEach1">' . $row['FirstName'] . '</td>';
+                                    echo '<td class="prEach3">' . $row['LastName'] . '</td>';
+                                    echo '<td class="prEach1">' . $row['Address1'] . '</td>';
+                                    echo '<td class="prEach1">' . $row['Address2'] . '</td>';
+                                    echo '<td class="prEach3">' . $row['Town'] . '</td>';
+                                    echo '<td class="prEach3">' . $row['County'] . '</td>';
+                                    echo '<td class="prEach4">' . $row['MobileNum'] . '</td>';
+                                    echo '<td class="prEach3">' . $row['Email'] . '</td>';
+                                    echo '<td class="prEach4 optlinks">'
+                                    . '<a href="viewOwner.php?OwnerID='.$row['OwnerID'].'">View</a> '
+                                    . '<a href="editOwnerForm.php?OwnerID='.$row['OwnerID'].'">Edit</a> '
+                                    . '<a class="deleteOwner" href="deleteOwner.php?OwnerID='.$row['OwnerID'].'">Delete</a> '
+                                    . '</td>';
+                                    echo '</tr>';
+
+                                    $row = $statement->fetch(PDO::FETCH_ASSOC);
+                                }
+                                ?>
+                            </tbody>
+                            <!-- This is the get methods of the properties, where the output of the user put in the Owner form will be shown -->
+                        </table>
+                        <hr class="botline">
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Footer Section -->
         <?php require 'footer.php'; ?>
     

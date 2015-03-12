@@ -6,7 +6,7 @@ if ($id == "") {
 if (isset($_SESSION['username'])) {
     echo '<div class="collapse navbar-collapse" id="myNavbar">';
     echo '<ul class="nav navbar-nav navbar-right">';
-    echo '<li><a href="home.php">Home</a></li>';
+    echo '<li><a href="home.php">Dashboard</a></li>';
     echo '<li><a href="#">To Rent</a></li>';
     echo '<li><a href="#">Short Term</a></li>';
     echo '<li><a href="#">Contact Us</a></li>';

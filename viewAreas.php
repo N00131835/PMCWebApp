@@ -49,41 +49,59 @@ $area = $areaGateway->getArea();
             and make my edits there, instead of having to edit it in a lot of pages.  -->
         <?php require 'header.php'; ?>
         
-        <div class="custom-container container">
-            <?php require 'mainMenu.php'; ?>
-
-            <hr> <!-- horizontal break -->
-                <table>
-                    <thead>
-                    <!-- This is the category fields on the list. -->
-                        <td class="vedHeaders">Area Name</td>
-                        <td class="vedHeaders">Facilities</td>
-                    </thead>
-                    <tbody>
-                    <h3>Viewing a Area</h3>
-                        <?php
-                        $row = $area->fetch(PDO::FETCH_ASSOC);
-                        while ($row) {
-                            
-                            echo '<tr>';
-                            echo '<td>' . $row['AreaName'] . '</td>';
-                            echo '<td>' . $row['Facilities'] . '</td>';
-                            echo '</tr>';
-                            
-                            $row = $area->fetch(PDO::FETCH_ASSOC);
-                        }
-                        ?>
-                    </tbody>
-                    <!-- This is the get methods of the properties, where the output of the user put in the Property form will be shown -->
-                </table>
+        <!-- menuList Section -->
+        <section id="mainMenuList" class="menuList-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                           <?php require 'mainMenu.php'; ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- areaList Section -->
+        <section id="areaLists" class="areaList-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                        
+                        <h3>
+                            Area List
+                        </h3>
             
-                <!--<div class="optlinksBtm" >
-                    <a class="editProperty" href="editPropertyForm.php?PropertyID=<?php echo $row['PropertyID']; ?>">
-                        Edit this Property</a>
-                    <a class="delLink deleteProperty" href="deleteProperty.php?PropertyID=<?php echo $row['PropertyID']; ?>">Delete this Property</a>
-                </div> --> <!-- These are buttons that will link to Edit and/or Delete the property -->
-            <hr class="botlineView"> <!-- horizontal break --> 
-        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="listPrAreaName">Area Name</th>
+                                    <th class="listPrAreaFac">Facilities</th>
+                                    <th class="listPr">Options</th>
+                                </tr>
+                            </thead>
+                            <!-- This is the category fields on the list. -->
+                            <tbody>
+                                 <?php
+                                $row = $area->fetch(PDO::FETCH_ASSOC);
+                                while ($row) {
+
+                                    echo '<tr>';
+                                    echo '<td class="prEach3">' . $row['AreaName'] . '</td>';
+                                    echo '<td class="prEach4">' . $row['Facilities'] . '</td>';
+                                    echo '<td class="prEach4 optlinks">'
+                                    . '<a href="viewArea.php?AreaID='.$row['AreaID'].'">View</a> '
+                                    . '</td>';
+                                    echo '</tr>';
+
+                                    $row = $area->fetch(PDO::FETCH_ASSOC);
+                                }
+                                ?>
+                            </tbody>
+                            <!-- This is the get methods of the properties, where the output of the user put in the Property form will be shown -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!-- Footer Section -->
         <?php require 'footer.php'; ?>

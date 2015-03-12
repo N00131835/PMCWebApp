@@ -47,6 +47,22 @@ th.listPr {
     color: #4f4e4c;
 }
 
+th.listPrAreaName {
+    width:180px; 
+    text-align: left;
+    border: 1px solid #888;
+    font-size: 18px;
+    color: #4f4e4c;
+}
+
+th.listPrAreaFac {
+    width:150px; 
+    text-align: left;
+    border: 1px solid #888;
+    font-size: 18px;
+    color: #4f4e4c;
+}
+
 td.vedHeaders {
     font-weight: bold;
     width: 130px;
@@ -184,6 +200,7 @@ button[type="submit"] {
 }
 
 #createPro {
+    margin-top: -130px;
     margin-left: -1px;
     font-size: 15px;
     height: 40px;

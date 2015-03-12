@@ -634,9 +634,83 @@ h4 {
 
 .dashTableMenu-section img{
     border: 1px solid #ededed;
-    border-radius: 9px;
+    border-radius: 10px;
     width: 400px;
     height: 350px;
+}
+
+.dashProfInfo{
+    margin-top: 160px;
+    padding-left: 40px;
+}
+
+.dashProfInfo img{
+    width: 230px;
+    height: 200px;
+}
+
+.profTextArea {
+    width: 500px;
+}
+
+/* ------------------ CUSTOM CSS FOR MAINMENU PHP PAGE. ------------------ */
+.menuList-section{
+    margin-top: 100px;
+    padding: 50px;
+    height: 500px;
+    background: #f0f0f0;
+}
+
+.mainMenu {
+    margin-top: 50px;
+}
+
+.mainMenuTitle {
+    padding-left: 40px;
+    margin-bottom: 30px;
+}
+
+.menuList ul{
+    list-style-type: none;
+}
+
+.menuList li {
+    display: inline;
+}
+
+.menuList img {
+    border: 1px solid #fff;
+    width: 250px;
+    height: 230px;
+    margin-right: 20px;
+}
+
+/* ------------------ CUSTOM CSS FOR PROPERTYLIST PHP PAGE. ------------------ */
+.propertyList-section{
+    padding: 30px;
+    height: 800px;
+    background: #fff;
+}
+
+/* ------------------ CUSTOM CSS FOR AREALIST PHP PAGE. ------------------ */
+.areaList-section{
+    padding: 30px;
+    height: 800px;
+    background: #fff;
+}
+
+/* ------------------ CUSTOM CSS FOR OWNERLIST PHP PAGE. ------------------ */
+.ownerList-section{
+    padding: 30px;
+    height: 800px;
+    background: #fff;
+}
+
+/* ------------------ CUSTOM CSS FOR TENANTLIST PHP PAGE. ------------------ */
+.tenantList-section{
+    padding: 30px;
+    height: 800px;
+    background: #fff;
 }
 
 /* ------------------ CUSTOM CSS FOR. ------------------ */

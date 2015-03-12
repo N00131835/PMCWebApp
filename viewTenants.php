@@ -43,60 +43,77 @@ $statement = $gateway->getTenant();
             and make my edits there, instead of having to edit it in a lot of pages.  -->
         <?php require 'header.php'; ?>
         
-        <div class="custom-container container">
-            <?php require 'mainMenu.php'; ?>
+        <!-- menuList Section -->
+        <section id="mainMenuList" class="menuList-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                           <?php require 'mainMenu.php'; ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- menuList Section -->
+        <section id="tenantLists" class="tenantList-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                        <h3>
+                            Tenant List
+                            
+                            <a href="createPropertyForm.php" class="pull-right">
+                                <input id="createPro" type="submit" value="Create Property" name="createProperty"/>
+                            </a>
+                        </h3>
 
-            <hr> <!-- horizontal break -->
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="listPr">FirstName</th>
+                                    <th class="listPr">LastName</th>
+                                    <th class="listPr">DOB</th>
+                                    <th class="listPr">Gender</th>
+                                    <th class="listPr">Email</th>
+                                    <th class="listPr">MobileNum</th>
+                                    <th class="listPr">PropertyID</th>
+                                    <th class="listPr">StartLease</th>
+                                    <th class="listPr">Duration</th>
+                                    <th class="listPr">Options</th>
+                                </tr>
+                            </thead>
+                            <!-- This is the category fields on the list. -->
+                            <tbody>
+                                <?php
+                                $row = $statement->fetch(PDO::FETCH_ASSOC);
+                                while ($row)  {
+                                    echo '<tr>';
+                                    echo '<td class="prEach1">' . $row['FirstName'] . '</td>';
+                                    echo '<td class="prEach3">' . $row['LastName'] . '</td>';
+                                    echo '<td class="prEach1">' . $row['DOB'] . '</td>';
+                                    echo '<td class="prEach1">' . $row['Gender'] . '</td>';
+                                    echo '<td class="prEach3">' . $row['Email'] . '</td>';
+                                    echo '<td class="prEach3">' . $row['MobileNum'] . '</td>';
+                                    echo '<td class="prEach3">' . $row['PropertyID'] . '</td>';
+                                    echo '<td class="prEach4">' . $row['StartLease'] . '</td>';
+                                    echo '<td class="prEach4">' . $row['Duration'] . '</td>';
+                                    echo '<td class="prEach4 optlinks">'
+                                    . '<a href="viewTenant.php?TenantID='.$row['TenantID'].'">View</a> '
+                                    . '<a href="editTenantForm.php?TenantID='.$row['TenantID'].'">Edit</a> '
+                                    . '<a class="deleteTenant" href="deleteTenant.php?TenantID='.$row['TenantID'].'">Delete</a> '
+                                    . '</td>';
+                                    echo '</tr>';
 
-            <h3>Tenant List</h3>
-            
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="listPr">FirstName</th>
-                            <th class="listPr">LastName</th>
-                            <th class="listPr">DOB</th>
-                            <th class="listPr">Gender</th>
-                            <th class="listPr">Email</th>
-                            <th class="listPr">MobileNum</th>
-                            <th class="listPr">PropertyID</th>
-                            <th class="listPr">StartLease</th>
-                            <th class="listPr">Duration</th>
-                            <th class="listPr">Options</th>
-                        </tr>
-                    </thead>
-                    <!-- This is the category fields on the list. -->
-                    <tbody>
-                        <?php
-                        $row = $statement->fetch(PDO::FETCH_ASSOC);
-                        while ($row)  {
-                            echo '<tr>';
-                            echo '<td class="prEach1">' . $row['FirstName'] . '</td>';
-                            echo '<td class="prEach3">' . $row['LastName'] . '</td>';
-                            echo '<td class="prEach1">' . $row['DOB'] . '</td>';
-                            echo '<td class="prEach1">' . $row['Gender'] . '</td>';
-                            echo '<td class="prEach3">' . $row['Email'] . '</td>';
-                            echo '<td class="prEach3">' . $row['MobileNum'] . '</td>';
-                            echo '<td class="prEach3">' . $row['PropertyID'] . '</td>';
-                            echo '<td class="prEach4">' . $row['StartLease'] . '</td>';
-                            echo '<td class="prEach4">' . $row['Duration'] . '</td>';
-                            echo '<td class="prEach4 optlinks">'
-                            . '<a href="viewTenant.php?TenantID='.$row['TenantID'].'">View</a> '
-                            . '<a href="editTenantForm.php?TenantID='.$row['TenantID'].'">Edit</a> '
-                            . '<a class="deleteTenant" href="deleteTenant.php?TenantID='.$row['TenantID'].'">Delete</a> '
-                            . '</td>';
-                            echo '</tr>';
-
-                            $row = $statement->fetch(PDO::FETCH_ASSOC);
-                        }
-                        ?>
-                    </tbody>
-                    <!-- This is the get methods of the properties, where the output of the user put in the Tenant form will be shown -->
-                </table>
-            <hr class="botline">
-            <a href="createPropertyForm.php">
-                <input id="createPro" type="submit" value="Create Property" name="createProperty"/></a>
-        </div>
+                                    $row = $statement->fetch(PDO::FETCH_ASSOC);
+                                }
+                                ?>
+                            </tbody>
+                            <!-- This is the get methods of the properties, where the output of the user put in the Tenant form will be shown -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!-- Footer Section -->
         <?php require 'footer.php'; ?>
