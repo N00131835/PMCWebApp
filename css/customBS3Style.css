@@ -109,7 +109,7 @@ button[type="submit"].searchButton {
 .quote-section {
 	padding: 30px;
     height: 500px;
-    background: #f0f0f0;
+    background: #dedede;
 }
 
 @media(max-width: 1200px) and (min-width: 769px){
@@ -314,7 +314,7 @@ p.quoteSec {
 	padding: 60px;
     height: 400px;
     text-align: center;
-    background: #f0f0f0;
+    background: #dedede;
 }
 
 .services-section p {
@@ -615,7 +615,7 @@ h4 {
 .dashProf-section {
     padding: 30px;
     height: 500px;
-    background: #f0f0f0;
+    background: #dedede;
 }
 
 .dashTableMenu-section {
@@ -633,7 +633,7 @@ h4 {
 }
 
 .dashTableMenu-section img{
-    border: 1px solid #ededed;
+    border: 2px solid #d1d1d1;
     border-radius: 10px;
     width: 400px;
     height: 350px;
@@ -658,7 +658,7 @@ h4 {
     margin-top: 100px;
     padding: 50px;
     height: 500px;
-    background: #f0f0f0;
+    background: #dedede;
 }
 
 .mainMenu {

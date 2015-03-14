@@ -68,9 +68,6 @@ $statement = $gateway->getProperty();
                         </a>
                         </h3>
                         
-                        
-                        
-            
                         <table>
                             <thead>
                                 <tr>
@@ -100,9 +97,9 @@ $statement = $gateway->getProperty();
                                     echo '<td class="prEach4">' . $row['Bedrooms'] . '</td>';
                                     echo '<td class="prEach3">' . $row['AreaName'] . '</td>';
                                     echo '<td class="prEach4 optlinks">'
-                                    . '<a href="viewProperty.php?PropertyID='.$row['PropertyID'].'">View</a> '
-                                    . '<a href="editPropertyForm.php?PropertyID='.$row['PropertyID'].'">Edit</a> '
-                                    . '<a class="deleteProperty" href="deleteProperty.php?PropertyID='.$row['PropertyID'].'">Delete</a> '
+                                    . '<a href="viewProperty.php?PropertyID='.$row['PropertyID'].'"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a> '
+                                    . '<a href="editPropertyForm.php?PropertyID='.$row['PropertyID'].'"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> '
+                                    . '<a class="deleteProperty" href="deleteProperty.php?PropertyID='.$row['PropertyID'].'"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a> '
                                     . '</td>';
                                     echo '</tr>';
 
