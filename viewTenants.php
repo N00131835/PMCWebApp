@@ -72,13 +72,8 @@ $statement = $gateway->getTenant();
                                 <tr>
                                     <th class="listPr">FirstName</th>
                                     <th class="listPr">LastName</th>
-                                    <th class="listPr">DOB</th>
-                                    <th class="listPr">Gender</th>
                                     <th class="listPr">Email</th>
                                     <th class="listPr">MobileNum</th>
-                                    <th class="listPr">PropertyID</th>
-                                    <th class="listPr">StartLease</th>
-                                    <th class="listPr">Duration</th>
                                     <th class="listPr">Options</th>
                                 </tr>
                             </thead>
@@ -90,13 +85,8 @@ $statement = $gateway->getTenant();
                                     echo '<tr>';
                                     echo '<td class="prEach1">' . $row['FirstName'] . '</td>';
                                     echo '<td class="prEach3">' . $row['LastName'] . '</td>';
-                                    echo '<td class="prEach1">' . $row['DOB'] . '</td>';
-                                    echo '<td class="prEach1">' . $row['Gender'] . '</td>';
                                     echo '<td class="prEach3">' . $row['Email'] . '</td>';
                                     echo '<td class="prEach3">' . $row['MobileNum'] . '</td>';
-                                    echo '<td class="prEach3">' . $row['PropertyID'] . '</td>';
-                                    echo '<td class="prEach4">' . $row['StartLease'] . '</td>';
-                                    echo '<td class="prEach4">' . $row['Duration'] . '</td>';
                                     echo '<td class="prEach4 optlinks">'
                                     . '<a href="viewTenant.php?TenantID='.$row['TenantID'].'">View</a> '
                                     . '<a href="editTenantForm.php?TenantID='.$row['TenantID'].'">Edit</a> '
