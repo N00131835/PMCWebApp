@@ -19,10 +19,6 @@
                     </ul>
                   </div>
                     
-                  <div class="contactFormFooter">
-                      <li><a href="#">Contact Us</a></li>
-                  </div>
-                    
                   <div class="socialFooter col-lg-4 pull-right">
                     <div class="loginRegFooter navbar-right text-right">
                         <ul>

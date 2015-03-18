@@ -9,7 +9,7 @@ if (isset($_SESSION['username'])) {
     echo '<li><a href="home.php">Dashboard</a></li>';
     echo '<li><a href="#">To Rent</a></li>';
     echo '<li><a href="#">Short Term</a></li>';
-    echo '<li><a href="#">Contact Us</a></li>';
+    echo '<li><a href="#contactForm" data-toggle="modal">Contact Us</a></li>';
     echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
     echo '</ul>';
     echo '</div>';
@@ -20,7 +20,7 @@ else {
     echo '<li><a href="index.php">Home</a></li>';
     echo '<li><a href="#">To Rent</a></li>';
     echo '<li><a href="#">Short Term</a></li>';
-    echo '<li><a href="#">Contact Us</a></li>';
+    echo '<li><a href="#contactForm" data-toggle="modal">Contact Us</a></li>';
     echo '<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
     echo '<li><a href="register.php"><button type="button" class="registerNav btn btn-default">Register</button></a></li>';
     echo '</ul>';
