@@ -102,36 +102,44 @@ $statement = $gateway->getProperty();
           </div>
         </section>
 
-        <!-- Quote Section -->
-        <section id="quotePic" class="quote-section">
+        <!-- Services Section -->
+        <section id="services" class="services-section">
             <div class="container">
-                <h2 class="text-center">
-                    Lovely homes in all parts of Dublin.
-                </h2>
-                <p class="lead text-center">
-                    Dublin Rentals has been apart of the most successful home owners in Dublin.  
-                </p>
                 <div class="row">
-                    <div class="col-sm-4">
-                        <img src="img/tableimgs/arealist.jpg" alt="Responsive across devices" class="img-responsive">
+                    <div class="col-lg-12">
+                        
+                        <p>
+                          Are you looking for a new apartment or want to buy a house?
+                          <br/> 
+                          Do you want to sell your property or find a roommate?
+                          <br/> 
+                          Dublin Rentals has 9 put of 10 properties available
+                          <br/> 
+                          in all areas of Dublin.
+                        </p>
+                        
+                        <div class="clearfix"></div>
 
-                        <h3>Reliable.</h3>
+                        <div class="servicesImgs row col-lg-offset-1">
+                            <div class="col-sm-4 text-center">
+                                <img src="img/tableimgs/ownerlist.jpg" class="img-responsive">
 
-                        <p>Bootstrap easily and efficiently scales your websites and applications with a single code base, from phones to tablets to desktops with CSS media queries.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="img/tableimgs/arealist.jpg" alt="Responsive across devices" class="img-responsive">
+                                <h4 class="text-center">Reliable.</h4>
+                            </div>
+                            <div class="col-sm-4 center-block">
+                                <img src="img/tableimgs/tenantlist.jpg" class="img-responsive">
 
-                        <h3>Comfortable.</h3>
+                                <h4>Comfortable.</h4>
+                            </div>
+                            <div class="col-sm-4 center-block">
+                                <img src="img/tableimgs/arealist.jpg" class="img-responsive">
 
-                        <p>Bootstrap easily and efficiently scales your websites and applications with a single code base, from phones to tablets to desktops with CSS media queries.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="img/tableimgs/arealist.jpg" alt="Responsive across devices" class="img-responsive">
-
-                        <h3>Beautiful.</h3>
-
-                        <p>Bootstrap easily and efficiently scales your websites and applications with a single code base, from phones to tablets to desktops with CSS media queries.</p>
+                                <h4>Accessible.</h4>
+                            </div>
+                        </div>
+                        
+                        <a href="register.php"><button type="submit" class="servicesButton btn btn-default btn-lg">Get Started</button></a>
+                    
                     </div>
                 </div>
             </div>
@@ -211,24 +219,11 @@ $statement = $gateway->getProperty();
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="services-section">
+        <!-- Quote Section -->
+        <section id="quotePic" class="quote-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        
-                        <p>
-                          Are you looking for a new apartment or want to buy a house?
-                          <br/> 
-                          Do you want to sell your property or find a roommate?
-                          <br/> 
-                          Dublin Rentals has 9 put of 10 properties available
-                          <br/> 
-                          in all areas of Dublin.
-                        </p>
-
-                        <a href="register.php"><button type="submit" class="servicesButton btn btn-default btn-lg">Get Started</button></a>
-                    </div>
+                    
                 </div>
             </div>
         </section>

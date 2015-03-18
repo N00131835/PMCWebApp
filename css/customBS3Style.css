@@ -294,8 +294,8 @@ p.quoteSec {
 /* ------------------ CUSTOM CSS FOR SERVICES SECTION. ------------------ */
 
 .services-section {
-	padding: 60px;
-    height: 400px;
+    padding: 60px;
+    height: 600px;
     text-align: center;
     background: #dedede;
 }
@@ -306,7 +306,8 @@ p.quoteSec {
 }
 
 .services-section img {
-	margin-bottom: 30px;
+	margin-top: 30px;
+        margin-bottom: 30px;
 }
 
 button[type="submit"].servicesButton {
@@ -314,6 +315,10 @@ button[type="submit"].servicesButton {
 	font-size: 15px;
 	background-color: #79c9e2;
         color:white;
+}
+
+.servicesImgs h4 {
+    margin-left: -65px;
 }
 
 @media(max-width: 525px){
@@ -463,13 +468,6 @@ button[type="submit"].servicesButton {
 	}
 }
 
-h4 { 
-    border:0 solid #fff; 
-    border-bottom-width:1px;
-    padding-bottom:10px;
-    text-align: center;
-}
-
 .form-control {
     border-radius: 10px;
 }
@@ -565,13 +563,6 @@ h4 {
 	.form-register {
             width: 225px;
 	}
-}
-
-h4 { 
-    border:0 solid #fff; 
-    border-bottom-width:1px;
-    padding-bottom:10px;
-    text-align: center;
 }
 
 .form-control {
