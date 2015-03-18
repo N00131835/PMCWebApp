@@ -105,9 +105,33 @@ $statement = $gateway->getProperty();
         <!-- Quote Section -->
         <section id="quotePic" class="quote-section">
             <div class="container">
+                <h2 class="text-center">
+                    Lovely homes in all parts of Dublin.
+                </h2>
+                <p class="lead text-center">
+                    Dublin Rentals has been apart of the most successful home owners in Dublin.  
+                </p>
                 <div class="row">
-                    <div class="col-lg-12 col-sm-12">
+                    <div class="col-sm-4">
+                        <img src="img/tableimgs/arealist.jpg" alt="Responsive across devices" class="img-responsive">
 
+                        <h3>Reliable.</h3>
+
+                        <p>Bootstrap easily and efficiently scales your websites and applications with a single code base, from phones to tablets to desktops with CSS media queries.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="img/tableimgs/arealist.jpg" alt="Responsive across devices" class="img-responsive">
+
+                        <h3>Comfortable.</h3>
+
+                        <p>Bootstrap easily and efficiently scales your websites and applications with a single code base, from phones to tablets to desktops with CSS media queries.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="img/tableimgs/arealist.jpg" alt="Responsive across devices" class="img-responsive">
+
+                        <h3>Beautiful.</h3>
+
+                        <p>Bootstrap easily and efficiently scales your websites and applications with a single code base, from phones to tablets to desktops with CSS media queries.</p>
                     </div>
                 </div>
             </div>

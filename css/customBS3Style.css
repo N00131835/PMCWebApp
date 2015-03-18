@@ -107,33 +107,16 @@ button[type="submit"].searchButton {
 /* ------------------ CUSTOM CSS FOR QUOTE SECTION. ------------------ */
 
 .quote-section {
-	padding: 30px;
-    height: 500px;
+    padding: 50px;
+    height: 600px;
     background: #dedede;
 }
 
-@media(max-width: 1200px) and (min-width: 769px){
-	.quote-section  {
-	    height: 400px;
-	}
-}
 
 p.quoteSec {
 	font-size: 18px;
 	font-style: italic;
 	padding: 0;
-}
-
-@media(max-width: 996px){
-	p.quoteSec {
-	    font-size: 14px;
-	}
-}
-
-@media(max-width: 760px){
-	p.quoteSec {
-	    font-size: 14px;
-	}
 }
 
 /* ------------------ CUSTOM CSS FOR FEATURED SECTION. ------------------ */
