@@ -50,3 +50,6 @@
         </div>
     </div>
 </footer>
+
+<!-- Contact Form Modal Window -->
+<?php require 'contactForm.php'; ?>

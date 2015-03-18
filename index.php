@@ -211,9 +211,6 @@ $statement = $gateway->getProperty();
 
         <!-- Footer Section -->
         <?php require 'footer.php'; ?>
-        
-        <!-- Contact Form Modal Window -->
-        <?php require 'contactForm.php'; ?>
 
         <!-- JAVASCRIPT just before the closing of the body tag --> <!-- Why its at the bottom? SPEED and so that the body, content loads faster. -->
         <script type="text/javascript" src="js/jquery.js"></script> <!-- jquery is a library, javascript framework, it has a lot of things 

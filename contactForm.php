@@ -5,7 +5,7 @@
                 <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal" style="color:red;"></button>
                 <h3 class="modal-title">Need help? Contact Us!</h3>
             </div>
-            
+
             <div class="modal-body">
                 <form role="form" action="" method="post">
                     <div class="form-group">
@@ -29,7 +29,7 @@
                       </div>
                 </form>
             </div>
-            
+
             <div class="modal-footer">
                 <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info">
                 <button class="btn btn-primary" data-dismiss="modal">Close</button>
