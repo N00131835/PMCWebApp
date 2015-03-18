@@ -95,9 +95,9 @@ $statement = $gateway->getOwner();
                                     echo '<td class="prEach4">' . $row['MobileNum'] . '</td>';
                                     echo '<td class="prEach3">' . $row['Email'] . '</td>';
                                     echo '<td class="prEach4 optlinks">'
-                                    . '<a href="viewOwner.php?OwnerID='.$row['OwnerID'].'">View</a> '
-                                    . '<a href="editOwnerForm.php?OwnerID='.$row['OwnerID'].'">Edit</a> '
-                                    . '<a class="deleteOwner" href="deleteOwner.php?OwnerID='.$row['OwnerID'].'">Delete</a> '
+                                    . '<a href="viewOwner.php?OwnerID='.$row['OwnerID'].'"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a> '
+                                    . '<a href="editOwnerForm.php?OwnerID='.$row['OwnerID'].'"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> '
+                                    . '<a class="deleteOwner" href="deleteOwner.php?OwnerID='.$row['OwnerID'].'"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a> '
                                     . '</td>';
                                     echo '</tr>';
 

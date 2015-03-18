@@ -88,9 +88,9 @@ $statement = $gateway->getTenant();
                                     echo '<td class="prEach3">' . $row['Email'] . '</td>';
                                     echo '<td class="prEach3">' . $row['MobileNum'] . '</td>';
                                     echo '<td class="prEach4 optlinks">'
-                                    . '<a href="viewTenant.php?TenantID='.$row['TenantID'].'">View</a> '
-                                    . '<a href="editTenantForm.php?TenantID='.$row['TenantID'].'">Edit</a> '
-                                    . '<a class="deleteTenant" href="deleteTenant.php?TenantID='.$row['TenantID'].'">Delete</a> '
+                                    . '<a href="viewTenant.php?TenantID='.$row['TenantID'].'"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a> '
+                                    . '<a href="editTenantForm.php?TenantID='.$row['TenantID'].'"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> '
+                                    . '<a class="deleteTenant" href="deleteTenant.php?TenantID='.$row['TenantID'].'"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a> '
                                     . '</td>';
                                     echo '</tr>';
 
