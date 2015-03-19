@@ -13,7 +13,8 @@
 
                   <div class="navbotLinks">
                     <ul class="navbar-left text-left">
-                      <li><a href="#">Home</a></li>
+                      <li><a href="index.php">Home</a></li>
+                      <li><a href="home.php">Dashboard</a></li>
                       <li><a href="#">To Rent</a></li>
                       <li><a href="#">Short-term</a></li>
                     </ul>
@@ -22,8 +23,9 @@
                   <div class="socialFooter col-lg-4 pull-right">
                     <div class="loginRegFooter navbar-right text-right">
                         <ul>
-                            <li><a href="#">Login</a></li>
-                            <li><a href="#">Register</a></li>
+                            <li><a href="#contactForm" data-toggle="modal">Contact Us</a></li>
+                            <li><a href="login.php">Login</a></li>
+                            <li><a href="register.php">Register</a></li>
                         </ul>
                         <div class="socialLinks pull-right">
                             <ul class="pull-right">
