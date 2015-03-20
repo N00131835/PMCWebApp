@@ -3,14 +3,6 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                
-                <nav class="navbot navbar">
-                  <div class="navbar-footer">
-
-                    <a class="navbar-brand" href="#"></a>
-
-                  </div>
-
                   <div class="navbotLinks">
                     <ul class="navbar-left text-left">
                       <li><a href="index.php">Home</a></li>
@@ -38,17 +30,13 @@
                    </div>
                 </nav>
                 
-                
-                
+            </div>
                 <div class="logoFooter col-lg-2 col-lg-offset-5">
                     <a href="#back-to-top"> 
                         <img src="img/dr-logosm.png">
                     </a>
                     <p class="text-center">&#169; Dublin Rentals</p> 
                 </div>
-                
-                
-            </div>
         </div>
     </div>
 </footer>

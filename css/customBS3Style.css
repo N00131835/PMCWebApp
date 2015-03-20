@@ -32,7 +32,7 @@ nav.navtop {
 }
 
 #myNavbar ul {
-	margin-right: 50px;
+	margin-right: 30px;
 }
 
 button[type="button"].registerNav {
@@ -112,11 +112,98 @@ button[type="submit"].searchButton {
     background: #dedede;
 }
 
+.quoteText p {
+    margin-top:40px;
+    font-size: 18px;
+}
 
-p.quoteSec {
-	font-size: 18px;
-	font-style: italic;
-	padding: 0;
+.quoteText img {
+    margin-top:20px;
+}
+
+.appLogo {
+        float:left;
+    }
+    
+.playLogo {
+    float:right;
+}
+
+@media(max-width: 1170px){
+    .quoteText p {
+        margin-top:35px;
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 991px){
+    .quote-section {
+        height: 890px;
+    }
+}
+
+@media(max-width: 767px){
+    .quote-section {
+        height: 800px;
+    }
+}
+
+@media(max-width: 700px){
+    .quote-section {
+        height: 770px;
+    }
+}
+
+@media(max-width: 665px){
+    .quote-section {
+        height: 740px;
+    }
+}
+
+@media(max-width: 630px){
+    .quote-section {
+        height: 720px;
+    }
+}
+
+@media(max-width: 510px){
+    .quote-section {
+        height: 690px;
+    }
+}
+
+@media(max-width: 510px){
+    .quote-section {
+        height: 690px;
+    }
+}
+
+@media(max-width: 406px){
+    .quote-section {
+        height: 720px;
+    }
+    
+    .appLogo {
+        float:none;
+    }
+    
+    .playLogo {
+        float:none;
+    }
+}
+
+@media(max-width: 360px){
+    .quote-section {
+        height: 750px;
+    }
+    
+    .appLogo {
+        float:none;
+    }
+    
+    .playLogo {
+        float:none;
+    }
 }
 
 /* ------------------ CUSTOM CSS FOR FEATURED SECTION. ------------------ */
@@ -295,7 +382,7 @@ p.quoteSec {
 
 .services-section {
     padding: 60px;
-    height: 600px;
+    height: 700px;
     text-align: center;
     background: #dedede;
 }
@@ -308,6 +395,18 @@ p.quoteSec {
 .services-section img {
 	margin-top: 30px;
         margin-bottom: 30px;
+        margin-left: -53px;
+        margin-right: 30px;
+}
+
+.servicesImgs h4 {
+    margin-left: -105px;
+}
+
+@media(max-width: 1200px){
+    .servicesImgs{
+        margin-left: 90px;
+    }
 }
 
 button[type="submit"].servicesButton {
@@ -317,18 +416,14 @@ button[type="submit"].servicesButton {
         color:white;
 }
 
-.servicesImgs h4 {
-    margin-left: -65px;
-}
-
 @media(max-width: 525px){
-    .services-section P{
+    .services-section p, h4{
         font-size:18px;
     }
 }
 
 @media(max-width: 395px){
-    .services-section P{
+    .services-section p, h4{
         font-size:13px;
     }
 }
@@ -376,6 +471,7 @@ button[type="submit"].servicesButton {
 
 .navbotLinks ul {
 	list-style-type: none;
+        padding-left:0;
 }
 
 .navbotLinks li {

@@ -101,6 +101,8 @@ $statement = $gateway->getProperty();
             </div> 
           </div>
         </section>
+        
+        <div class="clearfix"></div>
 
         <!-- Services Section -->
         <section id="services" class="services-section">
@@ -121,20 +123,20 @@ $statement = $gateway->getProperty();
                         <div class="clearfix"></div>
 
                         <div class="servicesImgs row col-lg-offset-1">
-                            <div class="col-sm-4 text-center">
-                                <img src="img/tableimgs/ownerlist.jpg" class="img-responsive">
+                            <div class="col-xs-4 col-sm-4">
+                                <img src="img/services/ownerPic.png" class="img-responsive">
 
                                 <h4 class="text-center">Reliable.</h4>
                             </div>
-                            <div class="col-sm-4 center-block">
-                                <img src="img/tableimgs/tenantlist.jpg" class="img-responsive">
+                            <div class="col-xs-4 col-sm-4">
+                                <img src="img/services/tenantPic.png" class="img-responsive">
 
-                                <h4>Comfortable.</h4>
+                                <h4 class="text-center">Comfortable.</h4>
                             </div>
-                            <div class="col-sm-4 center-block">
-                                <img src="img/tableimgs/arealist.jpg" class="img-responsive">
+                            <div class="col-xs-4 col-sm-4">
+                                <img src="img/services/areaPic.png" class="img-responsive">
 
-                                <h4>Accessible.</h4>
+                                <h4 class="text-center">Accessible.</h4>
                             </div>
                         </div>
                         
@@ -223,7 +225,23 @@ $statement = $gateway->getProperty();
         <section id="quotePic" class="quote-section">
             <div class="container">
                 <div class="row">
+                    <div class="col-sm-12 col-md-7 col-lg-7">
+                        <img src="img/app/dr-devices.png" class="img-responsive">
+                    </div>
                     
+                    <div class="quoteText col-md-5 col-lg-4">
+                        <p>
+                            From the ground up, we’ve reimagined what DublinRentals.ie can be, which led us to developing a completely new site that works across all platforms, all devices, and all browsers. 
+                            <br/>
+                            <br/>
+                            We applied that effort across our app ecosystem too, taking advantage of the power of native apps to deliver a rich and intuitive search experience. 
+                            <br/>
+                            <br/>
+                            Log on or download our app today to see the new DublinRentals.ie.
+                        </p>
+                        <img src="img/app/dr-appstore.png" class="appLogo img-responsive">
+                        <img src="img/app/dr-playstore.png" class="playLogo img-responsive">
+                    </div>
                 </div>
             </div>
         </section>
