@@ -3,7 +3,8 @@ require_once 'Property.php';
 require_once 'Connection.php';
 require_once 'PropertyTableGateway.php';
 
-require 'ensureUserLoggedIn.php'; //redirects to the index(login) if the user is not logged in
+require 'ensureUserLoggedIn.php'; 
+//redirects to the index(login) if the user is not logged in
 
 $connection = Connection::getInstance();
 $gateway = new PropertyTableGateway($connection);
@@ -68,18 +69,14 @@ $statement = $gateway->getProperty();
                         </a>
                         </h3>
                         
-                        <table>
+                        <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th class="listPr">Address1</th>
-                                    <th class="listPr">Address2</th>
-                                    <th class="listPr">Town</th>
-                                    <th class="listPr">County</th>
-                                    <th class="listPr">Description</th>
-                                    <th class="listPr">Rent / Monthly</th>
-                                    <th class="listPr">No. of bedrooms</th>
-                                    <th class="listPr">AreaName</th>
-                                    <th class="listPr">Options</th>
+                                    <th class="TableCol1">Address1</th>
+                                    <th class="TableCol2">Address2</th>
+                                    <th class="TableCol3">Town</th>
+                                    <th class="TableCol4">AreaName</th>
+                                    <th class="TableColOpt">Options</th>
                                 </tr>
                             </thead>
                             <!-- This is the category fields on the list. -->
@@ -91,10 +88,6 @@ $statement = $gateway->getProperty();
                                     echo '<td class="prEach1">' . $row['Address1'] . '</td>';
                                     echo '<td class="prEach1">' . $row['Address2'] . '</td>';
                                     echo '<td class="prEach3">' . $row['Town'] . '</td>';
-                                    echo '<td class="prEach3">' . $row['County'] . '</td>';
-                                    echo '<td class="prEach1">' . $row['Description'] . '</td>';
-                                    echo '<td class="prEach3">' . $row['Rent'] . '</td>';
-                                    echo '<td class="prEach4">' . $row['Bedrooms'] . '</td>';
                                     echo '<td class="prEach3">' . $row['AreaName'] . '</td>';
                                     echo '<td class="prEach4 optlinks">'
                                     . '<a href="viewProperty.php?PropertyID='.$row['PropertyID'].'"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a> '

@@ -66,18 +66,15 @@ $statement = $gateway->getOwner();
                                 <input id="createPro" type="submit" value="Create Property" name="createProperty"/>
                             </a>
                         </h3>
-                        <table>
+                        
+                        <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th class="listPr">FirstName</th>
-                                    <th class="listPr">LastName</th>
-                                    <th class="listPr">Address1</th>
-                                    <th class="listPr">Address2</th>
-                                    <th class="listPr">Town</th>
-                                    <th class="listPr">County</th>
-                                    <th class="listPr">MobileNum</th>
-                                    <th class="listPr">Email</th>
-                                    <th class="listPr">Options</th>
+                                    <th class="TableCol1">FirstName</th>
+                                    <th class="TableCol2">LastName</th>
+                                    <th class="TableCol3">MobileNum</th>
+                                    <th class="TableCol4">Email</th>
+                                    <th class="TableColOpt">Options</th>
                                 </tr>
                             </thead>
                             <!-- This is the category fields on the list. -->
@@ -88,10 +85,6 @@ $statement = $gateway->getOwner();
                                     echo '<tr>';
                                     echo '<td class="prEach1">' . $row['FirstName'] . '</td>';
                                     echo '<td class="prEach3">' . $row['LastName'] . '</td>';
-                                    echo '<td class="prEach1">' . $row['Address1'] . '</td>';
-                                    echo '<td class="prEach1">' . $row['Address2'] . '</td>';
-                                    echo '<td class="prEach3">' . $row['Town'] . '</td>';
-                                    echo '<td class="prEach3">' . $row['County'] . '</td>';
                                     echo '<td class="prEach4">' . $row['MobileNum'] . '</td>';
                                     echo '<td class="prEach3">' . $row['Email'] . '</td>';
                                     echo '<td class="prEach4 optlinks">'

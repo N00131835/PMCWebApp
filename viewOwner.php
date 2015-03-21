@@ -63,10 +63,10 @@ $statement = $gateway->getOwnerById($OwnerID);
                         <?php
                         $row = $statement->fetch(PDO::FETCH_ASSOC);
                             echo '<tr>';
-                            echo '<td class="vedHeaders">Description</td>' . '<td>' . $row['FirstName'] . '</td>';
+                            echo '<td class="vedHeaders">FirstName</td>' . '<td>' . $row['FirstName'] . '</td>';
                             echo '</tr>';
                             echo '<tr>';
-                            echo '<td class="vedHeaders">Description</td>' . '<td>' . $row['LastName'] . '</td>';
+                            echo '<td class="vedHeaders">LastName</td>' . '<td>' . $row['LastName'] . '</td>';
                             echo '</tr>';
                             echo '<tr>';
                             echo '<td class="vedHeaders">Address1</td>' . '<td>' . $row['Address1'] . '</td>';
@@ -81,10 +81,10 @@ $statement = $gateway->getOwnerById($OwnerID);
                             echo '<td class="vedHeaders">County</td>' . '<td>' . $row['County'] . '</td>';
                             echo '</tr>';
                             echo '<tr>';
-                            echo '<td class="vedHeaders">Rent</td>' . '<td>' . $row['MobileNum'] . '</td>';
+                            echo '<td class="vedHeaders">MobileNum</td>' . '<td>' . $row['MobileNum'] . '</td>';
                             echo '</tr>';
                             echo '<tr>';
-                            echo '<td class="vedHeaders">Bedrooms</td>' . '<td>' . $row['Email'] . '</td>';
+                            echo '<td class="vedHeaders">Email</td>' . '<td>' . $row['Email'] . '</td>';
                             echo '</tr>';
                         ?>
                     </tbody>

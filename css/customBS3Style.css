@@ -798,11 +798,31 @@ button[type="submit"].servicesButton {
     margin-right: 20px;
 }
 
-/* ------------------ CUSTOM CSS FOR PROPERTYLIST PHP PAGE. ------------------ */
+/* ------------------ CUSTOM CSS FOR VIEWPROPERTIES PHP PAGE. ------------------ */
 .propertyList-section{
     padding: 30px;
     height: 800px;
     background: #fff;
+}
+
+.TableCol1 {
+    background: #f88b77;
+}
+
+.TableCol2 {
+    background: #85db9c;
+}
+
+.TableCol3 {
+    background: #fed18d;
+}
+
+.TableCol4 {
+    background: #79c9e2;
+}
+
+.TableColOpt {
+    background: #c0a0e1;
 }
 
 /* ------------------ CUSTOM CSS FOR AREALIST PHP PAGE. ------------------ */

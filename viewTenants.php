@@ -67,14 +67,14 @@ $statement = $gateway->getTenant();
                             </a>
                         </h3>
 
-                        <table>
+                        <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th class="listPr">FirstName</th>
-                                    <th class="listPr">LastName</th>
-                                    <th class="listPr">Email</th>
-                                    <th class="listPr">MobileNum</th>
-                                    <th class="listPr">Options</th>
+                                    <th class="TableCol1">FirstName</th>
+                                    <th class="TableCol2">LastName</th>
+                                    <th class="TableCol3">Email</th>
+                                    <th class="TableCol4">MobileNum</th>
+                                    <th class="TableColOpt">Options</th>
                                 </tr>
                             </thead>
                             <!-- This is the category fields on the list. -->

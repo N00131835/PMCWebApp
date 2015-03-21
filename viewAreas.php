@@ -70,12 +70,12 @@ $area = $areaGateway->getArea();
                             Area List
                         </h3>
             
-                        <table>
+                        <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th class="listPrAreaName">Area Name</th>
-                                    <th class="listPrAreaFac">Facilities</th>
-                                    <th class="listPr">Options</th>
+                                    <th class="TableCol1">Area Name</th>
+                                    <th class="TableCol2">Facilities</th>
+                                    <th class="TableColOpt">Options</th>
                                 </tr>
                             </thead>
                             <!-- This is the category fields on the list. -->
