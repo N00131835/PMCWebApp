@@ -11,15 +11,24 @@ if ($id == "") {
 
 require 'ensureUserLoggedIn.php'; //redirects to the index.php page if the user is not logged in
 
-if (!isset($_GET) || !isset($_GET['PropertyID'])) {
-    die('Invalid request');
-}
-$PropertyID = $_GET['PropertyID'];
-
 $connection = Connection::getInstance();
 $gateway = new PropertyTableGateway($connection);
 
-$gateway->deleteProperty($PropertyID);
+$PropertyID = $_POST['PropertyID'];
+$address1 = $_POST['Address1'];
+$address2 = $_POST['Address2'];
+$town = $_POST['Town'];
+$county= $_POST['County'];
+$description = $_POST['Description'];
+$rent= $_POST['Rent'];
+$bedrooms = $_POST['Bedrooms'];
 
-header("Location: viewProperty.php");
-?>
+$gateway->updateProperty($PropertyID, $address1, $address2, $town, $county, $description, $rent, $bedrooms);
+
+header('Location: home.php');
+
+
+
+
+
+

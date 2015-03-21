@@ -56,7 +56,7 @@ if ($bedrooms === FALSE || $bedrooms === '') {
 
 if (empty($errorMessage)) {
     $id = $gateway->insertProperty($address1, $address2, $town, $county, $description, $rent, $bedrooms);
-    header('Location: home.php');
+    header('Location: viewProperties.php');
 }
 else {
     require 'createPropertyForm.php';

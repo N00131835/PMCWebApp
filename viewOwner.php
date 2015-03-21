@@ -53,51 +53,55 @@ $statement = $gateway->getOwnerById($OwnerID);
             and make my edits there, instead of having to edit it in a lot of pages.  -->
         <?php require 'header.php'; ?>
         
-        <div class="custom-container container">
+        <!-- ownerForms Section -->
+        <section id="ownerForms" class="ownerForms-section">
+            <div class="container">
+                <div class="row">
+                    <div class="custom-container col-lg-12 col-sm-12">
+                        <table>
+                            <!-- This is the category fields on the list. -->
+                            <tbody>
+                            <h3>Viewing a Owner</h3>
+                                <?php
+                                $row = $statement->fetch(PDO::FETCH_ASSOC);
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">FirstName</td>' . '<td>' . $row['FirstName'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">LastName</td>' . '<td>' . $row['LastName'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">Address1</td>' . '<td>' . $row['Address1'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">Address2</td>' . '<td>' . $row['Address2'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">Town</td>' . '<td>' . $row['Town'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">County</td>' . '<td>' . $row['County'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">MobileNum</td>' . '<td>' . $row['MobileNum'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">Email</td>' . '<td>' . $row['Email'] . '</td>';
+                                    echo '</tr>';
+                                ?>
+                            </tbody>
+                            <!-- This is the get methods of the properties, where the output of the user put in the Owner form will be shown -->
+                        </table>
 
-            <hr> <!-- horizontal break -->
-                <table>
-                    <!-- This is the category fields on the list. -->
-                    <tbody>
-                    <h3>Viewing a Owner</h3>
-                        <?php
-                        $row = $statement->fetch(PDO::FETCH_ASSOC);
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">FirstName</td>' . '<td>' . $row['FirstName'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">LastName</td>' . '<td>' . $row['LastName'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">Address1</td>' . '<td>' . $row['Address1'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">Address2</td>' . '<td>' . $row['Address2'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">Town</td>' . '<td>' . $row['Town'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">County</td>' . '<td>' . $row['County'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">MobileNum</td>' . '<td>' . $row['MobileNum'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">Email</td>' . '<td>' . $row['Email'] . '</td>';
-                            echo '</tr>';
-                        ?>
-                    </tbody>
-                    <!-- This is the get methods of the properties, where the output of the user put in the Owner form will be shown -->
-                </table>
-            
-                <div class="optlinksBtm" >
-                    <a class="editProperty" href="editOwnerForm.php?OwnerID=<?php echo $row['OwnerID']; ?>">
-                        Edit this Owner</a>
-                    <a class="delLink deleteOwner" href="deleteOwner.php?OwnerID=<?php echo $row['OwnerID']; ?>">Delete this Owner</a>
-                </div> <!-- These are buttons that will link to Edit and/or Delete the Owner -->
-            <hr class="botlineView"> <!-- horizontal break --> 
-        </div>
+                        <div class="optlinksBtm" >
+                            <a class="editProperty" href="editOwnerForm.php?OwnerID=<?php echo $row['OwnerID']; ?>">
+                                Edit this Owner</a>
+                            <a class="delLink deleteOwner" href="deleteOwner.php?OwnerID=<?php echo $row['OwnerID']; ?>">Delete this Owner</a>
+                        </div> <!-- These are buttons that will link to Edit and/or Delete the Owner -->
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!-- Footer Section -->
         <?php require 'footer.php'; ?>

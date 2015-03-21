@@ -54,7 +54,7 @@ $statement = $gateway->getOwner();
             </div>
         </section>
         
-        <!-- menuList Section -->
+        <!-- ownerLists Section -->
         <section id="ownerLists" class="ownerList-section">
             <div class="container">
                 <div class="row">
@@ -62,8 +62,8 @@ $statement = $gateway->getOwner();
                         <h3>
                             Owner List
                             
-                            <a href="createPropertyForm.php" class="pull-right">
-                                <input id="createPro" type="submit" value="Create Property" name="createProperty"/>
+                            <a href="createOwnerForm.php" class="pull-right">
+                                <input id="createPro" type="submit" value="Create Owner" name="createOwner"/>
                             </a>
                         </h3>
                         

@@ -832,8 +832,15 @@ button[type="submit"].servicesButton {
     background: #fff;
 }
 
-/* ------------------ CUSTOM CSS FOR OWNERLIST PHP PAGE. ------------------ */
+/* ------------------ CUSTOM CSS OWNER PHP PAGES. ------------------ */
 .ownerList-section{
+    padding: 30px;
+    height: 800px;
+    background: #fff;
+}
+
+/* -editownerform- */
+.ownerForms-section {
     padding: 30px;
     height: 800px;
     background: #fff;

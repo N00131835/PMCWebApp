@@ -1,7 +1,6 @@
 <?php
-require_once 'Property.php';
 require_once 'Connection.php';
-require_once 'PropertyTableGateway.php';
+require_once 'OwnerTableGateway.php';
 //this imports the info needed for this page.
 
 $id = session_id();
@@ -11,15 +10,15 @@ if ($id == "") {
 
 require 'ensureUserLoggedIn.php'; //redirects to the index.php page if the user is not logged in
 
-if (!isset($_GET) || !isset($_GET['PropertyID'])) {
+if (!isset($_GET) || !isset($_GET['OwnerID'])) {
     die('Invalid request');
 }
-$PropertyID = $_GET['PropertyID'];
+$OwnerID = $_GET['OwnerID'];
 
 $connection = Connection::getInstance();
-$gateway = new PropertyTableGateway($connection);
+$gateway = new OwnerTableGateway($connection);
 
-$gateway->deleteProperty($PropertyID);
+$gateway->deleteOwner($OwnerID);
 
-header("Location: viewProperty.php");
+header("Location: viewOwners.php");
 ?>

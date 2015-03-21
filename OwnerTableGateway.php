@@ -41,20 +41,21 @@ class OwnerTableGateway {
         return $statement;
     }
     
-    public function insertOwner($a1, $a2, $tn, $ct, $d, $r, $b) {
+    public function insertOwner($fnO, $lnO, $a1O, $a2O, $tnO, $ctO, $mnO, $eO) {
         $sqlQuery = "INSERT INTO owner " .
-                "(Address1, Address2, Town, County, Description, Rent, Bedrooms) " .
-                "VALUES (:Address1, :Address2, :Town, :County, :Description, :Rent, :Bedrooms)";
+                "(FirstName, LastName, Address1, Address2, Town, County, MobileNum, Email) " .
+                "VALUES (:FirstName, :LastName, :Address1, :Address2, :Town, :County, :MobileNum, :Email)";
         
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
-            "Address1" => $a1,
-            "Address2" => $a2,
-            "Town" => $tn,
-            "County" => $ct,
-            "Description" => $d,
-            "Rent" => $r,
-            "Bedrooms" => $b
+            "FirstName" => $fnO,
+            "LastName" => $lnO,
+            "Address1" => $a1O,
+            "Address2" => $a2O,
+            "Town" => $tnO,
+            "County" => $ctO,
+            "MobileNum" => $mnO,
+            "Email" => $eO
         );
         
         $status = $statement->execute($params);
@@ -85,28 +86,30 @@ class OwnerTableGateway {
         return ($statement->rowCount() == 1);
     }
     
-    public function updateOwner($OwnerID, $a1, $a2, $tn, $ct, $d, $r, $b) {
+    public function updateOwner($OwnerID, $fnO, $lnO, $a1O, $a2O, $tnO, $ctO, $mnO, $eO) {
         $sqlQuery =
                 "UPDATE owner SET " .
+                "FirstName = :FirstName, " .
+                "LastName = :LastName, " .
                 "Address1 = :Address1, " .
                 "Address2 = :Address2, " .
                 "Town = :Town, " .
                 "County = :County, " .
-                "Description = :Description, " .
-                "Rent = :Rent, " .
-                "Bedrooms = :Bedrooms " .
+                "MobileNum = :MobileNum, " .
+                "Email = :Email " .
                 "WHERE OwnerID = :OwnerID";
 
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
             "OwnerID" => $OwnerID,
-            "Address1" => $a1,
-            "Address2" => $a2,
-            "Town" => $tn,
-            "County" => $ct,
-            "Description" => $d,
-            "Rent" => $r,
-            "Bedrooms" => $b
+            "FirstName" => $fnO,
+            "LastName" => $lnO,
+            "Address1" => $a1O,
+            "Address2" => $a2O,
+            "Town" => $tnO,
+            "County" => $ctO,
+            "MobileNum" => $mnO,
+            "Email" => $eO
         );
 
         $status = $statement->execute($params);
