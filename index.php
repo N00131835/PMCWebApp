@@ -2,13 +2,16 @@
 require_once 'Property.php';
 require_once 'Connection.php';
 require_once 'PropertyTableGateway.php';
+//php pages that are required to run this page.
+
 
 $connection = Connection::getInstance();
 $gateway = new PropertyTableGateway($connection);
 
 $statement = $gateway->getProperty();
+//to connect to the databases and the queries.
 ?>
-<!-- This is where the ready made Property List is placed. -->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -32,12 +35,14 @@ $statement = $gateway->getProperty();
         <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     </head>
 
-    <body id="back-to-top">
-        <!-- Header Navigation is in a separate page, so that when I want to edit something i can just go in to the header.php page 
+    <body id="back-to-top"> <!-- BODY starts here, it also has an id so that when the user goes to the very bottom of the page, 
+                                 they can click the 4 colourful houses at the bottom so that it's easier to go to the top.-->
+        
+        <?php require 'header.php'; ?> <!-- Header Navigation is in a separate page, so that when I want to edit something i can just go in to the header.php page 
             and make my edits there, instead of having to edit it in a lot of pages.  -->
-        <?php require 'header.php'; ?>
-
-        <!-- Intro Section -->
+        
+        <!-- CAROUSEL Section -->
+        <!-- This is a very simple Carousel that consists of 3 images. -->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="item active">
@@ -50,14 +55,14 @@ $statement = $gateway->getProperty();
               <img src="img/hero/original/hero-img3.jpg" alt="">
             </div>
           </div>
-        </div><!-- /.carousel -->
+        </div><!-- END of Carousel Section -->
 
         <!-- Search Box Section -->
         <section id="searchbox" class="search-section">
           <div class="container">
             <div class="row">
               <div class="col-lg-offset-0 col-lg-12 col-md-offset-2 col-md-9 col-sm-offset-1 col-sm-10 col-xs-offset-1">
-                <h2> <strong>To Rent | Short Term</strong></h2>
+                <h2> <strong>To Rent | Short Term</strong></h2> <!--  -->
 
                 <form class="form-inline" role="form" id="searchSelects" action="" method="post">
                   <div class="form-group form-inline">
@@ -69,7 +74,7 @@ $statement = $gateway->getProperty();
                       <option>Dublin South-Central</option>
                       <option>Dublin Bay South</option>
                     </select>
-                  </div>
+                  </div> <!-- Dropdown selection for AREA Search -->
                     
                   <div class="form-group form-inline">
                     <select class="form-control" id="sel1">
@@ -82,7 +87,7 @@ $statement = $gateway->getProperty();
                       <option>Merrion</option>
                       <option>Merrion Square</option>
                     </select>
-                  </div>
+                  </div> <!-- Dropdown selection for Town Search -->
 
                   <div class="form-group form-inline">
                     <select class="form-control" id="sel1">
@@ -92,24 +97,22 @@ $statement = $gateway->getProperty();
                       <option>Studio To Let</option>
                       <option>Flat To Let</option>
                     </select>
-                  </div>
-                </form>
+                  </div> <!-- Dropdown selection for Type Search -->
+                </form> <!-- END of form for Search options -->
 
-                  <button type="submit" class="searchButton btn btn-default btn-lg">Search</button>
+                <button type="submit" class="searchButton btn btn-default btn-lg">Search</button>
+                <!-- Search Submit button -->
 
               </div>
             </div> 
           </div>
-        </section>
-        
-        <div class="clearfix"></div>
+        </section> <!-- END of Search Box Section -->
 
         <!-- Services Section -->
         <section id="services" class="services-section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        
                         <p>
                           Are you looking for a new apartment or want to buy a house?
                           <br/> 
@@ -120,7 +123,7 @@ $statement = $gateway->getProperty();
                           in all areas of Dublin.
                         </p>
                         
-                        <div class="clearfix"></div>
+                        <div class="clearfix"></div> <!-- Clearfix class can easily clear floats by adding this. -->
 
                         <div class="servicesImgs row col-lg-offset-1">
                             <div class="col-xs-4 col-sm-4">
@@ -138,14 +141,14 @@ $statement = $gateway->getProperty();
 
                                 <h4 class="text-center">Accessible.</h4>
                             </div>
-                        </div>
+                        </div> <!-- END of servicesImgs row -->
                         
                         <a href="register.php"><button type="submit" class="servicesButton btn btn-default btn-lg">Get Started</button></a>
-                    
+                        <!-- This button will go to the Register page. -->
                     </div>
                 </div>
             </div>
-        </section>
+        </section> <!-- END of Services Section -->
 
         <!-- Featured Properties Section -->
         <section id="featuredPro" class="featured-section">
@@ -164,7 +167,8 @@ $statement = $gateway->getProperty();
                                 <p><?php echo '<a href="viewProperty.php?PropertyID=1">see more</a> ' ?></p>
                               </div>
                             </div>
-                          </li>
+                          </li> <!-- Featured Property : 1 -->
+                         
                           <li>
                             <div class="ch-item ch-img-2">
                               <div class="ch-info">
@@ -174,7 +178,8 @@ $statement = $gateway->getProperty();
                                 <p><?php echo '<a href="viewProperty.php?PropertyID=2">see more</a> ' ?></p>
                               </div>
                             </div>
-                          </li>
+                          </li> <!-- Featured Property : 2 -->
+                          
                           <li>
                             <div class="ch-item ch-img-3">
                               <div class="ch-info">
@@ -184,7 +189,8 @@ $statement = $gateway->getProperty();
                                 <p><?php echo '<a href="viewProperty.php?PropertyID=3">see more</a> ' ?></p>
                               </div>
                             </div>
-                          </li>
+                          </li> <!-- Featured Property : 3 -->
+                          
                           <li>
                             <div class="ch-item ch-img-4">
                               <div class="ch-info">
@@ -194,7 +200,8 @@ $statement = $gateway->getProperty();
                                 <p><?php echo '<a href="viewProperty.php?PropertyID=4">see more</a> ' ?></p>
                               </div>
                             </div>
-                          </li>
+                          </li> <!-- Featured Property : 4 -->
+                          
                           <li>
                             <div class="ch-item ch-img-5">
                               <div class="ch-info">
@@ -204,7 +211,8 @@ $statement = $gateway->getProperty();
                                 <p><?php echo '<a href="viewProperty.php?PropertyID=5">see more</a> ' ?></p>
                               </div>
                             </div>
-                          </li>
+                          </li> <!-- Featured Property : 5 -->
+                          
                           <li>
                             <div class="ch-item ch-img-6">
                               <div class="ch-info">
@@ -214,24 +222,25 @@ $statement = $gateway->getProperty();
                                 <p><?php echo '<a href="viewProperty.php?PropertyID=6">see more</a> ' ?></p>
                               </div>
                             </div>
-                          </li>
-                        </ul>
+                          </li> <!-- Featured Property : 6 -->
+                        </ul> <!-- END of LIST of Featured Properties -->
+                        
                     </div>
                 </div>
             </div>
-        </section>
+        </section> <!-- END of Featured Section -->
 
         <!-- Quote Section -->
         <section id="quotePic" class="quote-section">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-7 col-lg-7">
-                        <img src="img/app/dr-devices.png" class="img-responsive">
+                        <img src="img/app/dr-devices.png" class="img-responsive"> <!-- Device Mock up for Computer, Laptop, Tablets and Phones. -->
                     </div>
                     
                     <div class="quoteText col-md-5 col-lg-4">
                         <p>
-                            From the ground up, we’ve reimagined what DublinRentals.ie can be, which led us to developing a completely new site that works across all platforms, all devices, and all browsers. 
+                            From the ground up, we’ve re-imagined what DublinRentals.ie can be, which led us to developing a completely new site that works across all platforms, all devices, and all browsers. 
                             <br/>
                             <br/>
                             We applied that effort across our app ecosystem too, taking advantage of the power of native apps to deliver a rich and intuitive search experience. 
@@ -239,14 +248,15 @@ $statement = $gateway->getProperty();
                             <br/>
                             Log on or download our app today to see the new DublinRentals.ie.
                         </p>
-                        <img src="img/app/dr-appstore.png" class="appLogo img-responsive">
-                        <img src="img/app/dr-playstore.png" class="playLogo img-responsive">
+                        <img src="img/app/dr-appstore.png" class="appLogo img-responsive"> <!-- Apple App Store Logo -->
+                        <img src="img/app/dr-playstore.png" class="playLogo img-responsive"> <!-- Google Play Logo -->
                     </div>
                 </div>
             </div>
-        </section>
+        </section> <!-- END of Quote Section -->
 
-        <!-- Footer Section -->
+        <!-- Footer Section is a link to another page because this section is featured all through out my pages,
+             and by using a link it will be easier to edit things.-->
         <?php require 'footer.php'; ?>
 
         <!-- JAVASCRIPT just before the closing of the body tag --> <!-- Why its at the bottom? SPEED and so that the body, content loads faster. -->

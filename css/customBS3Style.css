@@ -168,19 +168,35 @@ button[type="submit"].searchButton {
 
 @media(max-width: 510px){
     .quote-section {
-        height: 690px;
+        height: 715px;
     }
 }
 
-@media(max-width: 510px){
+@media(max-width: 410px){
     .quote-section {
-        height: 690px;
+        height: 700px;
     }
 }
 
 @media(max-width: 406px){
     .quote-section {
-        height: 720px;
+        height: 750px;
+    }
+    
+    .appLogo {
+        margin-left: 50px;
+        float:none;
+    }
+    
+    .playLogo {
+        margin-left: 50px;
+        float:none;
+    }
+}
+
+@media(max-width: 388px){
+    .quote-section {
+        height: 780px;
     }
     
     .appLogo {
@@ -192,16 +208,34 @@ button[type="submit"].searchButton {
     }
 }
 
-@media(max-width: 360px){
+@media(max-width: 354px){
     .quote-section {
-        height: 750px;
+        height: 800px;
     }
     
     .appLogo {
+        margin-left: 30px;
         float:none;
     }
     
     .playLogo {
+        margin-left: 30px;
+        float:none;
+    }
+}
+
+@media(max-width: 329px){
+    .quote-section {
+        height: 830px;
+    }
+    
+    .appLogo {
+        margin-left: 20px;
+        float:none;
+    }
+    
+    .playLogo {
+        margin-left: 20px;
         float:none;
     }
 }
