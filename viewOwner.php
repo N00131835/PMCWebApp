@@ -53,6 +53,17 @@ $statement = $gateway->getOwnerById($OwnerID);
             and make my edits there, instead of having to edit it in a lot of pages.  -->
         <?php require 'header.php'; ?>
         
+        <!-- menuList Section -->
+        <section id="mainMenuList" class="menuList-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                           <?php require 'mainMenu.php'; ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- ownerForms Section -->
         <section id="ownerForms" class="ownerForms-section">
             <div class="container">
@@ -61,7 +72,7 @@ $statement = $gateway->getOwnerById($OwnerID);
                         <table>
                             <!-- This is the category fields on the list. -->
                             <tbody>
-                            <h3>Viewing a Owner</h3>
+                            <h3>Viewing an Owner</h3>
                                 <?php
                                 $row = $statement->fetch(PDO::FETCH_ASSOC);
                                     echo '<tr>';

@@ -53,6 +53,17 @@ $statement = $gateway->getTenantById($TenantID);
             and make my edits there, instead of having to edit it in a lot of pages.  -->
         <?php require 'header.php'; ?>
         
+        <!-- menuList Section -->
+        <section id="mainMenuList" class="menuList-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                           <?php require 'mainMenu.php'; ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <div class="custom-container container">
 
             <hr> <!-- horizontal break -->

@@ -769,17 +769,13 @@ button[type="submit"].servicesButton {
 /* ------------------ CUSTOM CSS FOR MAINMENU PHP PAGE. ------------------ */
 .menuList-section{
     margin-top: 100px;
-    padding: 50px;
-    height: 500px;
+    padding: 20px;
+    height: 300px;
     background: #dedede;
 }
 
-.mainMenu {
-    margin-top: 50px;
-}
-
 .mainMenuTitle {
-    padding-left: 40px;
+    margin-left: 450px;
     margin-bottom: 30px;
 }
 
@@ -793,15 +789,15 @@ button[type="submit"].servicesButton {
 
 .menuList img {
     border: 1px solid #fff;
-    width: 250px;
-    height: 230px;
+    width: 150px;
+    height: 130px;
     margin-right: 20px;
 }
 
-/* ------------------ CUSTOM CSS FOR VIEWPROPERTIES PHP PAGE. ------------------ */
+/* ------------------ CUSTOM CSS FOR PROPERTY PHP PAGE. ------------------ */
 .propertyList-section{
     padding: 30px;
-    height: 800px;
+    height: 600px;
     background: #fff;
 }
 
@@ -825,6 +821,13 @@ button[type="submit"].servicesButton {
     background: #c0a0e1;
 }
 
+/* -editpropertyform- */
+.propertyForms-section {
+    padding: 50px;
+    height: 400px;
+    background: #fff;
+}
+
 /* ------------------ CUSTOM CSS FOR AREALIST PHP PAGE. ------------------ */
 .areaList-section{
     padding: 30px;
@@ -835,7 +838,7 @@ button[type="submit"].servicesButton {
 /* ------------------ CUSTOM CSS OWNER PHP PAGES. ------------------ */
 .ownerList-section{
     padding: 30px;
-    height: 800px;
+    height: 600px;
     background: #fff;
 }
 

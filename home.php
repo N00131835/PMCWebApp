@@ -1,4 +1,6 @@
 <?php
+require_once 'User.php';
+require_once 'UserTableGateway.php';
 require_once 'Property.php';
 require_once 'Connection.php';
 require_once 'PropertyTableGateway.php';
@@ -50,6 +52,7 @@ $statement = $gateway->getProperty();
                 <div class="row">
                     <div class="dashProfInfo col-lg-12 col-sm-12">
                         <img src="img/userprofPic.jpg" class="img-rounded">
+                        <?php echo '$username'; ?>
                         <!--<textarea class="profTextArea form-control pull-right" rows="9"></textarea>-->
                     </div>
                 </div>
