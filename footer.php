@@ -22,11 +22,11 @@
                  </div>
             </div>   
         </div>
-        <div class="logoFooter col-lg-2 col-lg-offset-5">
+        <div class="logoFooter col-xs-12 col-lg-2 col-lg-offset-5">
                 <a href="#back-to-top"> 
                     <img src="img/dr-logosm.png">
                 </a>
-                <p class="text-center">&#169; Dublin Rentals</p> 
+                <p>&#169; Dublin Rentals</p> 
             </div>
     </div>
 </footer>
