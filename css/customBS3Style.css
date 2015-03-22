@@ -739,6 +739,8 @@ button[type="submit"].servicesButton {
 
 .dashTableMenu-section ul{
    list-style-type: none;
+   padding-left: 65px;
+   padding-right: 65px;
 }
 
 .dashTableMenu-section li{
@@ -752,14 +754,35 @@ button[type="submit"].servicesButton {
     height: 350px;
 }
 
-.dashProfInfo{
-    margin-top: 160px;
-    padding-left: 40px;
+.dashProfTitle {
+    margin-left: 520px;
+    margin-bottom: 30px;
 }
 
-.dashProfInfo img{
+.dashProfPic{
+    margin-top: 160px;
+    margin-left: 100px;
+}
+
+.dashProfPic img{
     width: 230px;
     height: 200px;
+}
+
+.dashProfInfo{
+    margin-top: 160px;
+    margin-left: -60px;
+}
+
+.dashProfInfo h1{
+    margin-top: 40px;
+    margin-left: 0;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.dashProfInfo p{
+    font-size: 19px;
 }
 
 .profTextArea {
@@ -831,21 +854,21 @@ button[type="submit"].servicesButton {
 /* -viewpropertyform- */
 .viewpropertyForm-section {
     padding: 50px;
-    height: 400px;
+    height: 600px;
     background: #fff;
 }
 
 /* ------------------ CUSTOM CSS FOR AREALIST PHP PAGE. ------------------ */
 .areaList-section{
     padding: 30px;
-    height: 800px;
+    height: 600px;
     background: #fff;
 }
 
 /* viewareaForm-section */
 .viewareaForm-section {
     padding: 50px;
-    height: 400px;
+    height: 600px;
     background: #fff;
 }
 
@@ -866,14 +889,14 @@ button[type="submit"].servicesButton {
 /* -viewownerform- */
 .viewownerForm-section {
     padding: 50px;
-    height: 400px;
+    height: 600px;
     background: #fff;
 }
 
 /* ------------------ CUSTOM CSS FOR TENANTLIST PHP PAGE. ------------------ */
 .tenantList-section{
     padding: 30px;
-    height: 800px;
+    height: 600px;
     background: #fff;
 }
 

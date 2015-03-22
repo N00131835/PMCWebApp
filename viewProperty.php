@@ -66,11 +66,11 @@ $statement = $gateway->getPropertyById($PropertyID);
         </section>
         
         <!-- propertyForms Section -->
-        <section id="propertyForms" class="viewownerForm-section">
+        <section id="propertyForms" class="viewpropertyForm-section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-sm-6">
-                        <table>
+                        <table class="table">
                             <!-- This is the category fields on the list. -->
                             <tbody>
                             <h3>Viewing a Property</h3>

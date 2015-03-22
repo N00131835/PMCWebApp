@@ -248,8 +248,8 @@ $statement = $gateway->getProperty();
                             <br/>
                             Log on or download our app today to see the new DublinRentals.ie.
                         </p>
-                        <img src="img/app/dr-appstore.png" class="appLogo img-responsive"> <!-- Apple App Store Logo -->
-                        <img src="img/app/dr-playstore.png" class="playLogo img-responsive"> <!-- Google Play Logo -->
+                        <a href="https://itunes.apple.com/ie/genre/ios/id36?mt=8" target="_blank"><img src="img/app/dr-appstore.png" class="appLogo img-responsive"></a> <!-- Apple App Store Logo -->
+                        <a href="https://play.google.com/store/apps?hl=en" target="_blank"><img src="img/app/dr-playstore.png" class="playLogo img-responsive"></a> <!-- Google Play Logo -->
                     </div>
                 </div>
             </div>

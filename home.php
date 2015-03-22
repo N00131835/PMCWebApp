@@ -50,10 +50,16 @@ $statement = $gateway->getProperty();
         <section id="dashProf" class="dashProf-section">
             <div class="container">
                 <div class="row">
-                    <div class="dashProfInfo col-lg-12 col-sm-12">
+                    <div class="dashProfPic col-lg-4 col-sm-4">
                         <img src="img/userprofPic.jpg" class="img-rounded">
-                        <?php echo '$username'; ?>
-                        <!--<textarea class="profTextArea form-control pull-right" rows="9"></textarea>-->
+                    </div>
+                    <div class="dashProfInfo col-lg-6">
+                        <?php
+                            echo '<h1>Hey, ' . ($_SESSION['username']) . '</h1>';
+                        ?>
+                        <p>
+                            Here's where you manage your account.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -63,9 +69,9 @@ $statement = $gateway->getProperty();
         <section id="dashTableMenu" class="dashTableMenu-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-sm-12">
-                        <h2 class="mainMenuTitle">Tables</h2>
-                        <ul class="pull-left">
+                    <div class="dashTableBig col-lg-12 col-sm-12">
+                        <h2 class="dashProfTitle">Tables</h2>
+                        <ul class="dashLeftMenu pull-left">
                             <li>
                                 <a href="viewProperties.php"><img src="img/tableimgs/propertylist.png"></a>
                             </li>
@@ -75,7 +81,7 @@ $statement = $gateway->getProperty();
                             </li>
                         </ul>
                         
-                        <ul class="pull-right">
+                        <ul class="dashRightMenu pull-right">
                             <li>
                                 <a href="viewAreas.php"><img src="img/tableimgs/arealist.png"></a>
                             </li>
