@@ -1,34 +1,53 @@
 body {
-	background-color: #292d30;
-	font-family: 'Montserrat', sans-serif;
+    background-color: #292d30;
+    font-family: 'Montserrat', sans-serif;
 }
 
 nav.navtop {
-	padding-left: 30px;
-	padding-right: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .navbar-header {
-	margin-left: 30px;
+    margin-left: 30px;
 }
 
 .navbar-brand {
-	font-size: 20px;
-	font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
 }
 .navbar-default {
-	height: 105px;
-	border:none;
-	background-color: #fff;
-	border-bottom: 1px solid #ededed;
+    height: 105px;
+    border:none;
+    background-color: #fff;
+    border-bottom: 1px solid #ededed;
 }
 
 .navbar-header {
-	margin-top: 5px;
+    margin-top: 5px;
+}
+
+.navbar-toggle span{
+    margin-left: 10px;
+}
+
+.navbar-toggle h5{
+    margin-bottom: 0;
 }
 
 #myNavbar {
-	margin-top: 20px;
+    margin-top: 20px;
+}
+
+@media(max-width: 767px){
+    #myNavbar {
+        margin-top: 25px;
+        background: #fff;
+        border: none;
+        float: right;
+        width: 240px;
+        background: #fff;
+    }
 }
 
 #myNavbar ul {
@@ -443,6 +462,122 @@ button[type="submit"].searchButton {
     }
 }
 
+@media(max-width: 767px){
+    .services-section {
+        padding: 60px;
+        height: 1100px;
+        text-align: center;
+        background: #dedede;
+    }
+    .servicesImgs img{
+        margin-left: 80px;
+        max-width: 205px;
+        max-height: 177px;
+    }
+    .servicesImgs h4 {
+        margin-left: 40px;
+    }
+}
+
+@media(max-width: 650px){
+    .services-section {
+        padding: 60px;
+        height: 1150px;
+        text-align: center;
+        background: #dedede;
+    }
+    .servicesImgs img{
+        margin-left: 50px;
+        max-width: 205px;
+        max-height: 177px;
+    }
+    .servicesImgs h4 {
+        margin-left: 40px;
+    }
+}
+@media(max-width: 580px){
+    .services-section {
+        padding: 60px;
+        height: 1190px;
+        text-align: center;
+        background: #dedede;
+    }
+    .servicesImgs img{
+        margin-left: 0px;
+        max-width: 205px;
+        max-height: 177px;
+    }
+    .servicesImgs h4 {
+        margin-left: 10px;
+    }
+}
+
+@media(max-width: 515px){
+    .services-section {
+        padding: 60px;
+        height: 1190px;
+        text-align: center;
+        background: #dedede;
+    }
+    .servicesImgs img{
+        margin-left: -50px;
+        max-width: 205px;
+        max-height: 177px;
+    }
+    .servicesImgs h4 {
+        margin-left: -30px;
+    }
+}
+@media(max-width: 440px){
+    .services-section {
+        padding: 60px;
+        height: 1190px;
+        text-align: center;
+        background: #dedede;
+    }
+    .servicesImgs img{
+        margin-left: -60px;
+        max-width: 205px;
+        max-height: 177px;
+    }
+    .servicesImgs h4 {
+        margin-left: -20px;
+    }
+}
+@media(max-width: 395px){
+    .services-section {
+        padding: 60px;
+        height: 1080px;
+        text-align: center;
+        background: #dedede;
+    }
+    .servicesImgs img{
+        margin-left: -90px;
+        max-width: 185px;
+        max-height: 157px;
+    }
+    .servicesImgs h4 {
+        margin-left: -60px;
+    }
+}
+
+@media(max-width: 330px){
+    .services-section {
+        padding: 60px;
+        height: 1080px;
+        text-align: center;
+        background: #dedede;
+    }
+    .servicesImgs img{
+        margin-left: -115px;
+        max-width: 185px;
+        max-height: 157px;
+    }
+    .servicesImgs h4 {
+        margin-left: -65px;
+    }
+}
+
 button[type="submit"].servicesButton {
 	margin: 40px;
 	font-size: 15px;
@@ -499,9 +634,6 @@ button[type="submit"].servicesButton {
 	margin-left: 15px;
 }
 
-.navbotLinks {
-	margin-right: 60px;
-}
 
 .navbotLinks ul {
 	list-style-type: none;
@@ -517,16 +649,17 @@ button[type="submit"].servicesButton {
 	color: #c3c3c3;
 }
 
-@media(max-width: 868px) and (min-width: 767px){
-	.navbotLinks {
-            float: right;
-	    width: 450px;
-	}
-}
-
 .socialFooter {
 	margin-top: -20px;
 	margin-left: 31px;
+}
+
+.logoFooter{
+    margin-top: 50px;
+}
+
+.loginRegFooter{
+    margin-top: 20px;
 }
 
 .loginRegFooter ul{
@@ -548,14 +681,18 @@ button[type="submit"].servicesButton {
 
 .socialLinks li {
 	display: inline-block;
-	padding-left: 15px;
-	padding-right: 20px;
+	padding-left: 5px;
+	padding-right: 15px;
 }
 
-@media(max-width: 868px){
-	.footer-section {
-	    height: 300px;
-	}
+.footerLinks {
+    margin-left: -20px;
+}
+
+@media(max-width: 400px){
+    .footerLinks {
+        margin-left: -60px;
+    }
 }
 
 /* ------------------ CUSTOM CSS FOR LOGIN PAGE. ------------------ */

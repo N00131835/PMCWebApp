@@ -126,17 +126,17 @@ $statement = $gateway->getProperty();
                         <div class="clearfix"></div> <!-- Clearfix class can easily clear floats by adding this. -->
 
                         <div class="servicesImgs row col-lg-offset-1">
-                            <div class="col-xs-4 col-sm-4">
+                            <div class="col-xs-8 col-sm-4 col-md-4 col-lg-4">
                                 <img src="img/services/ownerPic.png" class="img-responsive">
 
                                 <h4 class="text-center">Reliable.</h4>
                             </div>
-                            <div class="col-xs-4 col-sm-4">
+                            <div class="col-xs-8 col-sm-4 col-md-4 col-lg-4">
                                 <img src="img/services/tenantPic.png" class="img-responsive">
 
                                 <h4 class="text-center">Comfortable.</h4>
                             </div>
-                            <div class="col-xs-4 col-sm-4">
+                            <div class="col-xs-8 col-sm-4 col-md-4 col-lg-4">
                                 <img src="img/services/areaPic.png" class="img-responsive">
 
                                 <h4 class="text-center">Accessible.</h4>

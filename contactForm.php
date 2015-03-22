@@ -31,6 +31,13 @@
             </div>
 
             <div class="modal-footer">
+                      <div class="socialLinks pull-left">
+                          <ul>
+                              <li><img src="img/social/fb.png"></li>
+                              <li><img src="img/social/g+.png"></li>
+                              <li><img src="img/social/twit.png"></li>
+                          </ul>
+                      </div>
                 <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info">
                 <button class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
