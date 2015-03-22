@@ -66,7 +66,7 @@ $statement = $gateway->getPropertyById($PropertyID);
         </section>
         
         <!-- propertyForms Section -->
-        <section id="propertyForms" class="propertyForms-section">
+        <section id="propertyForms" class="viewownerForm-section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-sm-6">

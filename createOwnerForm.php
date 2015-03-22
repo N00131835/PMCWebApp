@@ -37,11 +37,23 @@ require 'ensureUserLoggedIn.php'; //redirects to the index(login) if the user is
         <!-- Header Navigation is in a separate page, so that when I want to edit something i can just go in to the header.php page 
             and make my edits there, instead of having to edit it in a lot of pages.  -->
         <?php require 'header.php'; ?>
-        <!-- ownerForms Section -->
-        <section id="ownerForms" class="ownerForms-section">
+        
+        <!-- menuList Section -->
+        <section id="mainMenuList" class="menuList-section">
             <div class="container">
                 <div class="row">
-                    <div class="custom-container col-lg-12 col-sm-12">
+                    <div class="col-lg-12 col-sm-12">
+                           <?php require 'mainMenu.php'; ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- editownerForm Section -->
+        <section id="propertyForms" class="createownerForm-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
                         <h3>Create Owner Form</h3>
                         <form action="createOwner.php" 
                               method="POST"

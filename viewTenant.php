@@ -64,10 +64,12 @@ $statement = $gateway->getTenantById($TenantID);
             </div>
         </section>
         
-        <div class="custom-container container">
-
-            <hr> <!-- horizontal break -->
-                <table>
+        <!-- edittenantForm Section -->
+        <section id="tenantForms" class="edittenantForm-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                        <table>
                     <!-- This is the category fields on the list. -->
                     <tbody>
                     <h3>Viewing a Tenant</h3>
@@ -110,8 +112,10 @@ $statement = $gateway->getTenantById($TenantID);
                         Edit this Tenant</a>
                     <a class="delLink deleteTenant" href="deleteTenant.php?TenantID=<?php echo $row['TenantID']; ?>">Delete this Tenant</a>
                 </div> <!-- These are buttons that will link to Edit and/or Delete the Tenant -->
-            <hr class="botlineView"> <!-- horizontal break --> 
-        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!-- Footer Section -->
         <?php require 'footer.php'; ?>

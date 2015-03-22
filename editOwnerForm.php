@@ -55,11 +55,22 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
             and make my edits there, instead of having to edit it in a lot of pages.  -->
         <?php require 'header.php'; ?>
         
-        <!-- ownerForms Section -->
-        <section id="ownerForms" class="ownerForms-section">
+        <!-- menuList Section -->
+        <section id="mainMenuList" class="menuList-section">
             <div class="container">
                 <div class="row">
-                    <div class="custom-container col-lg-12 col-sm-12">
+                    <div class="col-lg-12 col-sm-12">
+                           <?php require 'mainMenu.php'; ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- editownerForm Section -->
+        <section id="propertyForms" class="editownerForm-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
                         <?php
                         if (isset($errorMessage)) {
                             echo '<p>Error: ' . $errorMessage . '</p>';
@@ -249,7 +260,7 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                 </tbody>
                             </table>
                             <div class="editLinksbot" >
-                                <a class="viewOwner" href="viewOwner.php?OwnerID=<?php echo $row['OwnerID']; ?>">
+                                <a class="viewProperty" href="viewOwner.php?OwnerID=<?php echo $row['OwnerID']; ?>">
                                     View this Owner</a>
                                 <a class="delLink deleteOwner" href="deleteOwner.php?OwnerID=<?php echo $row['OwnerID']; ?>">Delete this Owner</a>
                             </div> <!-- These are buttons that will link to View and/or Delete the property -->

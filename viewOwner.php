@@ -65,10 +65,10 @@ $statement = $gateway->getOwnerById($OwnerID);
         </section>
         
         <!-- ownerForms Section -->
-        <section id="ownerForms" class="ownerForms-section">
+        <section id="ownerForms" class="viewownerForm-section">
             <div class="container">
                 <div class="row">
-                    <div class="custom-container col-lg-12 col-sm-12">
+                    <div class="col-lg-12 col-sm-12">
                         <table>
                             <!-- This is the category fields on the list. -->
                             <tbody>

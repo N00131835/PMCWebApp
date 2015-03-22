@@ -64,33 +64,37 @@ $statement = $gateway->getAreaById($AreaID);
             </div>
         </section>
         
-        <div class="custom-container container">
+        <!-- viewareaForm Section -->
+        <section id="areaForms" class="viewareaForm-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                        <table>
+                            <!-- This is the category fields on the list. -->
+                            <tbody>
+                            <h3>Viewing a Area</h3>
+                                <?php
+                                $row = $statement->fetch(PDO::FETCH_ASSOC);
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">AreaName</td>' . '<td>' . $row['AreaName'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">Facilities</td>' . '<td>' . $row['Facilities'] . '</td>';
+                                    echo '</tr>';
+                                ?>
+                            </tbody>
+                            <!-- This is the get methods of the properties, where the output of the user put in the Area form will be shown -->
+                        </table>
 
-            <hr> <!-- horizontal break -->
-                <table>
-                    <!-- This is the category fields on the list. -->
-                    <tbody>
-                    <h3>Viewing a Area</h3>
-                        <?php
-                        $row = $statement->fetch(PDO::FETCH_ASSOC);
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">AreaName</td>' . '<td>' . $row['AreaName'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">Facilities</td>' . '<td>' . $row['Facilities'] . '</td>';
-                            echo '</tr>';
-                        ?>
-                    </tbody>
-                    <!-- This is the get methods of the properties, where the output of the user put in the Area form will be shown -->
-                </table>
-            
-                <div class="optlinksBtm" >
-                    <a class="editProperty" href="editAreaForm.php?AreaID=<?php echo $row['AreaID']; ?>">
-                        Edit this Area</a>
-                    <a class="delLink deleteArea" href="deleteArea.php?AreaID=<?php echo $row['AreaID']; ?>">Delete this Area</a>
-                </div> <!-- These are buttons that will link to Edit and/or Delete the Area -->
-            <hr class="botlineView"> <!-- horizontal break --> 
-        </div>
+                        <div class="optlinksBtm" >
+                            <a class="editProperty" href="editAreaForm.php?AreaID=<?php echo $row['AreaID']; ?>">
+                                Edit this Area</a>
+                            <a class="delLink deleteArea" href="deleteArea.php?AreaID=<?php echo $row['AreaID']; ?>">Delete this Area</a>
+                        </div> <!-- These are buttons that will link to Edit and/or Delete the Area -->
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!-- Footer Section -->
         <?php require 'footer.php'; ?>

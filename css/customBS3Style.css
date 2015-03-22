@@ -821,8 +821,15 @@ button[type="submit"].servicesButton {
     background: #c0a0e1;
 }
 
-/* -editpropertyform- */
-.propertyForms-section {
+/* -createpropertyform && editpropertyForm-section- */
+.createpropertyForm-section, .editpropertyForm-section {
+    padding: 50px;
+    height: 600px;
+    background: #fff;
+}
+
+/* -viewpropertyform- */
+.viewpropertyForm-section {
     padding: 50px;
     height: 400px;
     background: #fff;
@@ -835,6 +842,13 @@ button[type="submit"].servicesButton {
     background: #fff;
 }
 
+/* viewareaForm-section */
+.viewareaForm-section {
+    padding: 50px;
+    height: 400px;
+    background: #fff;
+}
+
 /* ------------------ CUSTOM CSS OWNER PHP PAGES. ------------------ */
 .ownerList-section{
     padding: 30px;
@@ -842,10 +856,17 @@ button[type="submit"].servicesButton {
     background: #fff;
 }
 
-/* -editownerform- */
-.ownerForms-section {
-    padding: 30px;
-    height: 800px;
+/* createownerForm-section && editownerForm-section */
+.createownerForm-section, .editownerForm-section {
+    padding: 50px;
+    height: 600px;
+    background: #fff;
+}
+
+/* -viewownerform- */
+.viewownerForm-section {
+    padding: 50px;
+    height: 400px;
     background: #fff;
 }
 
@@ -856,8 +877,16 @@ button[type="submit"].servicesButton {
     background: #fff;
 }
 
-/* ------------------ CUSTOM CSS FOR. ------------------ */
+/* createtenantForm-section && edittenantForm-section */
+.createtenantForm-section, .edittenantForm-section {
+    padding: 50px;
+    height: 600px;
+    background: #fff;
+}
 
-.custom-container{
-    padding-top: 150px;
+/* -viewtenantForm-section- */
+.viewtenantForm-section {
+    padding: 50px;
+    height: 400px;
+    background: #fff;
 }
