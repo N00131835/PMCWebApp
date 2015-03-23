@@ -62,8 +62,8 @@ $statement = $gateway->getTenant();
                         <h3>
                             Tenant List
                             
-                            <a href="createTenantForm.php" class="pull-right">
-                                <input id="createPro" type="submit" value="Create Tenant" name="createTenant"/>
+                            <a href="createTenantForm.php" class="createBtnLink pull-right">
+                                <span name="createTenant" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                             </a>
                         </h3>
 

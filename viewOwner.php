@@ -68,36 +68,36 @@ $statement = $gateway->getOwnerById($OwnerID);
         <section id="ownerForms" class="viewownerForm-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-sm-12">
-                        <table>
+                    <div class="col-lg-offset-4 col-lg-5">
+                        <table class="table table-hover">
                             <!-- This is the category fields on the list. -->
                             <tbody>
-                            <h3>Viewing an Owner</h3>
+                            <h2>Viewing an Owner</h2>
                                 <?php
                                 $row = $statement->fetch(PDO::FETCH_ASSOC);
                                     echo '<tr>';
-                                    echo '<td class="vedHeaders">FirstName</td>' . '<td>' . $row['FirstName'] . '</td>';
+                                    echo '<td class="vedHeaders">FirstName</td>' . '<td class="vedOutput">' . $row['FirstName'] . '</td>';
                                     echo '</tr>';
                                     echo '<tr>';
-                                    echo '<td class="vedHeaders">LastName</td>' . '<td>' . $row['LastName'] . '</td>';
+                                    echo '<td class="vedHeaders">LastName</td>' . '<td class="vedOutput">' . $row['LastName'] . '</td>';
                                     echo '</tr>';
                                     echo '<tr>';
-                                    echo '<td class="vedHeaders">Address1</td>' . '<td>' . $row['Address1'] . '</td>';
+                                    echo '<td class="vedHeaders">Address1</td>' . '<td class="vedOutput">' . $row['Address1'] . '</td>';
                                     echo '</tr>';
                                     echo '<tr>';
-                                    echo '<td class="vedHeaders">Address2</td>' . '<td>' . $row['Address2'] . '</td>';
+                                    echo '<td class="vedHeaders">Address2</td>' . '<td class="vedOutput">' . $row['Address2'] . '</td>';
                                     echo '</tr>';
                                     echo '<tr>';
-                                    echo '<td class="vedHeaders">Town</td>' . '<td>' . $row['Town'] . '</td>';
+                                    echo '<td class="vedHeaders">Town</td>' . '<td class="vedOutput">' . $row['Town'] . '</td>';
                                     echo '</tr>';
                                     echo '<tr>';
-                                    echo '<td class="vedHeaders">County</td>' . '<td>' . $row['County'] . '</td>';
+                                    echo '<td class="vedHeaders">County</td>' . '<td class="vedOutput">' . $row['County'] . '</td>';
                                     echo '</tr>';
                                     echo '<tr>';
-                                    echo '<td class="vedHeaders">MobileNum</td>' . '<td>' . $row['MobileNum'] . '</td>';
+                                    echo '<td class="vedHeaders">MobileNum</td>' . '<td class="vedOutput">' . $row['MobileNum'] . '</td>';
                                     echo '</tr>';
                                     echo '<tr>';
-                                    echo '<td class="vedHeaders">Email</td>' . '<td>' . $row['Email'] . '</td>';
+                                    echo '<td class="vedHeaders">Email</td>' . '<td class="vedOutput">' . $row['Email'] . '</td>';
                                     echo '</tr>';
                                 ?>
                             </tbody>

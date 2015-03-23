@@ -62,8 +62,8 @@ $statement = $gateway->getOwner();
                         <h3>
                             Owner List
                             
-                            <a href="createOwnerForm.php" class="pull-right">
-                                <input id="createPro" type="submit" value="Create Owner" name="createOwner"/>
+                            <a href="createOwnerForm.php" class="createBtnLink pull-right">
+                                <span name="createOwner" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                             </a>
                         </h3>
                         
@@ -100,11 +100,11 @@ $statement = $gateway->getOwner();
                             </tbody>
                             <!-- This is the get methods of the properties, where the output of the user put in the Owner form will be shown -->
                         </table>
-                        <hr class="botline">
                     </div>
                 </div>
             </div>
         </section>
+        
         <!-- Footer Section -->
         <?php require 'footer.php'; ?>
     

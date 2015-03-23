@@ -6,7 +6,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <h5>MENU</h5>
             </button>
 
             <a class="navbar-brand" href="index.php"><img src="img/dr-logosm.png" width="77" height="15px" style="margin-bottom:5px;"> Dublin <br/> Rentals</a>

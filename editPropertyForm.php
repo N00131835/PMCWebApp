@@ -71,14 +71,14 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
         <section id="propertyForms" class="editpropertyForm-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-sm-12">
+                    <div class="col-lg-offset-3 col-lg-8">
                        <?php
                         if (isset($errorMessage)) {
                             echo '<p>Error: ' . $errorMessage . '</p>';
                         }
                         ?>
 
-                        <h3>Edit Property Form</h3>
+                        <h2>Edit Property Form</h2>
 
                         <form id="editPropertyForm" name="editPropertyForm" action="editProperty.php" method="POST">
                         <input type="hidden" name="PropertyID" value="<?php echo $PropertyID; ?>" /> <!-- This is a hidden tyoe because we don't want the user to see the ID of the Property -->
@@ -227,7 +227,7 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                     <tr>
                                         <td></td>
                                         <td>
-                                            <input type="submit" value="Update Property" name="updateProperty"/>
+                                            <input type="submit" class="createProFormBtn" value="Update Property" name="updateProperty"/>
                                         </td>
                                     </tr>
                                 </tbody>

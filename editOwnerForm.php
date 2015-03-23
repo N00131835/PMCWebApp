@@ -70,14 +70,14 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
         <section id="propertyForms" class="editownerForm-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-sm-12">
+                    <div class="col-lg-offset-3 col-lg-8">
                         <?php
                         if (isset($errorMessage)) {
                             echo '<p>Error: ' . $errorMessage . '</p>';
                         }
                         ?>
 
-                        <h3>Edit Owner Form</h3>
+                        <h2>Edit Owner Form</h2>
 
                         <form id="editOwnerForm" name="editOwnerForm" action="editOwner.php" method="POST">
                         <input type="hidden" name="OwnerID" value="<?php echo $OwnerID; ?>" /> <!-- This is a hidden tyoe because we don't want the user to see the ID of the Owner -->
@@ -254,12 +254,12 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                     <tr>
                                         <td></td>
                                         <td>
-                                            <input type="submit" value="Update Owner" name="updateOwner"/>
+                                            <input type="submit" class="createOwnFormBtn" value="Update Owner" name="updateOwner"/>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="editLinksbot" >
+                            <div class="editLinksbotOwner" >
                                 <a class="viewProperty" href="viewOwner.php?OwnerID=<?php echo $row['OwnerID']; ?>">
                                     View this Owner</a>
                                 <a class="delLink deleteOwner" href="deleteOwner.php?OwnerID=<?php echo $row['OwnerID']; ?>">Delete this Owner</a>

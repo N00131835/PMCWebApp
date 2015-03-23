@@ -64,9 +64,9 @@ $statement = $gateway->getProperty();
                         <h3>
                             Property List
                             
-                        <a href="createPropertyForm.php" class="pull-right">
-                            <input id="createPro" type="submit" value="Create Property" name="createProperty"/>
-                        </a>
+                            <a href="createPropertyForm.php" class="createBtnLink pull-right">
+                                <span name="createProperty" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                            </a>
                         </h3>
                         
                         <table class="table table-bordered table-hover">

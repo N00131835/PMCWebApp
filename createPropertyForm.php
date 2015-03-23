@@ -53,8 +53,10 @@ require 'ensureUserLoggedIn.php'; //redirects to the index(login) if the user is
         <section id="propertyForms" class="createpropertyForm-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-sm-12">
-                        <h3>Create Property Form</h3>
+                    <div class="col-lg-offset-3 col-lg-8">
+                        
+                        <h2>Create Property Form</h2>
+                        
                             <form action="createProperty.php" 
                                   method="POST"
                                   onsubmit="return validateCreateProperty(this);">
@@ -189,7 +191,7 @@ require 'ensureUserLoggedIn.php'; //redirects to the index(login) if the user is
                                         <tr>
                                             <td></td>
                                             <td>
-                                                <input type="submit" value="Create Property" name="createProperty"/> <!-- this is a button that if you click will send a request to the DB and it will create the information written on their respective fields -->
+                                                <input type="submit" class="createProFormBtn" value="Create Property" name="createProperty"/> <!-- this is a button that if you click will send a request to the DB and it will create the information written on their respective fields -->
                                             </td>
                                         </tr>
                                     </tbody>

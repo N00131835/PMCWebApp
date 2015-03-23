@@ -238,7 +238,7 @@ $statement = $gateway->getProperty();
                         <img src="img/app/dr-devices.png" class="img-responsive"> <!-- Device Mock up for Computer, Laptop, Tablets and Phones. -->
                     </div>
                     
-                    <div class="quoteText col-md-5 col-lg-4">
+                    <div class="quoteText col-md-5 col-lg-5">
                         <p>
                             From the ground up, we’ve re-imagined what DublinRentals.ie can be, which led us to developing a completely new site that works across all platforms, all devices, and all browsers. 
                             <br/>

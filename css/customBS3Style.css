@@ -27,10 +27,6 @@ nav.navtop {
     margin-top: 5px;
 }
 
-.navbar-toggle span{
-    margin-left: 10px;
-}
-
 .navbar-toggle h5{
     margin-bottom: 0;
 }
@@ -259,6 +255,22 @@ button[type="submit"].searchButton {
     }
 }
 
+@media(max-width: 310px){
+    .quote-section {
+        height: 860px;
+    }
+    
+    .appLogo {
+        margin-left: 0px;
+        float:none;
+    }
+    
+    .playLogo {
+        margin-left: 0px;
+        float:none;
+    }
+}
+
 /* ------------------ CUSTOM CSS FOR FEATURED SECTION. ------------------ */
 
 .featured-section {
@@ -456,16 +468,32 @@ button[type="submit"].searchButton {
     margin-left: -105px;
 }
 
+button[type="submit"].servicesButton {
+	margin-top: 40px;
+	font-size: 15px;
+	background-color: #79c9e2;
+        color:white;
+}
+
 @media(max-width: 1200px){
     .servicesImgs{
         margin-left: 90px;
     }
 }
 
+@media(max-width: 992px){
+    .services-section {
+        padding: 60px;
+        height: 580px;
+        text-align: center;
+        background: #dedede;
+    }
+}
+
 @media(max-width: 767px){
     .services-section {
         padding: 60px;
-        height: 1100px;
+        height: 1140px;
         text-align: center;
         background: #dedede;
     }
@@ -477,22 +505,24 @@ button[type="submit"].searchButton {
     .servicesImgs h4 {
         margin-left: 40px;
     }
+    button[type="submit"].servicesButton {
+	margin-left: -40px;
+    }
 }
-
-@media(max-width: 650px){
+@media(max-width: 669px){
     .services-section {
         padding: 60px;
-        height: 1150px;
+        height: 1180px;
         text-align: center;
         background: #dedede;
     }
     .servicesImgs img{
-        margin-left: 50px;
+        margin-left: 25px;
         max-width: 205px;
         max-height: 177px;
     }
     .servicesImgs h4 {
-        margin-left: 40px;
+        margin-left: -5px;
     }
 }
 @media(max-width: 580px){
@@ -578,11 +608,21 @@ button[type="submit"].searchButton {
     }
 }
 
-button[type="submit"].servicesButton {
-	margin: 40px;
-	font-size: 15px;
-	background-color: #79c9e2;
-        color:white;
+@media(max-width: 310px){
+    .services-section {
+        padding: 60px;
+        height: 1120px;
+        text-align: center;
+        background: #dedede;
+    }
+    .servicesImgs img{
+        margin-left: -130px;
+        max-width: 185px;
+        max-height: 157px;
+    }
+    .servicesImgs h4 {
+        margin-left: -80px;
+    }
 }
 
 @media(max-width: 525px){
@@ -663,8 +703,18 @@ button[type="submit"].servicesButton {
 }
 
 @media(max-width: 350px){
+    .logoFooter{
+        margin-left: -25px;
+    }
     .logoFooter p{
+        text-align: center;
         font-size: 16px;
+    }
+}
+
+@media(max-width: 300px){
+    .logoFooter p{
+        font-size: 14px;
     }
 }
 
@@ -961,6 +1011,16 @@ button[type="submit"].servicesButton {
     background: #fff;
 }
 
+.propertyList-section h3{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.createBtnLink a{
+    text-decoration: none;
+    color: #000;
+}
+
 .TableCol1 {
     background: #f88b77;
 }
@@ -984,8 +1044,28 @@ button[type="submit"].servicesButton {
 /* -createpropertyform && editpropertyForm-section- */
 .createpropertyForm-section, .editpropertyForm-section {
     padding: 50px;
+    padding-left: 150px;
     height: 600px;
     background: #fff;
+}
+
+.createpropertyForm-section h2 {
+    margin-left: 55px;
+    margin-bottom: 30px;
+}
+
+.createProFormBtn{
+    width:300px; 
+    height:50px;
+    margin-left: 20px;
+    margin-top: 5px;
+    background-color: #C0A0E1;
+    border-radius: 5px;
+}
+
+.editpropertyForm-section h2 {
+    margin-left: 90px;
+    margin-bottom: 30px;
 }
 
 /* -viewpropertyform- */
@@ -993,6 +1073,11 @@ button[type="submit"].servicesButton {
     padding: 50px;
     height: 600px;
     background: #fff;
+}
+
+ .viewpropertyForm-section h2 {
+    margin-left: 80px;
+    margin-bottom: 30px;
 }
 
 /* ------------------ CUSTOM CSS FOR AREALIST PHP PAGE. ------------------ */
@@ -1016,11 +1101,36 @@ button[type="submit"].servicesButton {
     background: #fff;
 }
 
+.ownerList-section h3{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
 /* createownerForm-section && editownerForm-section */
 .createownerForm-section, .editownerForm-section {
     padding: 50px;
+    padding-left: 150px;
     height: 600px;
     background: #fff;
+}
+
+.createownerForm-section h2 {
+    margin-left: 55px;
+    margin-bottom: 30px;
+}
+
+.createOwnFormBtn{
+    width:300px; 
+    height:50px;
+    margin-left: 20px;
+    margin-top: 5px;
+    background-color: #C0A0E1;
+    border-radius: 5px;
+}
+
+.editownerForm-section h2 {
+    margin-left: 90px;
+    margin-bottom: 30px;
 }
 
 /* -viewownerform- */
@@ -1030,11 +1140,21 @@ button[type="submit"].servicesButton {
     background: #fff;
 }
 
+.viewownerForm-section h2 {
+    margin-left: 80px;
+    margin-bottom: 30px;
+}
+
 /* ------------------ CUSTOM CSS FOR TENANTLIST PHP PAGE. ------------------ */
 .tenantList-section{
     padding: 30px;
     height: 600px;
     background: #fff;
+}
+
+.tenantList-section h3{
+    font-size: 35px;
+    margin-bottom: 20px;
 }
 
 /* createtenantForm-section && edittenantForm-section */
@@ -1047,8 +1167,13 @@ button[type="submit"].servicesButton {
 /* -viewtenantForm-section- */
 .viewtenantForm-section {
     padding: 50px;
-    height: 400px;
+    height: 620px;
     background: #fff;
+}
+
+.viewtenantForm-section h2 {
+    margin-left: 80px;
+    margin-bottom: 30px;
 }
 
 /* ------------------ CUSTOM CSS FOR CONTACT FORM PAGE. ------------------ */

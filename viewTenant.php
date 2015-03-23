@@ -65,53 +65,53 @@ $statement = $gateway->getTenantById($TenantID);
         </section>
         
         <!-- edittenantForm Section -->
-        <section id="tenantForms" class="edittenantForm-section">
+        <section id="tenantForms" class="viewtenantForm-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-sm-12">
-                        <table>
-                    <!-- This is the category fields on the list. -->
-                    <tbody>
-                    <h3>Viewing a Tenant</h3>
-                        <?php
-                        $row = $statement->fetch(PDO::FETCH_ASSOC);
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">FirstName</td>' . '<td>' . $row['FirstName'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">LastName</td>' . '<td>' . $row['LastName'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">DOB</td>' . '<td>' . $row['DOB'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">Gender</td>' . '<td>' . $row['Gender'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">Email</td>' . '<td>' . $row['Email'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">MobileNum</td>' . '<td>' . $row['MobileNum'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">PropertyID</td>' . '<td>' . $row['PropertyID'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">StartLease</td>' . '<td>' . $row['StartLease'] . '</td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td class="vedHeaders">Duration</td>' . '<td>' . $row['Duration'] . '</td>';
-                            echo '</tr>';
-                        ?>
-                    </tbody>
-                    <!-- This is the get methods of the properties, where the output of the user put in the Tenant form will be shown -->
-                </table>
-            
-                <div class="optlinksBtm" >
-                    <a class="editProperty" href="editTenantForm.php?TenantID=<?php echo $row['TenantID']; ?>">
-                        Edit this Tenant</a>
-                    <a class="delLink deleteTenant" href="deleteTenant.php?TenantID=<?php echo $row['TenantID']; ?>">Delete this Tenant</a>
-                </div> <!-- These are buttons that will link to Edit and/or Delete the Tenant -->
+                    <div class="col-lg-offset-4 col-lg-5">
+                        <table class="table table-hover">
+                            <!-- This is the category fields on the list. -->
+                            <tbody>
+                            <h2>Viewing a Tenant</h2>
+                                <?php
+                                $row = $statement->fetch(PDO::FETCH_ASSOC);
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">FirstName</td>' . '<td>' . $row['FirstName'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">LastName</td>' . '<td>' . $row['LastName'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">DOB</td>' . '<td>' . $row['DOB'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">Gender</td>' . '<td>' . $row['Gender'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">Email</td>' . '<td>' . $row['Email'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">MobileNum</td>' . '<td>' . $row['MobileNum'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">PropertyID</td>' . '<td>' . $row['PropertyID'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">StartLease</td>' . '<td>' . $row['StartLease'] . '</td>';
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                    echo '<td class="vedHeaders">Duration</td>' . '<td>' . $row['Duration'] . '</td>';
+                                    echo '</tr>';
+                                ?>
+                            </tbody>
+                            <!-- This is the get methods of the properties, where the output of the user put in the Tenant form will be shown -->
+                        </table>
+
+                        <div class="optlinksBtm" >
+                            <a class="editProperty" href="editTenantForm.php?TenantID=<?php echo $row['TenantID']; ?>">
+                                Edit this Tenant</a>
+                            <a class="delLink deleteTenant" href="deleteTenant.php?TenantID=<?php echo $row['TenantID']; ?>">Delete this Tenant</a>
+                        </div> <!-- These are buttons that will link to Edit and/or Delete the Tenant -->
                     </div>
                 </div>
             </div>

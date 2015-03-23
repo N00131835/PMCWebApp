@@ -85,9 +85,9 @@ $area = $areaGateway->getArea();
                                 while ($row) {
 
                                     echo '<tr>';
-                                    echo '<td class="prEach3">' . $row['AreaName'] . '</td>';
-                                    echo '<td class="prEach4">' . $row['Facilities'] . '</td>';
-                                    echo '<td class="prEach4 optlinks">'
+                                    echo '<td>' . $row['AreaName'] . '</td>';
+                                    echo '<td>' . $row['Facilities'] . '</td>';
+                                    echo '<td class="optlinks">'
                                     . '<a href="viewArea.php?AreaID='.$row['AreaID'].'"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a> '
                                     . '</td>';
                                     echo '</tr>';

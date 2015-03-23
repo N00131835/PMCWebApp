@@ -68,11 +68,13 @@ $statement = $gateway->getAreaById($AreaID);
         <section id="areaForms" class="viewareaForm-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-sm-12">
-                        <table>
+                    <div class="col-lg-offset-3 col-lg-6">
+                        <table class="table table-hover">
                             <!-- This is the category fields on the list. -->
                             <tbody>
-                            <h3>Viewing a Area</h3>
+                            <h2>
+                                Viewing a Area
+                            </h2>
                                 <?php
                                 $row = $statement->fetch(PDO::FETCH_ASSOC);
                                     echo '<tr>';
