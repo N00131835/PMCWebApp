@@ -24,7 +24,7 @@ class AreaTableGateway {
     
     public function getAreaById($AreaID) {
         // execute a query to get the user with the specified id
-        $sqlQuery = "SELECT * FROM property WHERE AreaID = :AreaID";
+        $sqlQuery = "SELECT * FROM area WHERE AreaID = :AreaID";
         
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(

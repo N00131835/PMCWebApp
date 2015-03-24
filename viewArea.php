@@ -72,9 +72,9 @@ $statement = $gateway->getAreaById($AreaID);
                         <table class="table table-hover">
                             <!-- This is the category fields on the list. -->
                             <tbody>
-                            <h2>
-                                Viewing a Area
-                            </h2>
+                                <h2>
+                                    Viewing a Area
+                                </h2>
                                 <?php
                                 $row = $statement->fetch(PDO::FETCH_ASSOC);
                                     echo '<tr>';
@@ -88,10 +88,9 @@ $statement = $gateway->getAreaById($AreaID);
                             <!-- This is the get methods of the properties, where the output of the user put in the Area form will be shown -->
                         </table>
 
-                        <div class="optlinksBtm" >
+                        <div class="optlinksBtmArea" >
                             <a class="editProperty" href="editAreaForm.php?AreaID=<?php echo $row['AreaID']; ?>">
                                 Edit this Area</a>
-                            <a class="delLink deleteArea" href="deleteArea.php?AreaID=<?php echo $row['AreaID']; ?>">Delete this Area</a>
                         </div> <!-- These are buttons that will link to Edit and/or Delete the Area -->
                     </div>
                 </div>

@@ -47,14 +47,14 @@ nav.navtop {
 }
 
 #myNavbar ul {
-	margin-right: 30px;
+    margin-right: 30px;
 }
 
 button[type="button"].registerNav {
-	margin-top: -13px;
-	padding: 10px;
-        background-color: #87D1E8;
-        color: white;
+    margin-top: -13px;
+    padding: 10px;
+    background-color: #87D1E8;
+    color: white;
 }
 
 .registerNav:hover{
@@ -63,7 +63,7 @@ button[type="button"].registerNav {
 
 /* Carousel class */
 .carousel {
-	margin-top: 100px;
+    margin-top: 100px;
 }
 
 /* ------------------ CUSTOM CSS FOR SEARCH SECTION. ------------------ */
@@ -76,13 +76,13 @@ button[type="button"].registerNav {
 }
 
 div.form-group {
-	margin-top: 40px;
-	display: inline;
+    margin-top: 40px;
+    display: inline;
 }
 
 select#sel1.form-control {
-	margin-right: 10px;
-	height: 50px;
+    margin-right: 10px;
+    height: 50px;
 }
 
 
@@ -124,7 +124,7 @@ button[type="submit"].searchButton {
 .quote-section {
     padding: 50px;
     height: 600px;
-    background: #dedede;
+    background: #F4F4F4;
 }
 
 .quoteText p {
@@ -137,9 +137,9 @@ button[type="submit"].searchButton {
 }
 
 .appLogo {
-        float:left;
-    }
-    
+    float:left;
+}
+
 .playLogo {
     float:right;
 }
@@ -197,12 +197,12 @@ button[type="submit"].searchButton {
     .quote-section {
         height: 750px;
     }
-    
+
     .appLogo {
         margin-left: 50px;
         float:none;
     }
-    
+
     .playLogo {
         margin-left: 50px;
         float:none;
@@ -213,11 +213,11 @@ button[type="submit"].searchButton {
     .quote-section {
         height: 780px;
     }
-    
+
     .appLogo {
         float:none;
     }
-    
+
     .playLogo {
         float:none;
     }
@@ -227,12 +227,12 @@ button[type="submit"].searchButton {
     .quote-section {
         height: 800px;
     }
-    
+
     .appLogo {
         margin-left: 30px;
         float:none;
     }
-    
+
     .playLogo {
         margin-left: 30px;
         float:none;
@@ -243,12 +243,12 @@ button[type="submit"].searchButton {
     .quote-section {
         height: 830px;
     }
-    
+
     .appLogo {
         margin-left: 20px;
         float:none;
     }
-    
+
     .playLogo {
         margin-left: 20px;
         float:none;
@@ -259,12 +259,12 @@ button[type="submit"].searchButton {
     .quote-section {
         height: 860px;
     }
-    
+
     .appLogo {
         margin-left: 0px;
         float:none;
     }
-    
+
     .playLogo {
         margin-left: 0px;
         float:none;
@@ -274,194 +274,194 @@ button[type="submit"].searchButton {
 /* ------------------ CUSTOM CSS FOR FEATURED SECTION. ------------------ */
 
 .featured-section {
-	padding: 60px;
+    padding: 60px;
     height: 1000px;
     text-align: center;
     background: #fff;
 }
 
 @media(max-width: 1200px) and (min-width: 769px){
-	.featured-section {
-	    height: 1320px;
-	}
+    .featured-section {
+        height: 1320px;
+    }
 }
 
 @media(max-width: 768px){
-	.featured-section {
-	    height: 2350px;
-	}
+    .featured-section {
+        height: 2350px;
+    }
 }
 
 .ch-grid {
-	margin: 20px 0 0 0;
-	padding: 0;
-	list-style: none;
-	display: block;
-	text-align: center;
-	width: 100%;
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    text-align: center;
+    width: 100%;
 }
 
 @media(max-width: 500px){
-	.ch-grid {
-	    margin-left:-10px;;
-	}
+    .ch-grid {
+        margin-left:-10px;;
+    }
 }
 
 @media(max-width: 420px){
-	.ch-grid {
-	    margin-left:-50px;;
-	}
+    .ch-grid {
+        margin-left:-50px;;
+    }
 }
 
 @media(max-width: 375px){
-	.ch-grid {
-	    margin-left:-60px;;
-	}
+    .ch-grid {
+        margin-left:-60px;;
+    }
 }
 
 .ch-grid:after,
 .ch-item:before {
-	content: '';
+    content: '';
     display: table;
 }
 
 .ch-grid:after {
-	clear: both;
+    clear: both;
 }
 
 .ch-grid li {
-	width: 300px;
-	height: 300px;
-	display: inline-block;
-	margin: 20px;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    margin: 20px;
 }
 
 .ch-item {
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	position: relative;
-	cursor: default;
-	box-shadow: 
-		inset 0 0 0 0 rgba(0,0,0,0.4),
-		inset 0 0 0 16px rgba(240,240,240,0.6),
-		0 1px 2px rgba(0,0,0,0.1);
-	transition: all 0.4s ease-in-out;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    cursor: default;
+    box-shadow: 
+        inset 0 0 0 0 rgba(0,0,0,0.4),
+        inset 0 0 0 16px rgba(240,240,240,0.6),
+        0 1px 2px rgba(0,0,0,0.1);
+    transition: all 0.4s ease-in-out;
 }
 
 .ch-img-1 {
-	margin-top: 40px;
-	background-image: url(../img/featured/feat1/feat1.png);
+    margin-top: 40px;
+    background-image: url(../img/featured/feat1/feat1.png);
 }
 
 .ch-img-2 {
-	margin-top: 30px;
-	background-image: url(../img/featured/feat2/feat2.png);
+    margin-top: 30px;
+    background-image: url(../img/featured/feat2/feat2.png);
 }
 
 .ch-img-3 {
-	margin-top: 40px;
-	background-image: url(../img/featured/feat3/feat3.png);
+    margin-top: 40px;
+    background-image: url(../img/featured/feat3/feat3.png);
 }
 
 .ch-img-4 {
-	margin-top: 80px;
-	background-image: url(../img/featured/feat4/feat4.png);
+    margin-top: 80px;
+    background-image: url(../img/featured/feat4/feat4.png);
 }
 
 .ch-img-5 {
-	margin-top: 80px;
-	background-image: url(../img/featured/feat5/feat5.png);
+    margin-top: 80px;
+    background-image: url(../img/featured/feat5/feat5.png);
 }
 
 .ch-img-6 {
-	margin-top: 80px;
-	background-image: url(../img/featured/feat6/feat6.png);
+    margin-top: 80px;
+    background-image: url(../img/featured/feat6/feat6.png);
 }
 
 .ch-info {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	overflow: hidden;
-	opacity: 0;
-	margin-top: 30px;
-	transition: all 0.4s ease-in-out;
-	transform: scale(0);
-	backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 30px;
+    transition: all 0.4s ease-in-out;
+    transform: scale(0);
+    backface-visibility: hidden;
 }
 
 .ch-info h3 {
-	color: #fff;
-	text-transform: uppercase;
-	position: relative;
-	letter-spacing: 2px;
-	font-size: 22px;
-	margin: 0 30px;
-	margin-bottom: 20px;
-	padding: 65px 0 0 0;
-	height: 110px;
-	text-shadow: 
-		0 0 1px #fff, 
-		0 1px 2px rgba(0,0,0,0.3);
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin: 0 30px;
+    margin-bottom: 20px;
+    padding: 65px 0 0 0;
+    height: 110px;
+    text-shadow: 
+        0 0 1px #fff, 
+        0 1px 2px rgba(0,0,0,0.3);
 }
 
 .ch-info p {
-	color: #fff;
-	padding: 10px 5px;
-	font-style: italic;
-	margin-top: 30px;
-	font-size: 12px;
-	border-top: 1px solid rgba(255,255,255,0.5);
+    color: #fff;
+    padding: 10px 5px;
+    font-style: italic;
+    margin-top: 30px;
+    font-size: 12px;
+    border-top: 1px solid rgba(255,255,255,0.5);
 }
 
 .ch-info p a {
-	display: block;
-	color: rgba(255,255,255,0.7);
-	font-style: normal;
-	font-weight: 700;
-	text-transform: uppercase;
-	font-size: 9px;
-	letter-spacing: 1px;
-	padding-top: 4px;
+    display: block;
+    color: rgba(255,255,255,0.7);
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding-top: 4px;
 }
 
 .ch-info p a:hover {
-	color: rgba(255,255,255, 0.8);
+    color: rgba(255,255,255, 0.8);
 }
 
 .ch-item:hover {
-	box-shadow: 
-		inset 0 0 0 150px rgba(124,124,124,0.4),
-		inset 0 0 0 16px rgba(255,255,255,0.8),
-		0 1px 2px rgba(124,124,124,0.1);
+    box-shadow: 
+        inset 0 0 0 150px rgba(124,124,124,0.4),
+        inset 0 0 0 16px rgba(255,255,255,0.8),
+        0 1px 2px rgba(124,124,124,0.1);
 }
 
 .ch-item:hover .ch-info {
-	opacity: 1;
-	transform: scale(1);	
+    opacity: 1;
+    transform: scale(1);	
 }
 
 /* ------------------ CUSTOM CSS FOR SERVICES SECTION. ------------------ */
 
 .services-section {
-    padding: 60px;
+    padding: 40px;
     height: 700px;
     text-align: center;
-    background: #dedede;
+    background: #F4F4F4;
 }
 
 .services-section p {
-	margin-top: 10px;
-	font-size: 20px;
+    margin-top: 10px;
+    font-size: 20px;
 }
 
 .services-section img {
-	margin-top: 30px;
-        margin-bottom: 30px;
-        margin-left: -53px;
-        margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: -53px;
+    margin-right: 30px;
 }
 
 .servicesImgs h4 {
@@ -469,10 +469,10 @@ button[type="submit"].searchButton {
 }
 
 button[type="submit"].servicesButton {
-	margin-top: 40px;
-	font-size: 15px;
-	background-color: #79c9e2;
-        color:white;
+    margin-top: 40px;
+    font-size: 15px;
+    background-color: #79c9e2;
+    color:white;
 }
 
 @media(max-width: 1200px){
@@ -486,7 +486,7 @@ button[type="submit"].servicesButton {
         padding: 60px;
         height: 580px;
         text-align: center;
-        background: #dedede;
+        background: #F4F4F4;
     }
 }
 
@@ -495,7 +495,7 @@ button[type="submit"].servicesButton {
         padding: 60px;
         height: 1140px;
         text-align: center;
-        background: #dedede;
+        background: #F4F4F4;
     }
     .servicesImgs img{
         margin-left: 80px;
@@ -506,7 +506,7 @@ button[type="submit"].servicesButton {
         margin-left: 40px;
     }
     button[type="submit"].servicesButton {
-	margin-left: -40px;
+        margin-left: -40px;
     }
 }
 @media(max-width: 669px){
@@ -514,7 +514,7 @@ button[type="submit"].servicesButton {
         padding: 60px;
         height: 1180px;
         text-align: center;
-        background: #dedede;
+        background: #F4F4F4;
     }
     .servicesImgs img{
         margin-left: 25px;
@@ -530,7 +530,7 @@ button[type="submit"].servicesButton {
         padding: 60px;
         height: 1190px;
         text-align: center;
-        background: #dedede;
+        background: #F4F4F4;
     }
     .servicesImgs img{
         margin-left: 0px;
@@ -547,7 +547,7 @@ button[type="submit"].servicesButton {
         padding: 60px;
         height: 1190px;
         text-align: center;
-        background: #dedede;
+        background: #F4F4F4;
     }
     .servicesImgs img{
         margin-left: -50px;
@@ -563,7 +563,7 @@ button[type="submit"].servicesButton {
         padding: 60px;
         height: 1190px;
         text-align: center;
-        background: #dedede;
+        background: #F4F4F4;
     }
     .servicesImgs img{
         margin-left: -60px;
@@ -579,7 +579,7 @@ button[type="submit"].servicesButton {
         padding: 60px;
         height: 1080px;
         text-align: center;
-        background: #dedede;
+        background: #F4F4F4;
     }
     .servicesImgs img{
         margin-left: -90px;
@@ -596,7 +596,7 @@ button[type="submit"].servicesButton {
         padding: 60px;
         height: 1080px;
         text-align: center;
-        background: #dedede;
+        background: #F4F4F4;
     }
     .servicesImgs img{
         margin-left: -115px;
@@ -613,7 +613,7 @@ button[type="submit"].servicesButton {
         padding: 60px;
         height: 1120px;
         text-align: center;
-        background: #dedede;
+        background: #F4F4F4;
     }
     .servicesImgs img{
         margin-left: -130px;
@@ -639,7 +639,7 @@ button[type="submit"].servicesButton {
 
 @media(max-width: 300px){
     button[type="submit"].servicesButton {
-            margin-left: 5px;
+        margin-left: 5px;
     }
 }
 
@@ -662,53 +662,53 @@ button[type="submit"].servicesButton {
 /* ------------------ CUSTOM CSS FOR FOOTER SECTION. ------------------ */
 
 .footer-section {
-    padding: 50px;
-    height: 350px;
+    padding-top: 90px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 450px;
     text-align: center;
     background: #292d30;
     color: #c3c3c3;
 }
 
 .navbar-footer {
-	margin-top: 5px;
-	margin-left: 15px;
+    margin-top: 5px;
+    margin-left: 15px;
 }
 
 
 .navbotLinks ul {
-	list-style-type: none;
-        padding-left:0;
+    list-style-type: none;
+    padding-left:0;
 }
 
 .navbotLinks li {
-	padding: 15px 15px;
+    padding: 15px 15px;
 }
 
 .navbotLinks a {
-	text-decoration: none;
-	color: #c3c3c3;
+    text-decoration: none;
+    color: #c3c3c3;
 }
 
 .socialFooter {
-	margin-top: -20px;
-	margin-left: 31px;
+    margin-top: -20px;
+    margin-left: 31px;
 }
 
 .logoFooter{
     margin-top: 50px;
+    margin-bottom: 60px;
+    padding: 0;
 }
 
-.logoFooter p{
-    font-size: 19px;
+.logoFooter img{
+    margin-left: -85px;
 }
 
 @media(max-width: 350px){
     .logoFooter{
         margin-left: -25px;
-    }
-    .logoFooter p{
-        text-align: center;
-        font-size: 16px;
     }
 }
 
@@ -735,13 +735,109 @@ button[type="submit"].servicesButton {
     color: #c3c3c3;
 }
 
-.footerLinks {
-    margin-left: -20px;
+.contactFooter {
+    margin-bottom: 10px;
 }
 
-@media(max-width: 400px){
-    .footerLinks {
-        margin-left: -60px;
+.contactFootRent h3{
+    margin-top: -3px;
+}
+
+.contactFootRent p{
+    font-size: 16px;
+}
+
+.halfHr {
+    margin-top: 30px;
+    width: 100px;
+}
+
+.regFooterBtn{
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 15px;
+    background-color: #79c9e2;
+    color: white;
+}
+
+.followFooter h3{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.followFooter ul {
+    list-style-type: none;
+    padding:0;
+}
+
+.followFooter li {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.contactFootInfo h3{
+    margin-top: -3px;
+}
+
+.contactFootInfo h4{
+    line-height: 1.4;
+    margin-left:40px;
+    font-size: 16px
+}
+
+.contactFooterBtn {
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 15px;
+    background-color: #79c9e2;
+    color: white;
+}
+
+.copyrightFooter ul{
+    list-style-type: none;
+}
+
+.copyrightFooter li {
+    display: inline;
+    padding-top: 0;
+    padding: 10px;
+}
+
+@media(max-width: 767px){
+    .contactFootRent {
+        height: 300px;
+    }
+    
+    .followFooter{
+        height: 220px;
+    }
+    
+    .contactFootInfo {
+        height: 250px;
+    }
+}
+
+@media(max-width: 410px){
+    .contactFootRent {
+        height: 350px;
+    }
+    
+    .followFooter{
+        height: 260px;
+    }
+    
+    .contactFootInfo {
+        height: 300px;
+    }
+}
+
+@media(max-width: 315px){
+    .contactFootInfo {
+        margin-bottom: 30px;
     }
 }
 
@@ -768,21 +864,21 @@ button[type="submit"].servicesButton {
 }
 
 @media(max-width: 335px){
-	.form-login {
-            margin-left: -65px;
-	}
+    .form-login {
+        margin-left: -65px;
+    }
 }
 
 @media(max-width: 355px){
-	.form-login {
-            margin-left: -20px;
-	}
+    .form-login {
+        margin-left: -20px;
+    }
 }
 
 @media(max-width: 375px){
-	.form-login {
-            width: 225px;
-	}
+    .form-login {
+        width: 225px;
+    }
 }
 
 .form-control {
@@ -804,7 +900,7 @@ button[type="submit"].servicesButton {
     margin-top: 20px;
     margin-bottom: 10px;
     text-align: center;
-    
+
 }
 
 @media(max-width: 767px){
@@ -865,21 +961,21 @@ button[type="submit"].servicesButton {
 }
 
 @media(max-width: 335px){
-	.form-register {
-            margin-left: -65px;
-	}
+    .form-register {
+        margin-left: -65px;
+    }
 }
 
 @media(max-width: 355px){
-	.form-register {
-            margin-left: -20px;
-	}
+    .form-register {
+        margin-left: -20px;
+    }
 }
 
 @media(max-width: 375px){
-	.form-register {
-            width: 225px;
-	}
+    .form-register {
+        width: 225px;
+    }
 }
 
 .form-control {
@@ -901,7 +997,7 @@ button[type="submit"].servicesButton {
     margin-top: 20px;
     margin-bottom: 10px;
     text-align: center;
-    
+
 }
 
 @media(max-width: 767px){
@@ -915,7 +1011,7 @@ button[type="submit"].servicesButton {
 .dashProf-section {
     padding: 30px;
     height: 500px;
-    background: #dedede;
+    background: #F4F4F4;
 }
 
 .dashTableMenu-section {
@@ -925,13 +1021,13 @@ button[type="submit"].servicesButton {
 }
 
 .dashTableMenu-section ul{
-   list-style-type: none;
-   padding-left: 65px;
-   padding-right: 65px;
+    list-style-type: none;
+    padding-left: 65px;
+    padding-right: 65px;
 }
 
 .dashTableMenu-section li{
-   margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .dashTableMenu-section img{
@@ -981,7 +1077,7 @@ button[type="submit"].servicesButton {
     margin-top: 100px;
     padding: 20px;
     height: 300px;
-    background: #dedede;
+    background: #F4F4F4;
 }
 
 .mainMenuTitle {
@@ -1075,7 +1171,7 @@ button[type="submit"].servicesButton {
     background: #fff;
 }
 
- .viewpropertyForm-section h2 {
+.viewpropertyForm-section h2 {
     margin-left: 80px;
     margin-bottom: 30px;
 }
@@ -1095,7 +1191,7 @@ button[type="submit"].servicesButton {
 }
 
 .viewareaForm-section h2 {
-    margin-left: 80px;
+    margin-left: 140px;
     margin-bottom: 30px;
 }
 
@@ -1184,12 +1280,12 @@ button[type="submit"].servicesButton {
 /* ------------------ CUSTOM CSS FOR CONTACT FORM PAGE. ------------------ */
 
 .socialLinks ul {
-	list-style-type: none;
-        padding:0;
+    list-style-type: none;
+    padding:0;
 }
 
 .socialLinks li {
-	display: inline-block;
-	padding-left: 5px;
-	padding-right: 15px;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 15px;
 }
