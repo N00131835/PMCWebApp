@@ -78,10 +78,10 @@ $statement = $gateway->getAreaById($AreaID);
                                 <?php
                                 $row = $statement->fetch(PDO::FETCH_ASSOC);
                                     echo '<tr>';
-                                    echo '<td class="vedHeaders">AreaName</td>' . '<td>' . $row['AreaName'] . '</td>';
+                                    echo '<td class="vedHeaders">AreaName</td>' . '<td class="vedOutput">' . $row['AreaName'] . '</td>';
                                     echo '</tr>';
                                     echo '<tr>';
-                                    echo '<td class="vedHeaders">Facilities</td>' . '<td>' . $row['Facilities'] . '</td>';
+                                    echo '<td class="vedHeaders">Facilities</td>' . '<td class="vedOutput">' . $row['Facilities'] . '</td>';
                                     echo '</tr>';
                                 ?>
                             </tbody>

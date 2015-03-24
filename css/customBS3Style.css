@@ -1094,6 +1094,11 @@ button[type="submit"].servicesButton {
     background: #fff;
 }
 
+.viewareaForm-section h2 {
+    margin-left: 80px;
+    margin-bottom: 30px;
+}
+
 /* ------------------ CUSTOM CSS OWNER PHP PAGES. ------------------ */
 .ownerList-section{
     padding: 30px;
