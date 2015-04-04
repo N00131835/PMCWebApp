@@ -89,6 +89,7 @@ $area = $areaGateway->getArea();
                                     echo '<td>' . $row['Facilities'] . '</td>';
                                     echo '<td class="optlinks">'
                                     . '<a href="viewArea.php?AreaID='.$row['AreaID'].'"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a> '
+                                    . '<a href="editAreaForm.php?AreaID='.$row['AreaID'].'"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> '
                                     . '</td>';
                                     echo '</tr>';
 

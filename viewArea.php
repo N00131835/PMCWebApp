@@ -1,7 +1,7 @@
 <?php
 require_once 'Connection.php';
 require_once 'AreaTableGateway.php';
-//this imports the info needed for this page.
+require_once 'PropertyTableGateway.php'; //this imports the info needed for this page.
 
 $id = session_id();
 if ($id == "") {
@@ -16,9 +16,11 @@ if (!isset($_GET) || !isset($_GET['AreaID'])) {
 $AreaID = $_GET['AreaID'];
 
 $connection = Connection::getInstance();
-$gateway = new AreaTableGateway($connection);
+$areaGateway = new AreaTableGateway($connection);
+$propertyGateway = new PropertyTableGateway($connection);
 
-$statement = $gateway->getAreaById($AreaID);
+$areas = $areaGateway->getAreaById($AreaID);
+$properties = $propertyGateway->getPropertyByAreaId($AreaID);
 ?>
 
 <!DOCTYPE html>
@@ -72,28 +74,71 @@ $statement = $gateway->getAreaById($AreaID);
                         <table class="table table-hover">
                             <!-- This is the category fields on the list. -->
                             <tbody>
-                            <h2>
-                                Viewing a Area
-                            </h2>
+                                <h2>
+                                    Viewing a Area
+                                </h2>
                                 <?php
-                                $row = $statement->fetch(PDO::FETCH_ASSOC);
+                                $area = $areas->fetch(PDO::FETCH_ASSOC);
                                     echo '<tr>';
-                                    echo '<td class="vedHeaders">AreaName</td>' . '<td class="vedOutput">' . $row['AreaName'] . '</td>';
+                                    echo '<td class="vedHeaders">AreaName</td>'
+                                    . '<td class="vedOutput">' . $area['AreaName'] . '</td>';
                                     echo '</tr>';
                                     echo '<tr>';
-                                    echo '<td class="vedHeaders">Facilities</td>' . '<td class="vedOutput">' . $row['Facilities'] . '</td>';
+                                    echo '<td class="vedHeaders">Facilities</td>'
+                                    . '<td class="vedOutput">' . $area['Facilities'] . '</td>';
                                     echo '</tr>';
                                 ?>
                             </tbody>
                             <!-- This is the get methods of the properties, where the output of the user put in the Area form will be shown -->
                         </table>
 
-                        <div class="optlinksBtm" >
+                        <div class="optlinksBtmArea" >
                             <a class="editProperty" href="editAreaForm.php?AreaID=<?php echo $row['AreaID']; ?>">
                                 Edit this Area</a>
-                            <a class="delLink deleteArea" href="deleteArea.php?AreaID=<?php echo $row['AreaID']; ?>">Delete this Area</a>
                         </div> <!-- These are buttons that will link to Edit and/or Delete the Area -->
                     </div>
+                </div>
+            </div>
+        </section>
+        <section id="areaForms" class="viewareaPropertyForm-section">
+            <div class="container">
+                <div class="row">
+                    <h3>Properties Assigned to <?php echo $area['AreaName']; ?></h3>
+                    <?php if ($properties->rowCount() !== 0) { ?>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="TableCol1">Address1</th>
+                                    <th class="TableCol2">Address2</th>
+                                    <th class="TableCol3">Town</th>
+                                    <th class="TableCol4">AreaName</th>
+                                    <th class="TableColOpt">Options</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $row = $properties->fetch(PDO::FETCH_ASSOC);
+                                while ($row)  {
+                                    echo '<tr>';
+                                    echo '<td class="prEach1">' . $row['Address1'] . '</td>';
+                                    echo '<td class="prEach1">' . $row['Address2'] . '</td>';
+                                    echo '<td class="prEach3">' . $row['Town'] . '</td>';
+                                    echo '<td class="prEach3">' . $row['AreaName'] . '</td>';
+                                    echo '<td class="prEach4 optlinks">'
+                                    . '<a href="viewProperty.php?PropertyID='.$row['PropertyID'].'"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a> '
+                                    . '<a href="editPropertyForm.php?PropertyID='.$row['PropertyID'].'"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> '
+                                    . '<a class="deleteProperty" href="deleteProperty.php?PropertyID='.$row['PropertyID'].'"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a> '
+                                    . '</td>';
+                                    echo '</tr>';
+
+                                    $row = $properties->fetch(PDO::FETCH_ASSOC);
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                    <?php } else { ?>
+                        <p>There are no properties assigned to this manager.</p>
+                    <?php } ?>
                 </div>
             </div>
         </section>

@@ -84,14 +84,12 @@ td.fieldForm {
     margin-left: 8px;
     text-decoration: none;
     color: #000;
-    font-size: 14px;
-    border-bottom: 1px solid #ccc;
+    font-size: 20px;
 }
 
 .optlinks a:hover {
     background-color: #ccc;
     color: #000;
-    font-size: 14px;
 }
 
 .menu {
@@ -145,22 +143,22 @@ input[type="button"] {
     margin-top: 10px;
 }
 
-button[type="submit"] {
-    width:160px; 
-    height:40px; 
-    margin-top:3px; 
-    margin-bottom:10px;
-    margin-right: 30px;
-    cursor: pointer;
-}
-
 .optlinksBtm {
     margin-top:30px;
     margin-left: 75px;
-    float:left;
 }
 
 .optlinksBtm a{
+    margin-right: 13px;
+    color: #333;
+}
+
+.optlinksBtmArea {
+    margin-top:30px;
+    margin-left: 180px;
+}
+
+.optlinksBtmArea a{
     margin-right: 13px;
     color: #333;
 }

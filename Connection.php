@@ -6,10 +6,10 @@ class Connection {
     public static function getInstance() {
         if (Connection::$connection === NULL) {
             // connect to the database
-            $host = "daneel";
+            $host = "localhost";
             $database = "n00131835";
-            $username = "N00131835";
-            $password = "N00131835";
+            $username = "root";
+            $password = "";
             //details needed to connect to the database.
              
             $dsn = "mysql:host=" . $host . ";dbname=" . $database;

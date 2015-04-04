@@ -25,7 +25,7 @@ $bedrooms = $_POST['Bedrooms'];
 
 $gateway->updateProperty($PropertyID, $address1, $address2, $town, $county, $description, $rent, $bedrooms);
 
-header('Location: home.php');
+header('Location: viewProperties.php');
 
 
 

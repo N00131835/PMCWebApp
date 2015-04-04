@@ -11,6 +11,7 @@ $id = session_id();
 if ($id == "") {
     session_start();
 }
+//N00131835
 
 /* initialising */
 $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
@@ -22,6 +23,7 @@ $errorMessage = array();
 if ($username === FALSE || $username === '') {
     $errorMessage['username'] = 'Username must not be blank<br/>';
 }
+//N00131835
 
 if ($password === FALSE || $password === '') {
     $errorMessage['password'] = 'Password must not be blank<br/>';
@@ -39,6 +41,7 @@ if (empty($errorMessage)) {
         }
     }
 }
+//N00131835
 
 if (empty($errorMessage)) {
     $_SESSION['username'] = $username;
@@ -47,13 +50,3 @@ if (empty($errorMessage)) {
 else {
     require 'login.php';
 }
-
-
-
-
-
-
-
-
-
-

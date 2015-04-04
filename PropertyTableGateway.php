@@ -10,7 +10,9 @@ class PropertyTableGateway {
     
     public function getProperty() {
         // execute a query to get all property
-        $sqlQuery = "SELECT p.*, a.AreaName FROM property p LEFT JOIN area a ON a.AreaID = p.AreaID";
+        $sqlQuery = "SELECT p.*, a.AreaName
+                     FROM property p 
+                     LEFT JOIN area a ON a.AreaID = p.AreaID";
         
         
         $statement = $this->connection->prepare($sqlQuery);
@@ -23,9 +25,33 @@ class PropertyTableGateway {
         return $statement;
     }
     
+    public function getPropertyByAreaId($AreaID) {
+        // execute a query to get all property
+        $sqlQuery = "SELECT p.*, a.AreaName
+                     FROM property p 
+                     LEFT JOIN area a ON a.AreaID = p.AreaID
+                     WHERE p.AreaID = :AreaID";
+        
+        
+        $params = array(
+            'AreaID' => $AreaID
+        );
+        $statement = $this->connection->prepare($sqlQuery);
+        $status = $statement->execute($params);
+
+        if (!$status) {
+            die("Could not retrieve programmers");
+        }
+
+        return $statement;
+    }
+    
     public function getPropertyById($PropertyID) {
         // execute a query to get the user with the specified id
-        $sqlQuery = "SELECT * FROM property WHERE PropertyID = :PropertyID";
+        $sqlQuery = "SELECT p.*, a.AreaName
+                     FROM property p 
+                     LEFT JOIN area a ON a.AreaID = p.AreaID 
+                     WHERE PropertyID = :PropertyID";
         
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
@@ -108,10 +134,6 @@ class PropertyTableGateway {
             "Rent" => $r,
             "Bedrooms" => $b
         );
-
-        echo '<pre>';
-        print_r($params); print_r($statement);
-        echo '</pre>';
         
         $status = $statement->execute($params);
 

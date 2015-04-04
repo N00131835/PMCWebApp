@@ -12,7 +12,6 @@ class OwnerTableGateway {
         // execute a query to get all Owner
         $sqlQuery = "SELECT * FROM owner";
         
-        
         $statement = $this->connection->prepare($sqlQuery);
         $status = $statement->execute();
         
