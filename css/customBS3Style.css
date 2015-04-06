@@ -1183,9 +1183,18 @@ button[type="submit"].servicesButton {
     background: #fff;
 }
 
+/* editareaForm-section */
+.editareaForm-section {
+    padding: 50px;
+    padding-left: 150px;
+    height: 350px;
+    background: #fff;
+}
+
 /* viewareaForm-section */
 .viewareaForm-section {
     padding: 50px;
+    padding-left: 150px;
     height: 350px;
     background: #fff;
 }
@@ -1217,7 +1226,7 @@ button[type="submit"].servicesButton {
 .createownerForm-section, .editownerForm-section {
     padding: 50px;
     padding-left: 150px;
-    height: 600px;
+    height: 660px;
     background: #fff;
 }
 
@@ -1267,7 +1276,8 @@ button[type="submit"].servicesButton {
 /* createtenantForm-section && edittenantForm-section */
 .createtenantForm-section, .edittenantForm-section {
     padding: 50px;
-    height: 600px;
+    padding-left: 150px;
+    height: 670px;
     background: #fff;
 }
 

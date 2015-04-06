@@ -1,12 +1,13 @@
-function validateCreateOwner(form) {
+function validateCreateTenant(form) {
     var FirstName = form['FirstName'].value;
     var LastName = form['LastName'].value;
-    var Address1 = form['Address1'].value;
-    var Address2 = form['Address2'].value;
-    var Town = form['Town'].value;
-    var County = form['County'].value;
-    var MobileNum = form['MobileNum'].value;
+    var DOB = form['DOB'].value;
+    var Gender = form['Gender'].value;
     var Email = form['Email'].value;
+    var MobileNum = form['MobileNum'].value;
+    var PropertyID = form['PropertyID'].value;
+    var StartLease = form['StartLease'].value;
+    var Duration = form['Duration'].value;
 
     var spanElements = document.getElementsByClassName("error");
     for (var i = 0; i !== spanElements.length; i++) {
@@ -21,24 +22,28 @@ function validateCreateOwner(form) {
     if (LastName === "") {
         errors["LastName"] = "LastName cannot be empty\n";
     }
-    if (Address1 === "") {
-        errors["Address1"] = "Address1 cannot be empty\n";
+    if (DOB === "") {
+        errors["DOB"] = "DOB cannot be empty\n";
     }
-    if (Address2 === "") {
-        errors["Address2"] = "Address2 cannot be empty\n";
-    }
-    if (Town === "") {
-        errors["Town"] = "Town cannot be empty\n";
-    }
-    if (County === "") {
-        errors["County"] = "County cannot be empty\n";
-    }
-    if (MobileNum === "") {
-        errors["MobileNum"] = "MobileNum cannot be empty\n";
+    if (Gender === "") {
+        errors["Gender"] = "Gender cannot be empty\n";
     }
     if (Email === "") {
         errors["Email"] = "Email cannot be empty\n";
     }
+    if (MobileNum === "") {
+        errors["MobileNum"] = "MobileNum cannot be empty\n";
+    }
+    if (PropertyID === "") {
+        errors["PropertyID"] = "PropertyID cannot be empty\n";
+    }
+    if (StartLease === "") {
+        errors["StartLease"] = "StartLease cannot be empty\n";
+    }
+    if (Duration === "") {
+        errors["Duration"] = "Duration cannot be empty\n";
+    }
+    
 
     var valid = true;
     for (var index in errors) {
@@ -50,4 +55,4 @@ function validateCreateOwner(form) {
     return valid;
 }
 
-/* This is the validation for the Owner Form in javascript */
+/* This is the validation for the Tenant Form in javascript */

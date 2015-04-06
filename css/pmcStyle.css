@@ -111,6 +111,14 @@ input[type="text"] {
     margin-left:20px;
 }
 
+input[type="date"] {
+    width:300px; 
+    height:30px; 
+    margin-top:3px; 
+    margin-bottom:10px; 
+    margin-left:20px;
+}
+
 input[type="number"] {
     width:300px; 
     height:30px; 
@@ -209,4 +217,18 @@ input[type="button"] {
 .editLinksbotOwner {
     margin-left: 130px;
     margin-top: 20px;
+}
+
+.editLinksbotArea {
+    margin-left: 130px;
+    margin-top: 20px;
+}
+
+.viewArea {
+    background-color: #85db9c;
+    border: 1px solid #ccc;
+    padding: 8px 10px 8px 10px;
+    font-size: 13px;
+    margin-top: 30px;
+    margin-left: 70px;
 }

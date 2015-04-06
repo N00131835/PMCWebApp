@@ -41,20 +41,22 @@ class TenantTableGateway {
         return $statement;
     }
     
-    public function insertTenant($a1, $a2, $tn, $ct, $d, $r, $b) {
+    public function insertTenant($fnT, $lnT, $dob, $gT, $eT, $mnT, $pID, $sl, $du) {
         $sqlQuery = "INSERT INTO tenants " .
-                "(Address1, Address2, Town, County, Description, Rent, Bedrooms) " .
-                "VALUES (:Address1, :Address2, :Town, :County, :Description, :Rent, :Bedrooms)";
+                "(FirstName, LastName, DOB, Gender, Email, MobileNum, PropertyID, StartLease, Duration) " .
+                "VALUES (:FirstName, :LastName, :DOB, :Gender, :Email, :MobileNum, :PropertyID, :StartLease, :Duration)";
         
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
-            "Address1" => $a1,
-            "Address2" => $a2,
-            "Town" => $tn,
-            "County" => $ct,
-            "Description" => $d,
-            "Rent" => $r,
-            "Bedrooms" => $b
+            "FirstName" => $fnT,
+            "LastName" => $lnT,
+            "DOB" => $dob,
+            "Gender" => $gT,
+            "Email" => $eT,
+            "MobileNum" => $mnT,
+            "PropertyID" => $pID,
+            "StartLease" => $sl,
+            "Duration" => $du
         );
         
         $status = $statement->execute($params);
@@ -85,28 +87,32 @@ class TenantTableGateway {
         return ($statement->rowCount() == 1);
     }
     
-    public function updateTenant($TenantID, $a1, $a2, $tn, $ct, $d, $r, $b) {
+    public function updateTenant($TenantID, $fnT, $lnT, $dob, $gT, $eT, $mnT, $pID, $sl, $du) {
         $sqlQuery =
                 "UPDATE tenants SET " .
-                "Address1 = :Address1, " .
-                "Address2 = :Address2, " .
-                "Town = :Town, " .
-                "County = :County, " .
-                "Description = :Description, " .
-                "Rent = :Rent, " .
-                "Bedrooms = :Bedrooms " .
+                "FirstName = :FirstName, " .
+                "LastName = :LastName, " .
+                "DOB = :DOB, " .
+                "Gender = :Gender, " .
+                "Email = :Email, " .
+                "MobileNum = :MobileNum, " .
+                "PropertyID = :PropertyID, " .
+                "StartLease = :StartLease, " .
+                "Duration = :Duration " .
                 "WHERE TenantID = :TenantID";
 
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
             "TenantID" => $TenantID,
-            "Address1" => $a1,
-            "Address2" => $a2,
-            "Town" => $tn,
-            "County" => $ct,
-            "Description" => $d,
-            "Rent" => $r,
-            "Bedrooms" => $b
+            "FirstName" => $fnT,
+            "LastName" => $lnT,
+            "DOB" => $dob,
+            "Gender" => $gT,
+            "Email" => $eT,
+            "MobileNum" => $mnT,
+            "PropertyID" => $pID,
+            "StartLease" => $sl,
+            "Duration" => $du
         );
 
         $status = $statement->execute($params);

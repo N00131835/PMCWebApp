@@ -75,7 +75,7 @@ $properties = $propertyGateway->getPropertyByAreaId($AreaID);
                             <!-- This is the category fields on the list. -->
                             <tbody>
                                 <h2>
-                                    Viewing a Area
+                                    Viewing an Area
                                 </h2>
                                 <?php
                                 $area = $areas->fetch(PDO::FETCH_ASSOC);
@@ -93,7 +93,7 @@ $properties = $propertyGateway->getPropertyByAreaId($AreaID);
                         </table>
 
                         <div class="optlinksBtmArea" >
-                            <a class="editProperty" href="editAreaForm.php?AreaID=<?php echo $row['AreaID']; ?>">
+                            <a class="editProperty" href="editAreaForm.php?AreaID=<?php echo $area['AreaID']; ?>">
                                 Edit this Area</a>
                         </div> <!-- These are buttons that will link to Edit and/or Delete the Area -->
                     </div>
