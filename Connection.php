@@ -8,8 +8,8 @@ class Connection {
             // connect to the database
             $host = "localhost";
             $database = "n00131835";
-            $username = "root";
-            $password = "";
+            $username = "root"; //N00131835
+            $password = ""; //N00131835
             //details needed to connect to the database.
              
             $dsn = "mysql:host=" . $host . ";dbname=" . $database;

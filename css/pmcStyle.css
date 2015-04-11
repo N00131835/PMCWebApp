@@ -171,6 +171,16 @@ input[type="button"] {
     color: #333;
 }
 
+.optlinksBtmArea {
+    margin-top:30px;
+    margin-left: 180px;
+}
+
+.optlinksBtmArea a{
+    margin-right: 13px;
+    color: #333;
+}
+
 .homeBtnBtm {
     margin-top: 15px;
     float:right;
