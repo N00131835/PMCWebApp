@@ -8,9 +8,10 @@ class TenantTableGateway {
         $this->connection = $c;
     }
     
-    public function getTenant() {
+    public function getTenant($sortOrder) {
         // execute a query to get all Tenant
-        $sqlQuery = "SELECT * FROM tenants";
+        $sqlQuery = "SELECT * FROM tenants
+                     ORDER BY " . $sortOrder;
         
         
         $statement = $this->connection->prepare($sqlQuery);

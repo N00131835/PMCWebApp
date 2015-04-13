@@ -8,11 +8,12 @@ class PropertyTableGateway {
         $this->connection = $c;
     }
     
-    public function getProperty() {
+    public function getProperty($sortOrder) {
         // execute a query to get all property
         $sqlQuery = "SELECT p.*, a.AreaName
                      FROM property p 
-                     LEFT JOIN area a ON a.AreaID = p.AreaID";
+                     LEFT JOIN area a ON a.AreaID = p.AreaID
+                     ORDER BY " . $sortOrder;
         
         
         $statement = $this->connection->prepare($sqlQuery);

@@ -4,10 +4,21 @@ require_once 'TenantTableGateway.php';
 
 require 'ensureUserLoggedIn.php'; //redirects to the index(login) if the user is not logged in
 
+if (isset($_GET) && isset($_GET['sortOrder'])) {
+    $sortOrder = $_GET['sortOrder'];
+    $columnNames = array("FirstName", "LastName", "Email", "MobileNum");
+    if(!in_array($sortOrder, $columnNames)){
+        $sortOrder = 'FirstName';
+    }
+}
+else {
+    $sortOrder = 'FirstName';
+}
+
 $connection = Connection::getInstance();
 $gateway = new TenantTableGateway($connection);
 
-$statement = $gateway->getTenant();
+$statement = $gateway->getTenant($sortOrder);
 
 ?>
 <!-- This is where the ready made Tenant List is placed. -->
@@ -70,10 +81,10 @@ $statement = $gateway->getTenant();
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th class="TableCol1">FirstName</th>
-                                    <th class="TableCol2">LastName</th>
-                                    <th class="TableCol3">Email</th>
-                                    <th class="TableCol4">MobileNum</th>
+                                    <th class="TableCol1"><a href="viewTenants.php?sortOrder=FirstName">FirstName</a></th>
+                                    <th class="TableCol2"><a href="viewTenants.php?sortOrder=LastName">LastName</a></th>
+                                    <th class="TableCol3"><a href="viewTenants.php?sortOrder=MobileNum">Email</a></th>
+                                    <th class="TableCol4"><a href="viewTenants.php?sortOrder=Email">MobileNum</a></th>
                                     <th class="TableColOpt">Options</th>
                                 </tr>
                             </thead>

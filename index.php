@@ -8,7 +8,10 @@ require_once 'PropertyTableGateway.php';
 $connection = Connection::getInstance();
 $gateway = new PropertyTableGateway($connection);
 
-$statement = $gateway->getProperty();
+$sortOrder = 'Address1';
+
+$statement = $gateway->getProperty($sortOrder);
+
 //to connect to the databases and the queries.
 ?>
 

@@ -11,10 +11,21 @@ if ($id == "") {
 
 require 'ensureUserLoggedIn.php'; //redirects to the index(login) if the user is not logged in
 
+if (isset($_GET) && isset($_GET['sortOrder'])) {
+    $sortOrder = $_GET['sortOrder'];
+    $columnNames = array("AreaName", "Facilities");
+    if(!in_array($sortOrder, $columnNames)){
+        $sortOrder = 'AreaName';
+    }
+}
+else {
+    $sortOrder = 'AreaName';
+}
+
 $connection = Connection::getInstance();
 $areaGateway = new AreaTableGateway($connection);
 
-$area = $areaGateway->getArea();
+$area = $areaGateway->getArea($sortOrder);
 ?>
 
 <!DOCTYPE html>
@@ -73,8 +84,8 @@ $area = $areaGateway->getArea();
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th class="TableCol1">Area Name</th>
-                                    <th class="TableCol2">Facilities</th>
+                                    <th class="TableCol1"><a href="viewAreas.php?sortOrder=AreaName">Area Name</a></th>
+                                    <th class="TableCol2"><a href="viewAreas.php?sortOrder=Facilities">Facilities</a></th>
                                     <th class="TableColOpt">Options</th>
                                 </tr>
                             </thead>

@@ -10,7 +10,9 @@ require 'ensureUserLoggedIn.php'; //redirects to the index(login) if the user is
 $connection = Connection::getInstance();
 $gateway = new PropertyTableGateway($connection);
 
-$statement = $gateway->getProperty();
+$sortOrder = 'Address1';
+
+$statement = $gateway->getProperty($sortOrder);
 
 ?>
 <!-- This is where the ready made Property List is placed. -->

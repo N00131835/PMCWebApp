@@ -8,9 +8,10 @@ class AreaTableGateway {
         $this->connection = $c;
     }
     
-    public function getArea() {
-        // execute a query to get all property
-        $sqlQuery = "SELECT * FROM area";
+    public function getArea($sortOrder) {
+        // execute a query to get all area
+        $sqlQuery = "SELECT * FROM area
+                     ORDER BY " . $sortOrder;
         
         $statement = $this->connection->prepare($sqlQuery);
         $status = $statement->execute();

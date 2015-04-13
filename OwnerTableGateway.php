@@ -8,9 +8,10 @@ class OwnerTableGateway {
         $this->connection = $c;
     }
     
-    public function getOwner() {
+    public function getOwner($sortOrder) {
         // execute a query to get all Owner
-        $sqlQuery = "SELECT * FROM owner";
+        $sqlQuery = "SELECT * FROM owner
+                     ORDER BY " . $sortOrder;
         
         $statement = $this->connection->prepare($sqlQuery);
         $status = $statement->execute();

@@ -6,10 +6,21 @@ require_once 'PropertyTableGateway.php';
 require 'ensureUserLoggedIn.php'; 
 //redirects to the index(login) if the user is not logged in
 
+if (isset($_GET) && isset($_GET['sortOrder'])) {
+    $sortOrder = $_GET['sortOrder'];
+    $columnNames = array("Address1", "Address2", "Town", "AreaName");
+    if(!in_array($sortOrder, $columnNames)){
+        $sortOrder = 'Address1';
+    }
+}
+else {
+    $sortOrder = 'Address1';
+}
+
 $connection = Connection::getInstance();
 $gateway = new PropertyTableGateway($connection);
 
-$statement = $gateway->getProperty();
+$statement = $gateway->getProperty($sortOrder);
 
 ?>
 <!-- This is where the ready made Property List is placed. -->
@@ -72,10 +83,10 @@ $statement = $gateway->getProperty();
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th class="TableCol1">Address1</th>
-                                    <th class="TableCol2">Address2</th>
-                                    <th class="TableCol3">Town</th>
-                                    <th class="TableCol4">AreaName</th>
+                                    <th class="TableCol1"><a href="viewProperties.php?sortOrder=Address1">Address1</a></th>
+                                    <th class="TableCol2"><a href="viewProperties.php?sortOrder=Address2">Address2</a></th>
+                                    <th class="TableCol3"><a href="viewProperties.php?sortOrder=Town">Town</a></th>
+                                    <th class="TableCol4"><a href="viewProperties.php?sortOrder=AreaName">AreaName</a></th>
                                     <th class="TableColOpt">Options</th>
                                 </tr>
                             </thead>

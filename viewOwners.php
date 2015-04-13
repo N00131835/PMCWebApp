@@ -4,10 +4,21 @@ require_once 'OwnerTableGateway.php';
 
 require 'ensureUserLoggedIn.php'; //redirects to the index(login) if the user is not logged in
 
+if (isset($_GET) && isset($_GET['sortOrder'])) {
+    $sortOrder = $_GET['sortOrder'];
+    $columnNames = array("FirstName", "LastName", "MobileNum", "Email");
+    if(!in_array($sortOrder, $columnNames)){
+        $sortOrder = 'FirstName';
+    }
+}
+else {
+    $sortOrder = 'FirstName';
+}
+
 $connection = Connection::getInstance();
 $gateway = new OwnerTableGateway($connection);
 
-$statement = $gateway->getOwner();
+$statement = $gateway->getOwner($sortOrder);
 
 ?>
 <!-- This is where the ready made Owner List is placed. -->
@@ -70,10 +81,10 @@ $statement = $gateway->getOwner();
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th class="TableCol1">FirstName</th>
-                                    <th class="TableCol2">LastName</th>
-                                    <th class="TableCol3">MobileNum</th>
-                                    <th class="TableCol4">Email</th>
+                                    <th class="TableCol1"><a href="viewOwners.php?sortOrder=FirstName">FirstName</a></th>
+                                    <th class="TableCol2"><a href="viewOwners.php?sortOrder=LastName">LastName</a></th>
+                                    <th class="TableCol3"><a href="viewOwners.php?sortOrder=MobileNum">MobileNum</a></th>
+                                    <th class="TableCol4"><a href="viewOwners.php?sortOrder=Email">Email</a></th>
                                     <th class="TableColOpt">Options</th>
                                 </tr>
                             </thead>
