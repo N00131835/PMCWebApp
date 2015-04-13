@@ -21,6 +21,9 @@ $gender = $_POST['Gender'];
 $email = $_POST['Email'];
 $mobilenum = $_POST['MobileNum'];
 $propertyID = $_POST['PropertyID'];
+if ($propertyID == -1) {
+    $propertyID = NULL;
+}
 $startlease = $_POST['StartLease'];
 $duration = $_POST['Duration'];
 

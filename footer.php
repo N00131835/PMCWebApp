@@ -14,7 +14,7 @@
                         <br/>
                         easiest-to-use and most up-to-date 
                         <br/>
-                        rental website in the marketplace. 
+                        rental website in Dublin. 
                     </p>
                     <a href="register.php"><button type="submit" class="regFooterBtn btn btn-default btn-lg">Register</button></a>
                     <!-- This button will go to the Register page. -->

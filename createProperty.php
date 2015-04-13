@@ -19,6 +19,10 @@ $address1 = $_POST['address1'];
 $address2 = $_POST['address2'];
 $town = $_POST['town'];
 $county = $_POST['county'];
+$areaId = $_POST['areaId'];
+if ($areaId == -1) {
+    $areaId = NULL;
+}
 $description = $_POST['description'];
 $rent = $_POST['rent'];
 $bedrooms = $_POST['bedrooms'];
@@ -42,6 +46,10 @@ if ($county === FALSE || $county === '') {
     $errorMessage['county'] = 'County cannot be empty<br/>';
 }
 
+if ($areaId === FALSE || $areaId === '') {
+    $errorMessage['areaId'] = 'areaId cannot be empty<br/>';
+}
+
 if ($description === FALSE || $description === '') {
     $errorMessage['description'] = 'Description cannot be empty<br/>';
 }
@@ -55,7 +63,7 @@ if ($bedrooms === FALSE || $bedrooms === '') {
 }
 
 if (empty($errorMessage)) {
-    $id = $gateway->insertProperty($address1, $address2, $town, $county, $description, $rent, $bedrooms);
+    $id = $gateway->insertProperty($address1, $address2, $town, $county, $areaId, $description, $rent, $bedrooms);
     header('Location: viewProperties.php');
 }
 else {

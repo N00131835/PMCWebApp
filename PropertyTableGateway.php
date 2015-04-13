@@ -68,7 +68,7 @@ class PropertyTableGateway {
         return $statement;
     }
     
-    public function insertProperty($a1, $a2, $tn, $ct, $d, $r, $b) {
+    public function insertProperty($a1, $a2, $tn, $ct, $aId, $d, $r, $b) {
         $sqlQuery = "INSERT INTO property " .
                 "(Address1, Address2, Town, County, Description, Rent, Bedrooms) " .
                 "VALUES (:Address1, :Address2, :Town, :County, :Description, :Rent, :Bedrooms)";
@@ -79,6 +79,7 @@ class PropertyTableGateway {
             "Address2" => $a2,
             "Town" => $tn,
             "County" => $ct,
+            "AreaID" => $aId,
             "Description" => $d,
             "Rent" => $r,
             "Bedrooms" => $b
@@ -112,13 +113,14 @@ class PropertyTableGateway {
         return ($statement->rowCount() == 1);
     }
     
-    public function updateProperty($PropertyID, $a1, $a2, $tn, $ct, $d, $r, $b) {
+    public function updateProperty($PropertyID, $a1, $a2, $tn, $ct, $aId, $d, $r, $b) {
         $sqlQuery =
                 "UPDATE property SET " .
                 "Address1 = :Address1, " .
                 "Address2 = :Address2, " .
                 "Town = :Town, " .
                 "County = :County, " .
+                "AreaID = :AreaID, " .
                 "Description = :Description, " .
                 "Rent = :Rent, " .
                 "Bedrooms = :Bedrooms " .
@@ -131,6 +133,7 @@ class PropertyTableGateway {
             "Address2" => $a2,
             "Town" => $tn,
             "County" => $ct,
+            "AreaID" => $aId,
             "Description" => $d,
             "Rent" => $r,
             "Bedrooms" => $b

@@ -2,6 +2,7 @@
 require_once 'Property.php';
 require_once 'Connection.php';
 require_once 'PropertyTableGateway.php';
+require_once 'AreaTableGateway.php';
 //this imports the info needed for this page.
 
 $id = session_id();
@@ -16,14 +17,29 @@ if (!isset($_GET) || !isset($_GET['PropertyID'])) {
 }       
 $PropertyID = $_GET['PropertyID'];
 
-$connection = Connection::getInstance();
-$gateway = new PropertyTableGateway($connection);
+if (isset($_GET) && isset($_GET['sortOrder'])) {
+    $sortOrder = $_GET['sortOrder'];
+    $columnNames = array("AreaName");
+    if(!in_array($sortOrder, $columnNames)){
+        $sortOrder = 'AreaName';
+    }
+}
+else {
+    $sortOrder = 'AreaName';
+}
 
-$statement = $gateway->getPropertyById($PropertyID);
-if ($statement->rowCount() !== 1) {
+$connection = Connection::getInstance();
+
+$propertyGateway = new PropertyTableGateway($connection);
+
+$properties = $propertyGateway->getPropertyById($PropertyID);
+if ($properties->rowCount() !== 1) {
     die("Illegal request");
 }
-$row = $statement->fetch(PDO::FETCH_ASSOC);
+$property = $properties->fetch(PDO::FETCH_ASSOC);
+
+$areaGateway = new AreaTableGateway($connection);
+$areas = $areaGateway->getArea($sortOrder);
 ?> 
 <!DOCTYPE html>
 <html>
@@ -92,7 +108,7 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                                 if (isset($_POST) && isset($_POST['Address1'])) {
                                                     echo $_POST['Address1'];
                                                 } 
-                                                else echo $row['Address1'];
+                                                else echo $property['Address1'];
                                                 ?>"
                                                 <!-- The span if statement sends an error to the page if the user puts a wrong value in the field -->
                                             <span id="Address1Error" class="error">
@@ -112,7 +128,7 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                                 if (isset($_POST) && isset($_POST['Address2'])) {
                                                     echo $_POST['Address2'];
                                                 } 
-                                                else echo $row['Address2'];
+                                                else echo $property['Address2'];
                                                 ?>"
                                                 <!-- The span if statement sends an error to the page if the user puts a wrong value in the field -->
                                             <span id="Address2Error" class="error">
@@ -132,7 +148,7 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                                 if (isset($_POST) && isset($_POST['Town'])) {
                                                     echo $_POST['Town'];
                                                 } 
-                                                else echo $row['Town'];
+                                                else echo $property['Town'];
                                                 ?>"
                                                 <!-- The span if statement sends an error to the page if the user puts a wrong value in the field -->
                                             <span id="TownError" class="error">
@@ -152,7 +168,7 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                                 if (isset($_POST) && isset($_POST['county'])) {
                                                     echo $_POST['County'];
                                                 } 
-                                                else echo $row['County'];
+                                                else echo $property['County'];
                                                 ?>"
                                                 <!-- The span if statement sends an error to the page if the user puts a wrong value in the field -->
                                             <span id="CountyError" class="error">
@@ -165,6 +181,25 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                         </td>
                                     </tr>
                                     <tr class="field">
+                                        <td class="fieldForm"><a href="editPropertyForm.php?sortOrder=AreaName">AreaName</a></td>
+                                        <td>
+                                            <select name="area_id" class="selectNameOpt">
+                                                <option value="-1">No area</option></a>
+                                                <?php
+                                                $a = $areas->fetch(PDO::FETCH_ASSOC);
+                                                while ($a) {
+                                                    $selected = "";
+                                                    if ($a['AreaID'] == $property['AreaID']) {
+                                                        $selected = "selected";
+                                                    }
+                                                    echo '<option value="' . $a['AreaID'] . '" ' . $selected . '>' . $a['AreaName'] . '</option>';
+                                                    $a = $areas->fetch(PDO::FETCH_ASSOC);
+                                                }
+                                                ?>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr class="field">
                                         <td class="fieldForm">Description</td>
                                         <td>
                                             <!-- The if statement on the input value makes it remember the data that the user typed in the field. -->
@@ -172,7 +207,7 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                                 if (isset($_POST) && isset($_POST['Description'])) {
                                                     echo $_POST['Description'];
                                                 } 
-                                                else echo $row['Description'];
+                                                else echo $property['Description'];
                                                 ?>"
                                                 <!-- The span if statement sends an error to the page if the user puts a wrong value in the field -->
                                             <span id="DescriptionError" class="error">
@@ -192,7 +227,7 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                                 if (isset($_POST) && isset($_POST['Rent'])) {
                                                     echo $_POST['Rent'];
                                                 }
-                                                else echo $row['Rent'];
+                                                else echo $property['Rent'];
                                                 ?>"
                                                 <!-- The span if statement sends an error to the page if the user puts a wrong value in the field -->
                                             <span id="RentError" class="error">
@@ -212,7 +247,7 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                                 if (isset($_POST) && isset($_POST['Bedrooms'])) {
                                                     echo $_POST['Bedrooms'];
                                                 } 
-                                                else echo $row['Bedrooms'];
+                                                else echo $property['Bedrooms'];
                                                 ?>"
                                                 <!-- The span if statement sends an error to the page if the user puts a wrong value in the field -->
                                             <span id="BedroomsError" class="error">
@@ -233,9 +268,9 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                 </tbody>
                             </table>
                             <div class="editLinksbot" >
-                                <a class="viewProperty" href="viewProperty.php?PropertyID=<?php echo $row['PropertyID']; ?>">
+                                <a class="viewProperty" href="viewProperty.php?PropertyID=<?php echo $property['PropertyID']; ?>">
                                     View this Property</a>
-                                <a class="delLink deleteProperty" href="deleteProperty.php?PropertyID=<?php echo $row['PropertyID']; ?>">Delete this Property</a>
+                                <a class="delLink deleteProperty" href="deleteProperty.php?PropertyID=<?php echo $property['PropertyID']; ?>">Delete this Property</a>
                             </div> <!-- These are buttons that will link to View and/or Delete the property -->
                         </form> 
                     </div>

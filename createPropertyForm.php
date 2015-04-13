@@ -1,10 +1,29 @@
 <?php
+require_once 'Connection.php';
+require_once 'AreaTableGateway.php';
+
 $id = session_id();
 if ($id == "") {
     session_start();
 }
 
 require 'ensureUserLoggedIn.php'; //redirects to the index(login) if the user is not logged in
+
+if (isset($_GET) && isset($_GET['sortOrder'])) {
+    $sortOrder = $_GET['sortOrder'];
+    $columnNames = array("AreaName");
+    if(!in_array($sortOrder, $columnNames)){
+        $sortOrder = 'AreaName';
+    }
+}
+else {
+    $sortOrder = 'AreaName';
+}
+
+$connection = Connection::getInstance();
+$areaGateway = new AreaTableGateway($connection);
+
+$areas = $areaGateway->getArea($sortOrder);
 ?> 
 <!DOCTYPE html>
 <html>
@@ -132,6 +151,21 @@ require 'ensureUserLoggedIn.php'; //redirects to the index(login) if the user is
                                                     }
                                                     ?>
                                                 </span>
+                                            </td>
+                                        </tr>
+                                        <tr class="field">
+                                            <td class="fieldForm"><a href="createPropertyForm.php?sortOrder=AreaName">AreaName</a></td>
+                                            <td>
+                                                <select class="selectNameOpt" name="area_id">
+                                                    <option value="-1">No area</option></a>
+                                                    <?php
+                                                    $a = $areas->fetch(PDO::FETCH_ASSOC);
+                                                    while ($a) {
+                                                        echo '<option value="' . $a['AreaID'] . '">' . $a['AreaName'] . '</option>';
+                                                        $a = $areas->fetch(PDO::FETCH_ASSOC);
+                                                    }
+                                                    ?>
+                                                </select>
                                             </td>
                                         </tr>
                                         <tr class="field">

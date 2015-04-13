@@ -102,7 +102,7 @@ $properties = $propertyGateway->getPropertyByAreaId($AreaID);
         </section>
         <section id="areaForms" class="viewareaPropertyForm-section">
             <div class="container">
-                <div class="row">
+                <div class="row col-lg-offset-2 col-lg-9">
                     <h3>Properties Assigned to <?php echo $area['AreaName']; ?></h3>
                     <?php if ($properties->rowCount() !== 0) { ?>
                         <table class="table">
@@ -111,7 +111,6 @@ $properties = $propertyGateway->getPropertyByAreaId($AreaID);
                                     <th class="TableCol1">Address1</th>
                                     <th class="TableCol2">Address2</th>
                                     <th class="TableCol3">Town</th>
-                                    <th class="TableCol4">AreaName</th>
                                     <th class="TableColOpt">Options</th>
                                 </tr>
                             </thead>
@@ -123,7 +122,6 @@ $properties = $propertyGateway->getPropertyByAreaId($AreaID);
                                     echo '<td class="prEach1">' . $row['Address1'] . '</td>';
                                     echo '<td class="prEach1">' . $row['Address2'] . '</td>';
                                     echo '<td class="prEach3">' . $row['Town'] . '</td>';
-                                    echo '<td class="prEach3">' . $row['AreaName'] . '</td>';
                                     echo '<td class="prEach4 optlinks">'
                                     . '<a href="viewProperty.php?PropertyID='.$row['PropertyID'].'"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a> '
                                     . '<a href="editPropertyForm.php?PropertyID='.$row['PropertyID'].'"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> '
